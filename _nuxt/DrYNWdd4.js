@@ -1,0 +1,1 @@
+import{a6 as a,r as c}from"./DSfHGzKa.js";const n=a("scriptStore",()=>({isLoad:c(!0)})),p=async e=>{const o=n();o.isLoad=!0;for(const r of e)await new Promise((s,d)=>{const t=document.createElement("script");t.src=r,t.defer=!0,t.onload=()=>{s(`${r} onload`)},document.body.appendChild(t)});o.isLoad=!1};export{p as a,n as u};

@@ -1,0 +1,1 @@
+import{a6 as e}from"./DSfHGzKa.js";const o=e("AnyIdSso",{state:()=>({sso:null}),actions:{setSSO(s){this.sso=s}}}),r=e("user",{state:()=>({userId:""}),actions:{setUserId(s){this.userId=s}}});export{r as a,o as u};

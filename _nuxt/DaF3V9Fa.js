@@ -1,0 +1,1 @@
+import{v as e}from"./BdzGUozF.js";import{d as o,o as s,K as a,b as n,_ as r}from"./DSfHGzKa.js";const c=o({__name:"Loading",setup(t){return(_,p)=>(s(),a(n(e),{size:"100",color:"#246BEB",class:"vue-spinner"}))}}),m=r(c,[["__scopeId","data-v-b94ccdad"]]);export{m as L};

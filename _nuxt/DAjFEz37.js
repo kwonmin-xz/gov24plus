@@ -1,0 +1,1 @@
+import{aX as l,u as o}from"./DSfHGzKa.js";const s=l((a,t)=>{o("sessionActive");let e=t.fullPath;const i=a.fullPath;(t.fullPath===void 0||e===i)&&(e="/"),t.path==="/login/checklogin"&&(e=t.path)});export{s as default};
