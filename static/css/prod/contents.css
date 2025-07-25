@@ -1,0 +1,2607 @@
+@charset "utf-8";
+
+
+
+/* 공통
+========================================================================== */
+/* ie 서비스 안내 */
+.iw-info-ie-browser {padding-bottom:0.8rem;}
+.iw-info-ie-browser p {margin:0; word-break:keep-all;}
+.iw-info-ie-browser .box-info {margin:0 0 2.4rem; padding-top:9.6rem; text-align:center; background-image:url('https://static.gov.kr/content/images/contents/bg-login-invalid.svg'); background-repeat:no-repeat; background-position:top center; background-size:8rem;}
+.iw-info-ie-browser .box-info .txt {color:var(--iw-gray-90); font-size:var(--iw-fz-md); font-weight:700;}
+.iw-info-ie-browser .box-info .txt span {display:block;}
+.iw-info-ie-browser .box-info.invalid {margin-bottom:0;}
+.iw-info-ie-browser .txt-sub {margin:0.8rem 0 0 0; color:var(--iw-gray-90); font-size:var(--iw-fz-sm); text-align:center;}
+
+.iw-info-ie-browser .box {margin-top:2.4rem; padding:2rem; color:var(--iw-gray-70); border-radius:1.2rem; border:0.1rem solid var(--iw-secondary-10); background-color:var(--iw-secondary-5);}
+.iw-info-ie-browser .box .txt {text-align:center; word-break:break-all;}
+
+@media only screen and (max-width:767px) {
+	.iw-info-ie-browser {padding-bottom:1.2rem;}
+	.iw-info-ie-browser .box-info {margin:0 0 1.6rem; padding-top:8rem; background-size:7.2rem;}
+	.iw-info-ie-browser .box-info .txt span {display:inline;}
+	.iw-info-ie-browser .box {margin-top:1.6rem;}
+}
+
+/* 자동 로그아웃 안내 */
+.auto-logout-info .remaining-time {margin-top:1.6rem; color:var(--iw-gray-90); font-size:var(--iw-fz-xlg);}
+@media only screen and (max-width:1024px) {
+	.auto-logout-info .section-5 {gap:var(--iw-gap-3) 0;}
+	.auto-logout-info .remaining-time {margin-top:1.2rem;}
+}
+
+
+/* 만족도 평가 (모달) */
+.wrap-assess-question p {margin:0;}
+.wrap-assess-question .title.xlg {margin-bottom:1.6rem;}
+.wrap-assess-question .box-assess {display:flex; flex-direction:column; gap:2.4rem 0; margin-bottom:2.4rem; padding:4rem; border-radius:1.2rem; background-color:var(--iw-gray-5);}
+.wrap-assess-question .box-assess .tit {position:relative; padding-left:2.7rem; color:var(--iw-gray-90); font-size:var(--iw-fz-sm); font-weight:700;}
+.wrap-assess-question .box-assess .tit .txt {position:absolute; left:0; top:0; color:var(--iw-primary-60);}
+.wrap-assess-question .box-assess .assess-area {display:flex; gap:0 1.6rem;}
+.wrap-assess-question .box-assess .assess-area .btn-assess {display:flex; flex-direction:column; justify-content:center; align-items:center; gap:0.8rem 0; width:100%; padding:3.2rem 2.4rem 2.4rem 2.4rem; border:0.1rem solid var(--iw-color-border-gray); border-radius:1.2rem; background-color:#fff;}
+.wrap-assess-question .box-assess .assess-area .btn-assess:focus {outline:0.2rem solid rgba(36, 107, 235, 0.8); outline-offset:-0.4rem;}
+.wrap-assess-question .box-assess .assess-area .btn-assess.on:focus {outline-offset:-0.6rem;}
+.wrap-assess-question .box-assess .assess-area .btn-assess .iconset {width:4rem; height:4rem;}
+.wrap-assess-question .box-assess .assess-area .btn-assess .txt {color:var(--iw-gray-90); font-size:var(--iw-fz-b-lg); font-weight:700;}
+.wrap-assess-question .box-assess .assess-area .btn-assess.on {border-color:transparent; background-color:var(--iw-primary-5); box-shadow:inset 0 0 0 0.2rem var(--iw-primary);}
+.wrap-assess-question .box-assess .assess-area .btn-assess.on .txt {color:var(--iw-primary-60);}
+
+@media only screen and (max-width:1024px) {
+	.wrap-assess-question .box-assess {margin-bottom:1.6rem; padding:2rem;}
+	.wrap-assess-question .box-assess .assess-area {flex-direction:column; gap:1.6rem 0;}
+	.wrap-assess-question .box-assess .assess-area .btn-assess {flex-direction:row; gap:0 0.8rem; padding:1.6rem;}
+	.wrap-assess-question .box-assess .assess-area .btn-assess .iconset {flex-shrink:0; width:3.2rem; height:3.2rem;}
+	.wrap-assess-question .box-assess .assess-area .btn-assess .txt {min-width:5rem;}
+}
+
+.wrap-assess-question .opinion-area {padding:4rem; border:0.1rem solid var(--iw-color-border-gray); border-radius:1.2rem;}
+.wrap-assess-question .opinion-area .tit {margin-bottom:2.4rem; color:var(--iw-gray-90); font-size:var(--iw-fz-sm); font-weight:700;}
+.wrap-assess-question .opinion-area .list {display:flex; flex-direction:column; gap:2.4rem 0; margin:0; padding:0; list-style-type:none;}
+.wrap-assess-question .opinion-area .list li .tit-area {position:relative; margin-bottom:1.6rem; padding-left:2.3rem;}
+.wrap-assess-question .opinion-area .list li .tit-area .number {position:absolute; left:0; top:0; color:var(--iw-gray-90);}
+.wrap-assess-question .opinion-area .list li .tit-area .question {color:var(--iw-gray-90);}
+
+.wrap-assess-question .opinion-area .list li .opinion-score-area {display:flex; flex-direction:column; gap:1.2rem 0; width:100%;}
+.wrap-assess-question .opinion-area .list li .opinion-score-area .form-check [type='radio'] + label {position:relative; width:100%; padding:1.9rem 7.8rem 1.9rem 5.2rem; border-radius:0.8rem; background-color:var(--iw-gray-5);}
+.wrap-assess-question .opinion-area .list li .opinion-score-area .form-check [type='radio']:checked + label {color:var(--iw-primary-60); font-weight:700; background-color:#fff; box-shadow:inset 0 0 0 0.2rem var(--iw-primary);}
+.wrap-assess-question .opinion-area .list li .opinion-score-area .form-check [type='radio']:focus + label {outline:0.2rem solid var(--iw-primary); outline-offset:-0.2rem;}
+.wrap-assess-question .opinion-area .list li .opinion-score-area .form-check [type='radio']:checked:focus + label {outline-offset:-0.6rem;}
+.wrap-assess-question .opinion-area .list li .opinion-score-area .form-check [type='radio'] + label::before {left:2.4rem; top:2.1rem;}
+.wrap-assess-question .opinion-area .list li .opinion-score-area .form-check [type='radio'] + label::after {left:2.9rem; top:2.6rem;}
+.wrap-assess-question .opinion-area .list li .opinion-score-area .form-check [type='radio'] + label .score {position:absolute; right:2.4rem; top:1.6rem; margin:0; padding:0.4rem 1.2rem; color:var(--iw-gray-90); font-size:var(--iw-fz-b-sm); border-radius:3.2rem; background-color:var(--iw-gray-10);}
+.wrap-assess-question .opinion-area .list li .opinion-score-area .form-check [type='radio']:checked + label .score {color:var(--iw-primary-60); font-weight:700; background-color:var(--iw-primary-5);}
+
+
+@media only screen and (max-width:1024px) {
+	.wrap-assess-question .opinion-area {padding:2.4rem;}
+	.wrap-assess-question .opinion-area .tit .block {display:block;}
+	
+	.wrap-assess-question .opinion-area .list li .opinion-score-area .form-check [type='radio'] + label {padding:5rem 1.6rem 6.4rem 1.6rem;}
+	.wrap-assess-question .opinion-area .list li .opinion-score-area .form-check [type='radio'] + label::before {left:1.6rem; top:1.9rem;}
+	.wrap-assess-question .opinion-area .list li .opinion-score-area .form-check [type='radio'] + label::after {left:2.1rem; top:2.4rem;}
+	.wrap-assess-question .opinion-area .list li .opinion-score-area .form-check [type='radio'] + label .score {right:auto; left:1.6rem; top:auto; bottom:1.6rem;}
+}
+
+
+.wrap-assess-question .opinion-area .list li.question-bad {display:none;}
+
+
+
+/* 앱 설치 유도 */
+.iw-modal-auto .modal-wrap .induce-app .info-area {position:relative; padding-top:12rem;}
+.iw-modal-auto .modal-wrap .induce-app .info-area .iw-img {overflow:hidden; display:block; position:absolute; left:calc(50% - 5.2rem); top:0; width:9.6rem; height:9.6rem;}
+.iw-modal-auto .modal-wrap .induce-app .info-area .iw-img img {width:100%; height:100%;}
+.iw-modal-auto .modal-wrap .induce-app .info-area .txt {margin:0; color:var(--iw-gray-90); text-align:center;}
+.iw-modal-auto .modal-wrap .induce-app .btn-wrap {flex-direction:column; align-items:center; flex-wrap:wrap; gap:1.6rem 0; margin-top:2.4rem;}
+.iw-modal-auto .modal-wrap .induce-app .btn-wrap .btn {width:100%;}
+/* 앱에서만 사용 가능 */
+.iw-modal-auto .modal-wrap .induce-app.only-app .info-area {min-height:8rem; padding-top:0; padding-left:8.8rem;}
+.iw-modal-auto .modal-wrap .induce-app.only-app .info-area .iw-img {left:0; width:7.2rem; height:7.2rem;}
+.iw-modal-auto .modal-wrap .induce-app.only-app .div .img-area img {width:100%; height:100%;}
+.iw-modal-auto .modal-wrap .induce-app.only-app .info-area .txt {text-align:left;}
+
+
+
+
+
+
+/* 로그인 / 아이디비밀번호 찾기 / 회원계정, 14세 미만 자녀확인  공통
+========================================================================== */
+.iw-login-member .tit-page-wrap,
+.iw-conts-sm .tit-page-wrap {width:84rem;}
+.iw-login-member .tit-page-wrap.pc-hidden {margin:0 auto;}
+.iw-login-member .conts-wrap,
+.iw-conts-sm .conts-wrap {width:84rem; margin-top:4rem;}
+@media only screen and (max-width:1024px) {
+	.iw-login-member .tit-page-wrap,
+	.iw-conts-sm .tit-page-wrap {width:100%;}
+	.iw-login-member .conts-wrap ,
+	.iw-conts-sm .conts-wrap {width:100%; margin-top:1.6rem;}
+}
+
+
+/* .tit-conts-area {margin:-4.5rem 0 2.4rem 0;} */
+.tit-conts-area {margin:0 0 2.4rem 0;}
+.tit-conts-area p {margin:0; font-weight:700; color:var(--iw-gray-90); word-break:keep-all;}
+.tit-conts-area .tit-fake {padding-right:20.4rem; color:var(--iw-gray-95); font-size:4rem;}
+.tit-conts-area .tit-sub {font-size:2.4rem;}
+.tit-conts-area .reset.sub {margin-top:0.8rem; font-weight:400;}
+
+.iw-login-member .tit-conts-area {margin-top:0;}
+.auth-inner .tit-conts-area {margin-top:0;}
+.iw-conts-sm .tit-conts-area {margin-top:0;}
+
+@media only screen and (max-width:1024px) {
+	.tit-conts-area {margin:0 0 2.4rem 0;}
+	.tit-conts-area .tit-fake {padding-right:0; font-size:2.8rem;}
+	.tit-conts-area p span {display:block;}
+}
+
+/* 비밀번호 찾기 */
+@media only screen and (max-width:1024px) {
+	.iw-login-member .cont-border .title.xlg span {display:block;}
+	.iw-login-member .title.xxlg {text-align:left !important;}
+	.iw-login-member .title.xxlg span {display:block;}
+}
+
+
+
+
+/* 민원서비스 안내 신청방식 선택 모달 */
+[class^='login-for'] {padding-bottom:0.8rem;}
+[class^='login-for'] p {margin:0; word-break:keep-all;}
+[class^='login-for'] .box-info {margin:0 0 2.4rem; padding-top:9.6rem; text-align:center; background-image:url('https://static.gov.kr/content/images/contents/bg-login-invalid.svg'); background-repeat:no-repeat; background-position:top center; background-size:8rem;}
+[class^='login-for'] .box-info .txt {color:var(--iw-gray-90); font-size:var(--iw-fz-md); font-weight:700;}
+[class^='login-for'] .box-info .txt span {display:block;}
+[class^='login-for'] .box-info.invalid {margin-bottom:0;}
+[class^='login-for'] .txt-sub {margin:0.8rem 0 0 0; color:var(--iw-gray-90); font-size:var(--iw-fz-sm); text-align:center;}
+
+[class^='login-for'] .box {margin-top:2.4rem; padding:2rem; color:var(--iw-gray-70); border-radius:1.2rem; border:0.1rem solid var(--iw-secondary-10); background-color:var(--iw-secondary-5);}
+[class^='login-for'] .box .txt {text-align:center;}
+[class^='login-for'] .btn-wrap {margin-top:2.4rem;}
+[class^='login-for'] .btn-wrap-ad {margin-top:2.4rem;}
+
+@media only screen and (max-width:1024px) {
+	[class^='login-for'] {padding-bottom:1.2rem;}
+	[class^='login-for'] .box-info {margin:0 0 1.6rem; padding-top:8rem; background-size:7.2rem;}
+	[class^='login-for'] .box-info .txt {font-size:2.2rem;}
+	[class^='login-for'] .box {margin-top:1.6rem;}
+}
+
+
+
+
+
+
+
+/* 회원가입 > 회원가입완료 등 (완료,실패,변경 안내 등) */
+.box-result-condition {margin:0 auto 4.8rem auto; padding-top:9.6rem; text-align:center; background-repeat:no-repeat; background-position:top center; background-size:8rem;}
+.box-result-condition p {margin:0;}
+.box-result-condition .txt-result p {color:var(--iw-gray-95); font-size:var(--iw-fz-xlg); font-weight:700;}
+.box-result-condition .txt-wrap {margin-top:1.6rem;}
+.box-result-condition .txt-wrap p {color:var(--iw-gray-90); font-size:var(--iw-fz-b-lg);}
+.box-result-condition .txt-wrap .sub {margin-top:0.4rem; color:var(--iw-gray-70); font-size:var(--iw-fz-xsm);}
+
+.box-result-condition-ad {margin:0 auto 4.8rem auto; padding-top:9.6rem; text-align:center; background-repeat:no-repeat; background-position:top center; background-size:8rem;}
+.box-result-condition-ad p {margin:0;}
+.box-result-condition-ad .txt-result p {color:var(--iw-gray-95); font-size:var(--iw-fz-xlg); font-weight:700;}
+.box-result-condition-ad .txt-wrap {margin-top:1.6rem;}
+.box-result-condition-ad .txt-wrap p {color:var(--iw-gray-90); font-size:var(--iw-fz-b-lg);}
+.box-result-condition-ad .txt-wrap .sub {margin-top:0.4rem; color:var(--iw-gray-70); font-size:var(--iw-fz-xsm);}
+
+
+/* 성공, 완료 */
+.box-result-condition.success {background-image:url('https://static.gov.kr/content/images/common/bg/bg-result-success.svg');}
+.box-result-condition.success .txt {color:var(--iw-primary-60);}
+.box-result-condition-ad.success {background-image:url('https://static.gov.kr/content/images/common/bg/bg-result-success.svg');}
+.box-result-condition-ad.success .txt {color:var(--iw-primary-60);}
+
+/* 실패 */
+.box-result-condition.fail {background-image:url('https://static.gov.kr/content/images/common/bg/bg-result-fail.svg');}
+.box-result-condition.fail .txt {color:var(--iw-danger-60);}
+.box-result-condition-ad.fail {background-image:url('https://static.gov.kr/content/images/common/bg/bg-result-fail.svg');}
+.box-result-condition-ad.fail .txt {color:var(--iw-danger-60);}
+
+/* 안내 */
+.box-result-condition.info {background-image:url('https://static.gov.kr/content/images/common/bg/bg-result-info.svg');}
+.box-result-condition.info .txt {color:var(--iw-primary-60);}
+.box-result-condition-ad.info {background-image:url('https://static.gov.kr/content/images/common/bg/bg-result-info.svg');}
+.box-result-condition-ad.info .txt {color:var(--iw-primary-60);}
+
+@media only screen and (max-width:1024px) {
+	.box-result-condition {margin:0 0 2.4rem 0; padding-top:8rem; background-size:7.2rem;}
+	.box-result-condition .txt-wrap {margin-top:0.8rem;}
+	.box-result-condition .txt-wrap .sub {margin-top:0.8rem;}
+	.box-result-condition .txt-wrap span {display:block;}
+
+	.box-result-condition-ad {margin:0 0 2.4rem 0; padding-top:8rem; background-size:7.2rem;}
+	.box-result-condition-ad .txt-wrap {margin-top:0.8rem;}
+	.box-result-condition-ad .txt-wrap .sub {margin-top:0.8rem;}
+	.box-result-condition-ad .txt-wrap span {display:block;}
+}
+@media only screen and (max-width:767px) {
+	.box-result-condition .txt-wrap span {display:inline;}
+}
+
+
+
+/* 회원계정 , 로그인 > 아이디 찾기, 비밀번호 찾기 등 (하단 버튼영역 가로 사이즈 조절) */
+.wrap-member {width:38.4rem; margin:0 auto;}
+.btn-wrap.wrap-member .btn {flex-shrink:1; width:100%;}
+
+@media only screen and (max-width:1024px) {
+	.wrap-member {flex-direction:column; width:100%;}
+	.title.xxlg.a-c + .wrap-member {margin-top:0.8rem;}
+}
+
+/* section 밖에 있는 btn-wrap */
+@media only screen and (max-width:1024px) {
+	.iw-login-member .conts-wrap > .btn-wrap {padding-top:0.8rem;}
+	.iw-login-member .conts-wrap > .btn-wrap-ad {padding-top:0.8rem;}
+}
+
+
+/* 도움링크영역 */
+.help-info-link.any-id-only {margin-top:4rem; padding-top:4rem; border-top:0.1rem solid var(--iw-gray-40);}
+.help-info-link .block {display:flex; gap:0.8rem 1.6rem; flex-wrap:wrap; align-items:center;}
+.help-info-link.center .block {justify-content:center;}
+.help-info-link .block .txt {margin:0; color:var(--iw-gray-90); font-size:var(--iw-fz-sm); font-weight:700;}
+.help-info-link .block .btn-txt {text-decoration:none; color:var(--iw-gray-90);}
+.help-info-link .block .btn-txt:hover {text-decoration:underline;}
+
+.help-info-link-ad .block {display:flex; flex-direction:row; align-items:center; justify-content:center; gap:0.8rem;}
+.help-info-link-ad .block .txt {margin:0; color:var(--iw-gray-90); font-size:var(--iw-fz-sm); font-weight:700;}
+.help-info-link-ad .block .btn-txt {text-decoration:none; color:var(--iw-gray-90);}
+.help-info-link-ad .block .btn-txt:hover {text-decoration:underline;}
+
+@media only screen and (max-width:767px) {
+	.help-info-link-ad .block {flex-direction:column;}
+}
+
+/* 도움링크영역 상단 라인 있는 경우 :아이디 찾기 */
+.help-info-link.line {padding-top:4rem; border-top:0.1rem solid var(--iw-gray-40);}
+.help-info-link.line.center .block {justify-content:flex-start;}
+@media only screen and (max-width:1024px) {
+	.help-info-link.line {padding-top:0; border-top:none;}
+	.help-info-link.center .block {flex-direction:column; justify-content:center;}
+}
+
+/* 모달안에 들어가는 경우 */
+.iw-modal-auto .help-info-link {margin-top:3.2rem;}
+.iw-modal-auto .help-info-link-ad {margin-top:3.2rem;}
+@media only screen and (max-width:767px) {
+	.iw-modal-auto .help-info-link {margin-top:2.4rem;}
+	.iw-modal-auto .help-info-link-ad {margin-top:2.4rem;}
+}
+
+/* 본인확인 인증방법 선택 , 아이디/비밀번호 찾기 방법 선택 */
+.select-method-area {display:flex; justify-content:center; gap:var(--iw-gap-6);}
+.select-method-area .method {display:flex; flex-direction:column; align-items:center; width:100%; padding:3.2rem; text-decoration:none; border:0.1rem solid var(--iw-gray-20); border-radius:1.2rem; background-color:var(--iw-gray-5);}
+.select-method-area.half {flex-wrap:wrap; justify-content:flex-start;}
+.select-method-area.half .method {max-width:calc(50% - 1.2rem);}
+
+.select-method-area .method > span {display:block; text-align:center;}
+.select-method-area .method:hover,
+.select-method-area .method:focus {outline:0.2rem solid var(--iw-primary); outline-offset:-0.2rem; border-color:transparent;}
+.select-method-area .method .iconset {margin-bottom:1.2rem;}
+.select-method-area .method .tit {color:var(--iw-gray-90); font-size:var(--iw-fz-sm); font-weight:700;}
+.select-method-area .method .tit span {display:block;}
+.select-method-area .method .txt {margin-top:0.8rem; color:var(--iw-gray-70);}
+
+.select-method-area-ad {display:flex; flex-direction:column; justify-content:flex-start; gap:1.6rem 0;}
+.select-method-area-ad .method {display:flex; flex-direction:row; align-items:flex-start; flex-wrap:wrap; width:100%; padding:2.4rem; text-decoration:none; border:0.1rem solid var(--iw-gray-20); border-radius:1.2rem; background-color:var(--iw-gray-5);}
+.select-method-area-ad .method span {text-align:left;}
+.select-method-area-ad .method:hover,
+.select-method-area-ad .method:focus {outline:0.2rem solid var(--iw-primary); outline-offset:-0.2rem; border-color:transparent;}
+.select-method-area-ad .method .iconset {margin-right:0.8rem;}
+.select-method-area-ad .method .tit {width:calc(100% - 4rem); margin-top:0.2rem; color:var(--iw-gray-90); font-size:var(--iw-fz-sm); font-weight:700;}
+.select-method-area-ad .method .txt {margin-top:0.8rem; color:var(--iw-gray-70);}
+
+@media only screen and (max-width:1024px) {
+	.select-method-area {flex-direction:column; justify-content:flex-start; gap:1.6rem 0; margin-top:0.8rem;}
+	.select-method-area .method {flex-direction:row; align-items:flex-start; flex-wrap:wrap; max-width:none; padding:2.4rem;}
+	.select-method-area.half .method {max-width:none;}
+	.select-method-area .method span {display:inline; text-align:left;}
+	.select-method-area .method .iconset {width:2.4rem; height:2.4rem; margin:0.2rem 0.8rem 0 0;}
+	.select-method-area .method .tit {width:calc(100% - 3.2rem);}
+	.select-method-area .method .tit span {display:inline; margin:0 0.4rem 0 0;}
+	
+	.select-method-area-ad .method .iconset {width:2.4rem; height:2.4rem; margin-top:0.2rem;}
+	.select-method-area-ad .method .tit {width:calc(100% - 3.2rem); margin-top:0;}
+	.select-method-area-ad .method .tit span {display:inline; margin:0 0.4rem 0 0;}
+}
+
+@media only screen and (max-width:359px) {
+	.select-method-area .method .iconset {margin:0 0 0.8rem 0;}
+	.select-method-area .method .tit {width:100%;}
+
+	.select-method-area-ad .method .iconset {margin:0 0 0.8rem 0;}
+	.select-method-area-ad .method .tit {width:100%;}
+}
+
+
+
+/* 회원계정 약관동의, 비회원로그인 등 */
+.iw-modal .box-terms .txt {margin:0; padding:0;}
+.iw-modal .box-terms .list-terms {display:flex; flex-direction:column; row-gap:1.6rem; list-style-type:none; margin:0; padding:0;}
+.iw-modal .box-terms .list-terms > li {margin:0; padding:0;}
+.iw-modal .box-terms .list-terms > li .txt {margin-top:0.8rem; color:var(--iw-gray-70);}
+.iw-modal .box-terms .list-terms .list-number {row-gap:0.8rem; margin:0.8rem 0 0 0.8rem;}
+.iw-modal .box-terms .list-terms .list-number .list-bull li > .txt {margin-left:1.2rem; margin-bottom:1.2rem;}
+
+.iw-modal .box-terms .list-terms .list-bull {margin-top:0.8rem;}
+.iw-modal .box-terms .section-5 > .list-bull {margin-left:0;}
+
+.iw-modal .box-terms .list-number {display:flex; flex-direction:column; row-gap:1.6rem;}
+.iw-modal .box-terms .list-number .list-number {row-gap:0.8rem; margin:0.8rem 0 0 0.8rem;}
+.iw-modal .box-terms .list-number .list-bull {margin:0.8rem 0 0 0.8rem;}
+.iw-modal .box-terms .tbl-wrap .list-number {row-gap:0.8rem;}
+
+.iw-modal .box-terms .list-number .list-bull .list-dash {margin-left:1.2rem; margin-top:1.2rem;}
+
+.iw-modal .box-terms .list-text {display:flex; flex-direction:column; row-gap:1.6rem; list-style-type:none; margin:0; padding:0;}
+.iw-modal .box-terms .list-number .list-text {row-gap:0.8rem; margin:0.8rem 0 0 0.8rem;}
+
+/* .iw-modal .box-terms .refer {margin-top:0.8rem;}  */
+@media only screen and (max-width:1024px) {
+	.iw-modal .box-terms {/* padding:2rem; */}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 회원 유형 선택 */
+.select-member-ad {display:flex; gap:1.6rem; flex-wrap:wrap;}
+.select-member-ad .btn-type {position:relative; width:calc(50% - 0.8rem); min-height:12.4rem; padding:6.7rem 1.6rem 2.7rem; color:var(--iw-gray-90); font-size:1.9rem; font-weight:700; text-align:center; border-radius:1.2rem; border:0.1rem solid var(--iw-gray-20); background-color:var(--iw-gray-5); text-decoration:none;}
+.select-member-ad .btn-type:only-child {width:100%;}
+.select-member-ad .btn-type:hover,
+.select-member-ad .btn-type:focus {outline:0.2rem solid var(--iw-primary); outline-offset:-0.2rem;}
+.select-member-ad .btn-type .iconset {position:absolute; left:calc(50% - 1.6rem); top:2.7rem;}
+@media only screen and (max-width:359px) {
+	.select-member-ad .btn-type {width:100%;}
+}
+
+
+
+
+
+/* 로그인
+========================================================================== */
+/* 로그인 방식 선택 */
+.login-wrap {padding-bottom:4rem; border-bottom:0.1rem solid #8a949e;}
+.login-type-wrap {display:flex; flex-wrap:wrap; gap:2.4rem;}
+.login-type-wrap .login-type {display:flex; flex-direction:column; justify-content:flex-start; position:relative; width:calc((100% - 4.8rem) / 3); padding:3.2rem; text-align:left; vertical-align:top; text-decoration:none; border:0.1rem solid var(--iw-gray-20); border-radius:1.2rem; background-color:var(--iw-gray-5);}
+.login-type-wrap .login-type:hover,
+.login-type-wrap .login-type:focus {outline:0.2rem solid var(--iw-primary); outline-offset:-0.2rem;}
+.login-type-wrap .login-type .badge-wrap {display:none; width:100%; margin-bottom:1.6rem;}
+.login-type-wrap .login-type .iconset {display:inline-flex; position:absolute; left:3.2rem; top:3.2rem;}
+.login-type-wrap .login-type .tit {flex-shrink:0; display:block; width:auto; margin:0; padding:0.3rem 0 0 4rem; color:var(--iw-gray-90); font-size:var(--iw-fz-b-lg); font-weight:700;}
+.login-type-wrap .login-type .txt {flex-shrink:0; display:block; width:100%; margin:1.2rem 0 0 0; color:var(--iw-gray-70); word-break:keep-all;}
+
+.login-wrap-ad {display:flex; flex-direction:column; gap:2.4rem 0; padding:0 0 2.4rem 0; border-bottom:0.1rem solid var(--iw-gray-40); border-left:0; border-right:0;}
+.login-wrap-ad .title span {display:block;}
+.login-type-wrap-ad {display:flex; flex-wrap:wrap; gap:var(--iw-gap-4);}
+.login-type-wrap-ad .login-type {display:flex; flex-direction:column; gap:2.4rem 0; width:calc(50% - 0.8rem); padding:2.4rem; text-align:left; text-decoration:none; border:0.1rem solid var(--iw-gray-20); border-radius:1.2rem; background-color:var(--iw-gray-5);}
+.login-type-wrap-ad .login-type:hover,
+.login-type-wrap-ad .login-type:focus {outline:0.2rem solid var(--iw-primary); outline-offset:-0.2rem;}
+.login-type-wrap-ad .login-type .tit {display:block; margin:0; color:var(--iw-gray-90); font-size:var(--iw-fz-sm); font-weight:700;}
+
+
+@media only screen and (max-width:1024px) {
+	.login-wrap {padding:0 0 2.4rem 0;}
+	.login-wrap .title.xlg span {display:block;}
+	.login-type-wrap {gap:1.6rem;}
+	.login-type-wrap .login-type {align-items:center; width:calc((100% - 2.4rem) / 2); padding:1.6rem;}
+	.login-type-wrap .login-type .iconset {position:static;}
+	.login-type-wrap .login-type .tit {width:100%; margin:0.8rem 0 0 0; padding:0; text-align:center;}
+	.login-type-wrap .login-type .txt {margin:0.8rem 0 0 0;}
+}
+
+
+@media only screen and (max-width:359px) {
+	.login-type-wrap .login-type {max-width:100%; padding:2.4rem;}
+	.login-type-wrap .login-type .badge-wrap {position:static; margin-bottom:1.6rem;}
+	.login-type-wrap-ad .login-type {width:100%;}
+}
+
+/* 생체 인증 - 로그인 */
+.bio-login-section .txt {margin:0; padding:0;}
+.bio-login-section .info-area {display:flex; margin:4.8rem 0 4rem 0; padding:4rem 0; border:1px solid var(--iw-gray-40); border-width:1px 0;}
+.bio-login-section .info-area .info-img {flex-shrink:0; width:50%;}
+.bio-login-section .info-area .info-img .img-area {display:flex; justify-content:center; align-items:center;}
+.bio-login-section .info-area .info-img .img-area .app {position:relative; padding:0 6.4rem 0 0;}
+.bio-login-section .info-area .info-img .img-area .app::after {content:''; flex-shrink:0; display:block; position:absolute; right:2rem; top:calc(50% - 0.8rem); width:2.4rem; height:1.6rem; background:url('https://static.gov.kr/content/images/contents/ico-export-arr.svg') no-repeat center; background-size:contain;}
+.bio-login-section .info-area .info-img .img-area .qr {display:flex; justify-content:center; align-items:center; width:12rem; height:12.6rem; margin-top:2.3rem; padding:1rem; font-size:0; line-height:0; border-radius:1.2rem; border:1px solid var(--iw-gray-20);}
+.bio-login-section .info-area .info-img .img-area .qr img {max-width:100%; max-height:100%;}
+
+.bio-login-section .info-area .info-txt {flex-shrink:0; width:50%; padding:0 0 0 4rem; border-left:1px solid var(--iw-gray-20);}
+.bio-login-section .info-area .info-txt p {margin:1.6rem 0 0 0; padding:0;}
+.bio-login-section .info-area .info-txt p:first-child {margin-top:0;}
+.bio-login-section .info-area .info-txt .list-number li {margin:1.6rem 0 0 0;}
+.bio-login-section .info-area .info-txt .list-number li:first-child {margin-top:0;}
+.bio-login-section .info-area .info-txt .btn-wrap {display:block; margin:2.4rem 0 0 0;}
+@media only screen and (max-width:1024px) {
+	.bio-login-section .info-area {flex-direction:column; margin:2.4rem 0 2.44rem 0; padding:2.4rem 0;}
+	.bio-login-section .info-area .info-img {width:100%;}
+	.bio-login-section .info-area .info-txt {width:100%; margin-top:2.4rem; padding:0; border-left:0;}
+}
+@media only screen and (max-width:767px) {
+	.bio-login-section .info-area .info-img .ico-bio-login-app {width:7rem; height:7.65rem;}
+	.bio-login-section .info-area .info-img .ico-bio-login-qr {width:6rem; height:6rem; margin-top:0;}
+}
+
+
+
+
+/* ico-export-arr.svg */
+
+/* 생체 인증 - 재등록 로그인 */
+.login-wrap .iw-disclosure-list {margin-top:2.4rem;}
+.login-wrap .iw-disclosure .iw-disclosure-cont p {margin:1.6rem 0 0 0;}
+.login-wrap .iw-disclosure .iw-disclosure-cont p:first-child {margin-top:0;}
+.login-wrap .iw-disclosure .iw-disclosure-cont .list-number li {margin-top:0.8rem}
+.login-wrap .iw-disclosure .iw-disclosure-cont .list-number li:first-child {margin-top:0;}
+.login-wrap .iw-disclosure .iw-disclosure-cont .btn-wrap {display:block; margin-top:2.4rem;}
+
+/* 생체인증 - 등록 */
+.box-bio-icons {display:flex; justify-content:center; align-items:center; gap:0 2.4rem; margin-bottom:2.4rem;}
+.box-bio-icons .icon {flex-shrink:0; display:inline-flex; justify-content:center; align-items:center; width:6.4rem; height:6.4rem; margin:0; padding:0; border:1px solid #cdd1d5; border-radius:6.4rem;}
+.box-bio-icons .icon .iconset {flex-shrink:0; width:3.2rem; height:3.2rem;}
+
+
+/* 생체인증 등록 완료, 해지 완료 */
+.box-bio-regi {padding:4.8rem 0 0 0; background-position:center 0; background-repeat:no-repeat;}
+.box-bio-regi .iconset {display:block; margin:0 auto 2.4rem auto;}
+.box-bio-regi p {margin:0; padding:0; text-align:center;}
+.box-bio-regi .txt-01 {color:var(--iw-gray-90); font-size:var(--iw-fz-md); font-weight:700;}
+.box-bio-regi .txt-02 {margin-top:0.8rem; color:var(--iw-gray-70);}
+.box-bio-regi .btn-wrap {margin-top:4rem;}
+
+/* 개인용 법인용 선택 */
+.iw-modal .select-certificate {display:flex; gap:0.8rem; padding-bottom:0.8rem;}
+.iw-modal .select-certificate .btn-type {display:flex; flex-direction:column; justify-content:center; align-items:center; gap:0.8rem 0; width:100%; min-height:14rem; padding:1.6rem; color:var(--iw-gray-90); font-size:var(--iw-fz-b-lg); font-weight:700; text-align:center; border-radius:1.2rem; border:0.1rem solid var(--iw-gray-20); background-color:var(--iw-gray-5); text-decoration:none;;}
+.iw-modal .select-certificate .btn-type:only-child {width:100%;}
+.iw-modal .select-certificate .btn-type:hover,
+.iw-modal .select-certificate .btn-type:focus {outline:0.2rem solid var(--iw-primary); outline-offset:-0.2rem;}
+
+/* 인증서 선택 모달 */
+.iw-modal .select-certificate.row {flex-wrap:wrap; gap:1.2rem;}
+.iw-modal .select-certificate.row .btn-type {flex-direction:row; justify-content:flex-start; gap:0 0.8rem; width:100%; min-height:auto; padding:2.4rem; text-align:left;}
+
+
+@media only screen and (max-width:1024px) {
+	.iw-modal .select-certificate .btn-type {min-height:12.4rem;}
+}
+
+
+
+/* 아이디 로그인 */
+.login-box {display:flex; padding:4rem 0; border:0.1rem solid var(--iw-gray-40); border-left:0; border-right:0;}
+.login-box .input-area {display:flex; flex-direction:column; gap:2.4rem 0; width:100%; padding-right:4rem; border-right:0.1rem solid var(--iw-gray-20);}
+.login-box .input-area .link-wrap {text-align:center;}
+.login-box .input-area .link-wrap span {display:inline-block; position:relative; margin-right:1.3rem;}
+.login-box .input-area .link-wrap span:last-child {margin-right:0;}
+.login-box .input-area .link-wrap span:before {display:block; position:absolute; left:-0.9rem; top:calc(50% - 0.8rem); content:''; width:0.1rem; height:1.6rem; background-color:var(--iw-color-border-gray-light);}
+.login-box .input-area .link-wrap span:first-child:before {display:none;}
+.login-box .input-area .link-wrap .btn-txt {gap:0; padding:0.2rem; text-decoration:none; color:var(--iw-gray-90);}
+.login-box .input-area .link-wrap .btn-txt:hover {text-decoration:underline;}
+.login-box .method-area {width:100%; padding-left:4rem;}
+
+.login-box-ad {padding-bottom:2.4rem; border-bottom:0.1rem solid var(--iw-gray-40);}
+.login-box-ad .input-area {display:flex; flex-direction:column; gap:1.6rem 0; padding-bottom:2.4rem; border-bottom:0.1rem solid var(--iw-gray-20);}
+.login-box-ad .input-area .link-wrap {text-align:center;}
+.login-box-ad .input-area .link-wrap span {display:inline-block; position:relative; margin-right:1.3rem;}
+.login-box-ad .input-area .link-wrap span:last-child {margin-right:0;}
+.login-box-ad .input-area .link-wrap span:before {display:block; position:absolute; left:-0.9rem; top:calc(50% - 0.8rem); content:''; width:0.1rem; height:1.6rem; background-color:var(--iw-color-border-gray-light);}
+.login-box-ad .input-area .link-wrap span:first-child:before {display:none;}
+.login-box-ad .input-area .link-wrap .btn-txt {gap:0; padding:0.2rem; text-decoration:none; color:var(--iw-gray-90);}
+.login-box-ad .input-area .link-wrap .btn-txt:hover {text-decoration:underline;}
+.login-box-ad .method-area {width:100%; margin-top:2.4rem;}
+
+@media only screen and (max-width:1024px) {
+	.login-box {flex-direction:column; gap:2.4rem 0; padding:0 0 2.4rem 0; border-top:none;}
+	.login-box .input-area {gap:1.6rem 0; padding-right:0; padding-bottom:2.4rem; border-right:none; border-bottom:0.1rem solid var(--iw-color-border-gray-light);}
+	.login-box .method-area {padding:0;}
+}
+
+
+/* 아이디로그인 > 비밀번호5회오류 > 비밀번호재설정 */
+.iw-login-member .box-user-id {display:flex; align-items:center; gap:0 1.6rem; width:34.4rem; padding:1.6rem; border-radius:0.8rem; background-color:var(--iw-secondary-5);}
+.iw-login-member .box-user-id .iconset {justify-content:center; align-items:center; width:5.6rem; height:5.6rem; border-radius:5.6rem; background-color:#fff;}
+.iw-login-member .box-user-id .iconset::after {width:3.2rem; height:3.2rem;}
+.iw-login-member .box-user-id .txt-area .tit {margin:0; font-size:var(--iw-fz-b-sm); color:var(--iw-gray-90);}
+.iw-login-member .box-user-id .txt-area .id {color:var(--iw-gray-90);}
+
+.iw-login-member .box-user-id-ad {display:flex; align-items:center; gap:0 1.6rem; width:34.4rem; padding:1.6rem; border-radius:0.8rem; background-color:var(--iw-secondary-5);}
+.iw-login-member .box-user-id-ad .iconset {justify-content:center; align-items:center; width:5.6rem; height:5.6rem; border-radius:5.6rem; background-color:#fff;}
+.iw-login-member .box-user-id-ad .iconset::after {width:3.2rem; height:3.2rem;}
+.iw-login-member .box-user-id-ad .txt-area .tit {margin:0; font-size:var(--iw-fz-b-sm); color:var(--iw-gray-90);}
+.iw-login-member .box-user-id-ad .txt-area .id {color:var(--iw-gray-90);}
+
+@media only screen and (max-width:1024px) {
+	.iw-login-member .box-user-id {gap:0 0.8rem; width:100%;}
+	.iw-login-member .box-user-id .iconset {width:4.8rem; height:4.8rem; border-radius:4.8rem;}
+	.iw-login-member .box-user-id .iconset::after {width:2.4rem; height:2.4rem;}
+	
+	.iw-login-member .box-user-id-ad {gap:0 0.8rem; width:100%;}
+	.iw-login-member .box-user-id-ad .iconset {width:4.8rem; height:4.8rem; border-radius:4.8rem;}
+	.iw-login-member .box-user-id-ad .iconset::after {width:2.4rem; height:2.4rem;}
+}
+
+
+
+
+
+/* 아이디 찾기 > 아이디 찾기 결과 > 조회 성공 > 개인 */
+.box-find-id {width:100%; padding:4rem; border-radius:1.2rem; background-color:var(--iw-secondary-5);}
+.box-find-id p {margin:0; text-align:center;}
+.box-find-id hr {margin:3.2rem 0; border:none; border-bottom:0.1rem dashed var(--iw-gray-30);}
+.box-find-id .result-area .txt {color:var(--iw-gray-90); font-size:var(--iw-fz-lg); font-weight:700;}
+.box-find-id .result-area .txt .id {color:var(--iw-primary-60);}
+.box-find-id .txt-area {text-align:center;}
+.box-find-id .txt-area .list-bull {width:43.2rem; margin:0 auto; text-align:left;}
+.box-find-id .txt-area .txt {color:var(--iw-gray-90);}
+.box-find-id .btn-wrap {flex-wrap:wrap; margin-top:2.4rem;}
+
+
+.box-find-id-ad {width:100%; padding:4rem; border-radius:1.2rem; background-color:var(--iw-secondary-5);}
+.box-find-id-ad p {margin:0; text-align:center;}
+.box-find-id-ad hr {margin:3.2rem 0; border:none; border-bottom:0.1rem dashed var(--iw-gray-30);}
+.box-find-id-ad .result-area .txt {color:var(--iw-gray-90); font-size:var(--iw-fz-lg); font-weight:700;}
+.box-find-id-ad .result-area .txt .id {color:var(--iw-primary-60);}
+.box-find-id-ad .txt-area {text-align:center;}
+.box-find-id-ad .txt-area .list-bull {width:43.2rem; margin:0 auto; text-align:left;}
+.box-find-id-ad .txt-area .txt {color:var(--iw-gray-90);}
+.box-find-id-ad .btn-wrap-ad {flex-wrap:wrap; margin-top:2.4rem;}
+
+@media only screen and (max-width:1024px) {
+	.box-find-id {padding:2.4rem;}
+	.box-find-id hr {margin:2.4rem 0 2rem;}
+	.box-find-id .txt-area .list-bull {width:100%;}
+	.box-find-id .btn-wrap {margin-top:2rem;}
+	
+	.box-find-id-ad {padding:2.4rem;}
+	.box-find-id-ad hr {margin:2.4rem 0 2rem;}
+	.box-find-id-ad .txt-area .list-bull {width:100%;}
+	.box-find-id-ad .btn-wrap-ad {margin-top:2rem;}
+}
+
+@media only screen and (max-width:767px) {
+	.box-find-id .txt-area .txt {display:inline;}
+	.box-find-id-ad .txt-area .txt {display:inline;}
+}
+
+
+
+
+/* 회원계정
+========================================================================== */
+/* 회원가입 > 회원정보입력 > 개인회원 */
+.join-agree-info {padding-top:2.4rem; border-top:0.1rem solid var(--iw-gray-30);}
+.join-agree-info .form-check input[type='checkbox'] + label {color:var(--iw-gray-90);}
+
+.join-agree-info-ad {padding-top:2.4rem; border-top:0.1rem solid var(--iw-gray-30);}
+.join-agree-info-ad .form-check input[type='checkbox'] + label {color:var(--iw-gray-90);}
+
+
+
+
+/* mobile (적응형) */
+/* 회원가입 > 회원정보입력 > 간편인증등록 */
+.info-simple-login-ad .wrap-img img {display:block; width:100%; max-width:32.8rem; margin:0 0 0 auto;}
+.info-simple-login-ad .box-help {margin-top:0;}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 민원서비스
+========================================================================== */
+/* 민원서비스 안내 > 서비스 목록 */
+.apply-list-page .top-search {margin-bottom:4rem;}
+.apply-list-page .top-search .input-area {width:124.8rem; margin:0 auto; padding:0 2.4rem;}
+.apply-list-page .top-search .input-area .input-fn {max-width:48.5rem; height:5.6rem; padding:0 1.6rem; border-radius:0.8rem;}
+.apply-list-page .top-search .input-area .input-fn .input {padding:0; font-size:1.9rem;}
+.apply-list-page .top-search .input-area .input-fn .btn-clear {width:2rem; height:2rem;}
+.apply-list-page .top-search .input-area .input-fn .btn-total-search {width:2.4rem; height:2.4rem;}
+.apply-list-page .top-search .input-area .input-fn .btn-total-search::after {width:2.4rem; height:2.4rem;}
+
+@media only screen and (max-width:1248px) {
+	.apply-list-page .top-search .input-area {width:100%;}
+}
+@media only screen and (max-width:1024px) {
+	.apply-list-page .top-search {margin-bottom:3.2rem;}
+	.apply-list-page .top-search .input-area {padding:0 1.6rem;}
+	.apply-list-page .top-search .input-area .input-fn {max-width:100%;}
+}
+
+.apply-list-page .conts-wrap {position:relative; display:flex; justify-content:space-between; align-items:flex-start; gap:0 6.4rem;}
+.apply-list-page .left {width:100%;}
+.apply-list-page .list-top-util {display:flex; margin-top:0; padding:0; /* padding:2.4rem 0 0 0; */}
+.apply-list-page .list-top-util .list-sort .form-select {height:auto;}
+
+@media only screen and (max-width:1248px) {
+	.apply-list-page .list-top-util .list-sort {flex-direction:row;}
+}
+
+@media only screen and (max-width:1024px) {
+	.apply-list-page .conts-wrap {flex-direction:column; gap:3.2rem 0;}
+	.apply-list-page .list-top-util {padding:1.6rem 0 0 0;}
+	.apply-list-page .list-top-util .list-sort .col:first-child {display:none;}
+}
+
+.apply-list-page .recently-area {flex-shrink:0; position:sticky; top:6rem; width:24.2rem; padding:0; /* padding-top:.8rem; */ transition:.3s;}
+.scroll-up .apply-list-page .recently-area {top:24.5rem;}
+.apply-list-page .recently-area .view {margin-top:2.4rem; padding:2rem; border:0.1rem solid var(--iw-color-border-gray); border-radius:1.2rem;}
+.apply-list-page .recently-area .view:first-child {margin-top:0;}
+.apply-list-page .recently-area .view .tit {margin:0; color:var(--iw-gray-95); font-size:var(--iw-fz-xsm); font-weight:700;}
+.apply-list-page .recently-area .view .title-wrap {display:flex; align-items:flex-start; gap:0.4rem; flex-wrap:wrap;}
+.apply-list-page .recently-area .view .title-wrap .form-select {flex-shrink:0; width:auto; height:auto; padding:0 2.6rem 0 0.4rem; color:var(--iw-gray-90); font-size:var(--iw-fz-xsm); font-weight:700; border:none; background-position:right 0.4rem center;}
+.apply-list-page .recently-area .view .title-wrap .form-select option {font-size:1.7rem;}
+
+@media only screen and (max-width:1024px) {
+	.apply-list-page .recently-area {width:100%; padding-top:0;}
+}
+
+.apply-list-page .recently-area .view .list-recently {margin-top:1.6rem;}
+.apply-list-page .recently-area .view .list-recently .no-data {text-align:left; font-weight:400; font-size:1.7rem; margin-bottom:0;}
+.apply-list-page .recently-area .view .list-recently .no-data::before {display:none;}
+
+.apply-list-page .recently-area .view .list-recently .tag-chip-area {width:100%; gap:1.2rem 0.8rem;}
+.apply-list-page .recently-area .view .list-recently .tag-chip-area .tag-chip {text-decoration:none; flex-shrink:0; max-width:100%;}
+.apply-list-page .recently-area .view .list-recently .tag-chip-area .tag-chip .label {overflow:hidden; display:block; max-width:100%; white-space:nowrap; text-overflow:ellipsis;}
+.apply-list-page .recently-area .view .list-recently .tag-chip-area .tag-chip:hover {text-decoration:underline;}
+
+.apply-list-page .recently-area .view .list-recently ol {margin:0; padding:0; list-style-type:none;}
+.apply-list-page .recently-area .view .list-recently li {margin-top:0.8rem;}
+.apply-list-page .recently-area .view .list-recently li:first-child {margin-top:0;}
+.apply-list-page .recently-area .view .list-recently li .popular {display:flex; justify-content:flex-start; align-items:center; gap:0.8rem; height:4.8rem; padding:0 1.6rem; border-radius:0.8rem; background-color:var(--iw-gray-5); text-decoration:none;}
+
+
+.apply-list-page .recently-area .view .list-recently li span {color:var(--iw-gray-90); font-size:var(--iw-fz-xxsm);}
+.apply-list-page .recently-area .view .list-recently li .number {flex-shrink:0; font-weight:700;}
+.apply-list-page .recently-area .view .list-recently li .txt {overflow:hidden; width:100%; white-space:nowrap; text-overflow:ellipsis;}
+.apply-list-page .recently-area .view .list-recently li .ico-more-right {display:none;}
+
+.apply-list-page .recently-area .view .list-recently li .popular:hover {outline:0.1rem solid #61666b; outline-offset:-0.1rem;;}
+
+.apply-list-page .recently-area .view .list-recently li .popular:hover::after {display:block; flex-shrink:0; content:''; width:2rem; height:2rem; background:url('https://static.gov.kr/content/images/common/ico/ico-more-right.svg') no-repeat center; background-size:contain;}
+
+
+
+
+
+
+
+
+/* 민원서비스 안내 > 서비스 안내 */
+.guide-service-page {display:flex; flex-direction:row-reverse; align-items:flex-start; gap:6.4rem; position:relative;}
+.guide-service-page > .section-1 {width:calc(100% - 30.6rem); gap:8rem 0;}
+.guide-service-page .title {color:var(--iw-gray-95);}
+.guide-service-page .title.lg.refer {margin:1.6rem 0 0.4rem;;}
+.guide-service-page .box-help {margin-top:0;}
+
+.guide-service-page .list-card .list > li {width:calc((100% - 2.4rem) / 2);}
+
+.quick-panel-wrap {flex-shrink:0; display:flex; flex-direction:column; gap:1.6rem 0; position:sticky; top:6rem; width:24.2rem; background-color:#fff; transition:.3s;}
+.scroll-up .quick-panel-wrap {top:24.5rem;}
+.quick-panel-wrap .guide-tit-area .txt {margin:0 0 0.4rem 0;; color:var(--iw-gray-90); font-size:1.3rem;}
+.quick-panel-wrap .guide-tit-area .tit {margin:0; color:var(--iw-gray-95); font-size:var(--iw-fz-xsm); font-weight:700;}
+.quick-panel-wrap .guide-tit-area .title span {display:block;}
+.quick-panel-wrap .list-quick ul {margin:0; padding:0; list-style-type:none;}
+.quick-panel-wrap .list-quick ul li {margin-top:0.4rem;}
+.quick-panel-wrap .list-quick ul li:first-child {margin-top:0;}
+.quick-panel-wrap .list-quick ul li a {display:block; padding:0.4rem 0.8rem; color:var(--iw-gray-70); font-size:var(--iw-fz-b-sm); border-radius:0.4rem; background-color:#fff; text-decoration:none; transition:color .4s, background .2s}
+.quick-panel-wrap .list-quick ul li a:hover {background-color:var(--iw-secondary-5);}
+.quick-panel-wrap .list-quick ul li.active a {color:var(--iw-secondary-80); font-weight:700; background-color:var(--iw-secondary-5);}
+.quick-panel-wrap .btn-wrap {flex-wrap:wrap; gap:0.8rem 0; padding-top:2.4rem; border-top:0.1rem solid var(--iw-color-border-gray);}
+.quick-panel-wrap .btn-wrap .btn {width:100%;}
+
+@media only screen and (max-width:1024px) {
+	.guide-service-page {flex-direction:column; gap:3.2rem 0; padding-bottom:8rem;}
+	.guide-service-page > .section-1 {width:100%;}
+	.guide-service-page .title.lg.refer {margin:0;}
+	.quick-panel-wrap {position:static; width:100%;}
+	.quick-panel-wrap .guide-tit-area {display:none;}
+	.quick-panel-wrap .list-quick ul li {margin-top:0;}
+	.quick-panel-wrap .list-quick ul li a {padding:0.8rem 1.2rem; font-size:var(--iw-fz-b-md);}
+	.quick-panel-wrap .list-quick ul li a:active,
+	.quick-panel-wrap .list-quick ul li a:hover,
+	.quick-panel-wrap .list-quick ul li a:focus,
+	.quick-panel-wrap .list-quick ul li a:visited {background-color:transparent;}
+	.quick-panel-wrap .btn-wrap {position:fixed; left:0; right:0; bottom:0; z-index:5; padding:2.4rem 1.6rem; background-color:#fff;}
+	.guide-service-page .list-card .list > li {width:100%;}
+}
+
+
+.box-overview {padding:2.4rem 0; border:0.1rem solid var(--iw-gray-40); border-right:none; border-left:none;}
+.box-overview .tag-chip-area {margin-bottom:2.4rem; gap:1.2rem 0.8rem;}
+.box-overview .tag-chip-area .tag-chip {padding:0.8rem 1.6rem;}
+.box-overview ul.list-detail {margin:0; padding:0; list-style-type:none;}
+.box-overview .list-detail li {display:flex; gap:2.4rem; margin-top:1.6rem;}
+.box-overview .list-detail li:first-child {margin-top:0;}
+.box-overview .list-detail li p {margin:0; color:var(--iw-gray-95);}
+.box-overview .list-detail li .tit {flex-shrink:0; width:18rem; font-weight:700;}
+.box-overview .list-detail li .txt span {display:block; margin-bottom:0.8rem;}
+.box-overview .list-detail li .txt .btn-txt {padding:0; color:var(--iw-gray-90); margin-right:1.2rem;}
+.box-overview .list-detail li .txt .btn-txt:first-child {margin-right:0;}
+
+
+@media only screen and (max-width:1024px) {
+	.box-overview {padding:2.4rem 0;}
+	.box-overview .list-detail li {flex-direction:column; gap:1.2rem 0; margin-top:2.4rem;}
+	.box-overview .list-detail li:first-child {margin-top:0;}
+}
+
+.guide-service-page .list-number > li {margin-top:4rem;}
+.guide-service-page .list-number > li:first-child {margin-top:0;}
+.guide-service-page .list-number li .title {margin-bottom:2rem;}
+.guide-service-page .list-bull .box-help {margin-top:2rem;}
+
+.box-step-service {max-width:58.8rem; padding:3.2rem; border:0.1rem solid var(--iw-color-border-gray); border-radius:1.2rem;}
+.box-step-service .step-service {margin:0; padding:0; list-style-type:none;}
+.box-step-service .step-service li {position:relative; padding:0 0 3.2rem 5.6rem;}
+.box-step-service .step-service li:last-child {padding-bottom:0;}
+.box-step-service .step-service li::before {display:block; position:absolute; left:2rem; top:0; z-index:-1; content:''; width:0.1rem; height:100%; background-color:var(--iw-secondary-10);}
+.box-step-service .step-service li:last-child::before {display:none;}
+.box-step-service .step-service li .number {display:block; position:absolute; left:0.8rem; top:0; width:2.4rem; height:2.4rem; padding:0 0.4rem; color:#fff; font-size:1.5rem; font-weight:700; text-align:center; line-height:2.4rem; border-radius:0.4rem; background-color:var(--iw-secondary-70);}
+.box-step-service .step-service li .tit-area {margin:0;}
+.box-step-service .step-service li .tit-area .tit {color:#052b57; font-weight:700;}
+.box-step-service .step-service li .btn-wrap {flex-wrap:wrap; gap:0.4rem; margin-top:0.4rem;}
+
+@media only screen and (max-width:1024px) {
+	.box-step-service {max-width:none; padding:2.4rem;}
+	.guide-service-page .list-number > li {margin-top:2.4rem;}
+	.guide-service-page .list-number li .title {margin-bottom:1.2rem;}
+	.guide-service-page .section-1 {gap:4rem;}
+	.guide-service-page .section-1 .title.xxlg {margin-bottom:.4rem;}
+	.guide-service-page .section-2 .title.xxlg {margin-bottom:0;}
+	.guide-service-page .section-4 .title.xlg {margin-bottom:.4rem;}
+	.guide-service-page .section-4 .section-5 {gap:1.2rem 0; margin-top:.8rem;}
+}
+
+
+.guide-service-page .wrap-qr-info .box {display:inline-block; padding:3.2rem; border:0.1rem solid var(--iw-color-border-gray); border-radius:1.2rem;}
+.guide-service-page .wrap-qr-info .box .img-qr {height:8rem;}
+.guide-service-page .wrap-qr-info .box .img-qr img {display:block; height:100%; margin:0 auto;}
+.guide-service-page .wrap-qr-info .box .btn {margin-top:1.6rem;}
+
+.iw-modal .btn-wrap.btn-login-apply {justify-content:space-between; flex-wrap:wrap;}
+.iw-modal .btn-wrap.btn-login-apply .btn {width:calc((100% - 0.8rem) / 2);}
+.iw-modal .btn-wrap.btn-login-apply .btn:first-child {width:100%;}
+@media only screen and (max-width:767px) {
+	.iw-modal .btn-wrap.btn-login-apply {gap:0.8rem 0;}
+	.iw-modal .btn-wrap.btn-login-apply .btn {width:100%;}
+}
+
+/* 민원신청서 작성예시 */
+.write-example-area .img-example {padding:2.4rem; border:0.1rem solid var(--iw-color-border-gray); border-radius:1.2rem;}
+.write-example-area .img-example img {display:block; width:100%;}
+
+.write-example-area .list-desc {margin:2rem 0 0 0; padding:0; list-style-type:none;}
+.write-example-area .list-desc li {margin-top:0.4rem; color:var(--iw-gray-90);}
+.write-example-area .list-desc li:first-child {margin-top:0;}
+
+
+@media only screen and (max-width:767px) {
+	.write-example-area .img-example {padding:2rem;}
+}
+
+
+/* 만족도 평가 */
+.satisfaction-area {display:flex; flex-direction:column; gap:2.4rem 0;}
+.box-satisfaction {padding:3.2rem; border-radius:1.2rem; background-color:var(--iw-gray-5);}
+.box-satisfaction .tit {margin:0 0 2.4rem 0; color:var(--iw-gray-90); font-weight:700;}
+.box-satisfaction .assess-area {display:flex; gap:0 1.2rem;}
+.box-satisfaction .assess-area .btn-assess {display:flex; justify-content:space-between; align-items:center; gap:0 0.8rem; width:100%; min-height:5.6rem; padding:1.2rem 1.6rem; border:none; border-radius:0.8rem; background-color:#fff;}
+.box-satisfaction .assess-area .btn-assess:focus {outline:0.2rem solid var(--iw-primary); outline-offset:-0.2rem;}
+.box-satisfaction .assess-area .btn-assess.on {box-shadow:inset 0 0 0 0.2rem var(--iw-primary);}
+.box-satisfaction .assess-area .btn-assess.on:focus {outline-offset:-0.6rem;}
+.box-satisfaction .assess-area .btn-assess .iconset {flex-shrink:0;}
+.box-satisfaction .assess-area .btn-assess .txt {width:100%; color:var(--iw-gray-90);}
+.box-satisfaction .form-group {margin-top:2.4rem; max-width:none;}
+.box-satisfaction .btn-wrap {margin-top:1.6rem;}
+
+@media only screen and (max-width:1024px) {
+	.satisfaction-area {gap:2rem 0;}
+	.box-satisfaction {padding:2.4rem;}
+	.box-satisfaction .assess-area {flex-direction:column; gap:1.2rem 0;}
+	.box-satisfaction .assess-area .btn-assess {justify-content:center;}
+	.box-satisfaction .assess-area .btn-assess .txt {width:8rem;}
+}
+
+/* 민원서비스 안내 > 서비스 신청 */
+/* tab-spread */
+.tab-spread {margin-bottom:1.6rem;}
+.tab-spread .txt-page {display:inline-flex; align-items:flex-start; gap:0 0.8rem; color:var(--iw-gray-95); font-size:var(--iw-fz-sm); vertical-align:middle;}
+.tab-spread .txt-page::before {display:block; flex-shrink:0; content:''; width:2.4rem; height:2.4rem; margin-top:0.2rem; background-repeat:no-repeat; background-position:center; background-size:contain;}
+
+.tab-spread .box-current {position:relative; min-height:7.8rem; padding:2.4rem 8rem 2.4rem 4rem; border:0.1rem solid var(--iw-color-border-gray); border-radius:1.2rem;}
+.tab-spread .box-current .txt-page::before {background-image:url('https://static.gov.kr/content/images/common/bg/bg-tab-spread-on.svg');}
+.tab-spread .box-current .btn-toggle {display:block; position:absolute; right:3.2rem; top:1.6rem; width:4rem; height:4rem; margin:0; padding:0; border:none; background-color:#fff; background-image:url('https://static.gov.kr/content/images/common/bg/bg-select-arr.svg'); background-repeat:no-repeat; background-position:center; background-size:2.4rem auto; transition:transform .3s;}
+.tab-spread .box-current .btn-toggle.active {transform:rotate(-180deg);}
+.tab-spread .box-spread {display:none; justify-content:center; align-items:center; margin-top:0.6rem;}
+.tab-spread .box-spread.on {display:flex;}
+.tab-spread .box-spread .wrap {display:flex; flex-direction:column; position:relative; width:100%; margin-top:0.6rem; padding:2.4rem 4rem; border:0.1rem solid #61666b; border-radius:1.2rem; background-color:#fff;}
+.tab-spread .box-spread .tit {display:none; margin:0; padding-right:3.2rem; color:var(--iw-gray-90); font-size:var(--iw-fz-xsm); font-weight:700;}
+.tab-spread .box-spread .btn-close-common {display:none; position:absolute; right:2.4rem; top:2.4rem; width:2.4rem; height:2.4rem;}
+.tab-spread .box-spread .btn-close-common::after {width:100%; height:100%;}
+
+.tab-spread .box-spread .list-page {margin:0; padding:0; list-style-type:none;}
+.tab-spread .box-spread .list-page li {margin-top:2.4rem;}
+.tab-spread .box-spread .list-page li:first-child {margin-top:0;}
+.tab-spread .box-spread .list-page li .txt-page {text-decoration:none;}
+.tab-spread .box-spread .list-page li .txt-page:hover {text-decoration:underline;}
+.tab-spread .box-spread .list-page li .txt-page::before {background-image:url('https://static.gov.kr/content/images/common/bg/bg-tab-spread.svg');}
+.tab-spread .box-spread .list-page li.active .txt-page::before {background-image:url('https://static.gov.kr/content/images/common/bg/bg-tab-spread-on.svg');}
+
+@media only screen and (max-width:767px) {
+	.tab-spread .box-current {min-height:5.6rem; padding:1.6rem 4.8rem 1.6rem 1.6rem; border-color:#58616a; border-radius:0.8rem;}
+	.tab-spread .box-current .btn-toggle {right:0.8rem; top:0.8rem; background-position:center right 0.8rem;}
+	.tab-spread .box-current .txt-page {font-weight:700;}
+
+	.tab-spread .box-spread {overflow:hidden; position:fixed; left:0; right:0; top:0; bottom:0; z-index:999990; margin:0; padding:0; background-color:rgba(0,0,0,0.5);}
+	.tab-spread .box-spread .wrap {max-height:100%; min-height:19.6rem; margin-top:0; padding:2.4rem; border:none;}
+	.tab-spread .box-spread .tit {display:block;}
+	.tab-spread .box-spread .select-area {margin-top:1.6rem;}
+	.tab-spread .box-spread .btn-close-common {display:block;}
+}
+
+
+
+
+
+
+/* 토지 구분 */
+.land-area {display:flex; flex-direction:column; gap:0.8rem 0;}
+.land-area .form-wrap {display:flex; gap:0 1.6rem;}
+.land-area p {margin:0;}
+.land-area .form-wrap .form-group.ground {flex-shrink:0; width:24rem;}
+@media only screen and (max-width:1024px) {
+	.land-area .form-wrap {flex-direction:column; gap:1.6rem 0;}
+	.land-area .form-wrap .form-group.ground {width:100%;}
+}
+
+/* 건물 구분 */
+.building-num-area {display:flex; flex-direction:column; gap:0.8rem 0;}
+.building-num-area .form-wrap {display:flex; gap:0 1.6rem;}
+.building-num-area p {margin:0;}
+.building-num-area .form-wrap .form-group.building {flex-shrink:0; width:24rem;}
+@media only screen and (max-width:1024px) {
+	.building-num-area .form-wrap {flex-direction:column; gap:1.6rem 0;}
+	.building-num-area .form-wrap .form-group.building {width:100%;}
+}
+
+
+
+
+/* 하단 메시지 */
+.land-area .form-hint {padding-left:2rem; color:var(--iw-gray-70);}
+.land-area .form-hint::before {background:url('https://static.gov.kr/content/images/common/ico/ico-hint.svg') no-repeat center; background-size:contain;}
+
+.land-area .form-hint.error {color:var(--iw-danger-60);}
+.land-area .form-hint.error::before {background-image:url('https://static.gov.kr/content/images/common/ico/ico-error.svg');}
+
+.land-area .form-hint.warning {color:var(--iw-warning-60);}
+.land-area .form-hint.warning::before {background-image:url('https://static.gov.kr/content/images/common/ico/ico-warning.svg');}
+
+.land-area .form-hint.success {color:var(--iw-success-60);}
+.land-area .form-hint.success::before {background-image:url('https://static.gov.kr/content/images/common/ico/ico-success.svg');}
+
+.land-area .form-hint.info {color:var(--iw-info-60);}
+.land-area .form-hint.info::before {background-image:url('https://static.gov.kr/content/images/common/ico/ico-info.svg');}
+
+
+
+/* 인증 방식 선택 모달 */
+.iw-modal .choice-method {padding-bottom:4rem;}
+.iw-modal .choice-method .btn {width:100%; gap:0 0.8rem; margin-top:0.8rem;}
+.iw-modal .choice-method .btn:first-child {margin-top:0;}
+
+
+.box-contact {display:flex; gap:0 1.6rem; margin-top:6.4rem;}
+.box-contact .contact {display:flex; flex-direction:column; justify-content:center; align-items:flex-start; gap:0.8rem 0; position:relative; width:100%; padding:3.2rem 12.8rem 3.2rem 4rem; border-radius:1.2rem; border:0.1rem solid var(--iw-color-border-gray-light);}
+.box-contact .contact::after {position:absolute; right:4rem; top:calc(50% - 3.2rem); content:''; width:6.4rem; height:6.4rem; border-radius:2.4rem; background-color:#dde9fd;}
+.box-contact .contact p {margin:0;}
+.box-contact .contact .tit {color:var(--iw-gray-90); font-weight:700; word-break:keep-all;}
+.box-contact .contact .tit span {display:block;}
+.box-contact .contact .txt {color:var(--iw-gray-70); font-size:1.5rem; word-break:keep-all;}
+.box-contact .contact .btn-txt {display:inline-block; padding:0; color:var(--iw-gray-90); text-align:left; word-break:keep-all;}
+.box-contact .contact .btn-txt::after { margin-left:0.2rem;}
+.box-contact .contact > .iconset {position:absolute; right:5.5rem; top:calc(50% - 1.6rem); z-index:1;}
+
+@media only screen and (max-width:1248px) {
+	.box-contact .contact .tit span {display:inline;}
+}
+@media only screen and (max-width:1024px) {
+	.box-contact {flex-direction:column; gap:1.6rem 0; margin-top:3.2rem;}
+	.box-contact .contact {padding:2.4rem 10.4rem 2.4rem 2.4rem;}
+	.box-contact .contact::after {right:2.4rem;}
+	.box-contact .contact .tit {font-size:1.7rem;}
+	.box-contact .contact .tit span {display:inline;}
+	.box-contact .contact > .iconset {right:4rem;}
+}
+
+/* 민원서비스 안내 > 신청완료 */
+.service-apply-complete .detail-area {display:flex; flex-direction:column; gap:4rem 0;}
+
+.box-service-detail {padding:4rem; border-radius:1.2rem; background-color:var(--iw-secondary-5);}
+.box-service-detail > .tit {margin:0; color:var(--iw-gray-90); font-size:3.2rem; font-weight:700;}
+.box-service-detail .list-detail {margin-top:2.4rem; padding-top:2.4rem; border-top:0.1rem dashed var(--iw-color-border-gray);}
+.box-service-detail .list-detail ul {margin:0; padding:0; list-style-type:none;}
+.box-service-detail .list-detail ul li {display:flex; gap:2.4rem; margin:2.4rem 0 0 0;}
+.box-service-detail .list-detail ul li:first-child {margin:0;}
+.box-service-detail .list-detail ul li p {margin:0;}
+.box-service-detail .list-detail ul li .tit {flex-shrink:0; width:19.1rem; color:var(--iw-gray-90); font-size:1.9rem; font-weight:700;}
+.box-service-detail .list-detail ul li .txt {color:var(--iw-gray-90); font-size:1.9rem;}
+.box-service-detail .list-detail ul li .txt span {display:inline-block; margin-right:1.6rem;}
+.box-service-detail .list-detail ul li .txt span:last-child {margin-right:0;}
+
+@media only screen and (max-width:1024px) {
+	.service-apply-complete .detail-area {gap:3.2rem 0;}
+	.box-service-detail {padding:3.2rem 2.4rem;}
+	.box-service-detail > .tit {font-size:2.2rem;}
+	.box-service-detail .list-detail ul li {flex-direction:column; gap:0.8rem; margin:1.6rem 0 0 0;}
+	.box-service-detail .list-detail ul li .tit {width:100%;}
+	.box-service-detail .list-detail ul li .txt span {display:inline; margin-right:0;}
+}
+
+
+.wrap-similar-service {display:flex; flex-direction:column; gap:4rem 0; margin-top:6.4rem; padding-top:4rem; border-top:0.1rem solid var(--iw-gray-40);}
+.wrap-similar-service .similar-area .title {margin-bottom:2.4rem;}
+
+@media only screen and (max-width:1024px) {
+	.wrap-similar-service {margin-top:4rem;}
+	.wrap-similar-service .similar-area .title {margin-bottom:1.6rem;}
+	.wrap-similar-service .title.xxlg em {display:block;}
+}
+
+
+/* 민원찾기 > 민신청 적응형 */
+.iw-mo-minwon {margin:0 -1.6rem; padding-bottom:97px;}
+.iw-mo-minwon .iw-user {margin:0 0 2.4rem 0; padding:0; font-weight:700; font-size:2.8rem; color:var(--iw-gray-90)}
+.iw-mo-minwon .iw-user .text-primary {display:block;}
+.iw-mo-minwon .tit-conts-area {position:sticky; left:0; right:0; top:64px; z-index:3; margin:0; padding:0 0 1.2rem 0; background-color:#fff; box-shadow:0 4px 8px rgba(255, 255, 255, 1);}
+.iw-mo-minwon .tit-conts-area .tit-fake {padding:0 1.6rem; font-size:2.4rem;}
+.iw-mo-minwon .box-alert {margin:0 1.6rem 4rem 1.6rem;}
+
+.section-mo-minwon {display:flex; flex-direction:column; gap:0; padding:0 1.6rem;}
+
+.section-mo-minwon .motion-block {display:none; overflow:hidden; visibility:hidden; height:0;  flex-direction:column; gap:var(--iw-gap-4) 0;}
+.section-mo-minwon .motion-block.on {display:flex; overflow:visible; visibility:visible; height:auto;}
+.section-mo-minwon .motion-block.on + .motion-block.on {margin-top:6.4rem;}
+.section-mo-minwon .motion-block .document-bundle {display:flex; flex-direction:column; gap:6.4rem 0;}
+.section-mo-minwon .motion-block .document-bundle .docu {display:flex; flex-direction:column; gap:1.6rem 0;}
+.section-mo-minwon .motion-block .document-bundle .reconfirm {text-align:right;}
+.section-mo-minwon .motion-block .document-bundle .reconfirm .btn-txt {text-decoration:underline;}
+
+.section-mo-minwon .form-group {max-width:100%;}
+.section-mo-minwon .chk-area {gap:1.2rem 0;}
+
+
+
+
+/* 주소찾기 시군구, 읍면동 전용 */
+.iw-mo-minwon .mo-address-bundle .tit-area {margin-bottom:0.8rem;}
+.iw-mo-minwon .mo-address-bundle .tit-area em {font-size:var(--iw-fz-b-sm);}
+.iw-mo-minwon .mo-address-bundle .btn-address-value {display:block; position:relative; width:100%; min-height:5.6rem; margin:0; padding:0.8rem 0; color:var(--iw-gray-70); font-size:var(--iw-fz-b-lg); text-align:left; border:0; border-bottom:1px solid var(--iw-gray-60); background-color:#fff;}
+.iw-mo-minwon .mo-address-bundle .btn-address-value::after {content:''; display:block; position:absolute; right:0; top:50%; transform:translateY(-50%) rotate(180deg); width:2.4rem; height:2.4rem; background:url('https://static.gov.kr/content/images/common/ico/ico-arr-toggle.svg') no-repeat 0 0;}
+.iw-mo-minwon .mo-address-bundle .form-hint {margin-top:0.8rem;}
+
+/* 민원찾기 > 민신청 적응형 - 주소선택 레이어 */
+.iw-modal.address-layer {display:flex; visibility:hidden;}
+.iw-modal.address-layer.on {visibility:visible; align-items:flex-end;}
+.iw-modal.address-layer .modal-wrap {align-items:flex-end; width:100%; padding:15.4rem 0 0 0;}
+.iw-modal.address-layer .modal-wrap .modal-dialog {margin-bottom:-100vh; padding:2.4rem 1.6rem 1.6rem 1.6rem; border-radius:1.2rem 1.2rem 0 0; transition:margin 0.3s ease-in-out;}
+.iw-modal.address-layer .modal-wrap .modal-dialog .modal-body {padding:0;}
+.iw-modal.address-layer.on .modal-wrap .modal-dialog {margin-bottom:0;}
+.choice-address-area {height:100%;}
+.choice-address-area .tit-txt {position:sticky; left:0; top:0; display:flex; align-items:center; gap:0 0.8rem; width:100%; margin:0; padding:0.2rem 0 3.2rem 0; font-weight:700; font-size:var(--iw-fz-b-lg); color:var(--iw-gray-90); background-color:#fff;}
+.choice-address-area .tit-txt .btn-prev {flex-shrink:0; display:block; width:2.4rem; height:2.4rem; margin:0; padding:0; border:0; background:url('https://static.gov.kr/content/images/common/ico/ico-prev.svg') no-repeat center; background-size:2.4rem;}
+.choice-address-area .list-address {list-style-type:none; margin:0; padding:0;}
+.choice-address-area .list-address .button {display:block; width:100%; height:5.6rem; margin:0; padding:0 0.8rem; text-align:left; border:0; background:url('https://static.gov.kr/content/images/common/ico/ico-arr-right.svg') no-repeat right 8px center; background-size:24px;}
+
+.bottom-fixed {position:fixed; left:0; right:0; bottom:0; z-index:5; padding:2.4rem 1.6rem; border-top:1px solid var(--iw-gray-30); background-color:#fff;}
+
+
+
+
+
+
+
+
+
+/* layer 같이 찾는 (서비스) */
+.with {flex-shrink:0; display:inline-flex; position:relative;}
+.with .layer-with {display:none; position:absolute; right:-1.21rem; top:4rem; z-index:2; border-radius:1.2rem; border:0.2rem solid var(--iw-primary); background-color:#fff;}
+.with .layer-with.on {display:block;}
+.with .layer-with::before {overflow:hidden; content:''; display:block; position:absolute; right:0.6rem; top:-1.2rem; width:2.8rem; height:1.2rem; background:url('https://static.gov.kr/content/images/common/bg/bg-with-arr.svg') no-repeat top; background-size:2.3rem 1.4rem;}
+.with .layer-with .with-wrap {position:relative; width:37.6rem; padding:2.4rem;}
+.with .layer-with .with-wrap .tit {margin:0; padding:0 3.6rem 1.6rem 0; font-size:1.9rem; font-weight:700;}
+.with .layer-with .with-wrap .tit em {color:var(--iw-primary-60);}
+.with .layer-with .with-wrap .list-bull {display:flex; flex-direction:column; gap:.8rem 0;}
+.with .layer-with .with-wrap .list-bull li {display:flex; justify-content:space-between; align-items:center; gap:.8rem; padding-left:1.2rem;}
+.with .layer-with .with-wrap .list-bull li::before {top:1.2rem; left:0;}
+.with .layer-with .with-wrap .btn-close-common {position:absolute; right:2.4rem; top:2.4rem;}
+
+/* layer QR코드 보기 */
+.platform-qr {position:relative;}
+.platform-qr .layer-qr {display:none; position:absolute; left:0; top:2.8rem; z-index:2; border-radius:0.8rem; border:0.1rem solid var(--iw-color-border-gray-light); background-color:#fff; box-shadow:0 0.2rem 0.6rem 0 rgba(0, 0, 0, 0.10);}
+.platform-qr .layer-qr.on {display:block;}
+.platform-qr .layer-qr .qr-wrap {position:relative; padding:1.6rem;}
+.platform-qr .layer-qr .qr-wrap .tit {margin:0 0 1.2rem 0; padding-right:2.4rem; font-weight:700; color:var(--iw-gray-90); font-size:var(--iw-fz-b-sm);}
+.platform-qr .layer-qr .qr-wrap .list-qr {display:flex; gap:1.6rem; margin:0; padding:0; list-style-type:none;}
+.platform-qr .layer-qr .qr-wrap .list-qr li {display:flex; flex-direction:column; align-items:center; gap:0.8rem;}
+.platform-qr .layer-qr .qr-wrap .list-qr li .img img {display:block; width:8rem; height:8rem;}
+.platform-qr .layer-qr .qr-wrap .list-qr li .store {flex-shrink:0; display:flex; align-items:center; gap:0 0.4rem; margin:0; color:var(--iw-gray-70); font-size:var(--iw-fz-b-sm); white-space:nowrap;}
+.platform-qr .layer-qr .qr-wrap .btn-close-common {position:absolute; right:1.6rem; top:1.6rem;}
+
+.keyword {font-weight:700; color:var(--iw-primary-60);}
+
+/* 목록 - 카드형 (공통) */
+.list-card .keyword {background-color:var(--iw-primary-5);}
+.list-card .list {display:flex; flex-wrap:wrap; gap:2.4rem; width:100%; list-style-type:none; margin:0; padding:0;}
+.list-card .list > li {flex-shrink:0; width:calc((100% - 4.8rem) / 3);  margin:0; padding:0;}
+.list-card .card-wrap {display:flex; width:100%; height:100%; padding:2.4rem; border-radius:1.2rem; border:0.1rem solid var(--iw-gray-30);}
+.list-card .card-wrap p {margin:0; padding:0;}
+.list-card .card-wrap .chk-area {flex-shrink:0; width:100px;}
+.list-card .card-wrap .cont-area {display:flex; flex-direction:column; width:100%; position:relative;}
+.list-card .card-wrap .cont-area .card-header {display:flex; justify-content:space-between; align-items:flex-start; gap:0 2.4rem;}
+.list-card .card-wrap .cont-area .card-body {display:flex; flex-direction:column; justify-content:space-between; margin:0;}
+.list-card .card-wrap .cont-area .card-footer {margin-top:auto; padding-top:2.4rem;}
+.list-card .card-wrap .cont-area .card-footer .btn-wrap {gap:0.8rem;}
+
+.list-card .card-wrap .cont-area .badge-wrap {margin-bottom:1.6rem;}
+.list-card .card-wrap .cont-area .util-area {flex-shrink:0; display:flex; align-items:center; gap:0 1.6rem;}
+.list-card .card-wrap .cont-area .util-area .btn-txt {align-items:center; padding:0.2rem 0.4rem 0.2rem 0.3rem; color:var(--iw-gray-90); border-radius:0.4rem;}
+.list-card .card-wrap .cont-area .util-area .btn-txt::after {margin-bottom:0;}
+.list-card .card-wrap .cont-area .util-area .ico-like .txt,
+.list-card .card-wrap .cont-area .util-area .ico-with .txt {overflow:hidden; position:absolute; width:0.1rem; height:0.1rem; margin:-0.1rem; padding:0; clip:rect(0 0 0 0); white-space:nowrap; border:0;}/* 카드형만 숨김처리 */
+.list-card .card-wrap .cont-area .info-area {display:block; text-decoration:none; transition:0.4s ease-in-out;}
+.list-card .card-wrap .cont-area .info-area .tit {display:inline; color:var(--iw-gray-90); font-size:var(--iw-fz-b-lg); font-weight:700; vertical-align:middle;}
+.list-card .card-wrap .cont-area .info-area .tit .iconset {margin-left:0.2rem;}
+.list-card .card-wrap .cont-area .info-area .tit .iconset::after {/* background-position:top -0.1rem right 50%; */}
+.list-card .card-wrap .cont-area .info-area .txt {overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; text-overflow:ellipsis; white-space:normal; max-width:100%; margin-top:1.2rem; color:var(--iw-gray-70);}
+.list-card .card-wrap .cont-area .info-area:hover .tit {text-decoration:underline;}
+.list-card .card-wrap .cont-area .info-area:hover .txt {text-decoration:underline;}
+.list-card .card-wrap .cont-area .date {margin:1rem 0 0 0; color:var(--iw-gray-90); font-size:var(--iw-fz-b-sm);}
+.list-card .card-wrap .cont-area .sub-area {display:flex; flex-wrap:wrap; align-items:center; gap:0.8rem; margin-top:1.2rem;}
+.list-card .card-wrap .cont-area .tag-chip-area {gap:0.6rem;}
+.list-card .card-wrap .cont-area .tag-chip-area:hover .label {text-decoration:none;}
+.list-card .card-wrap .cont-area .certify {display:flex; align-items:center; gap:0 0.8rem;}
+.list-card .card-wrap .cont-area .certify .txt {position:relative; padding-left:0.8rem; color:var(--iw-gray-90); font-size:var(--iw-fz-b-sm);}
+.list-card .card-wrap .cont-area .certify .txt::before {content:''; display:block; position:absolute; left:0; top:50%; width:0.1rem; height:1.6rem; margin-top:-0.8rem; background-color:var(--iw-color-border-gray-light);}
+.list-card .card-wrap .cont-area .certify .txt:first-child {padding-left:0;}
+.list-card .card-wrap .cont-area .certify .txt:first-child::before {display:none;}
+
+.list-card .card-wrap .cont-area .link-area {width:100%; margin-top:1.2rem;}
+.list-card .card-wrap .cont-area .link-area .link {display:block;}
+.list-card .card-wrap .cont-area .link-area .link a {padding-right:2rem; color:var(--iw-gray-90); font-size:var(--iw-fz-b-sm); background-image:url('https://static.gov.kr/content/images/common/ico/ico-arr-right.svg'); background-repeat:no-repeat; background-position:right center; background-size:1.6rem;}
+.list-card .card-wrap .cont-area .link-area .link a:last-child {padding-right:0; background-image:none;}
+.list-card .card-wrap .cont-area .link-area .link a.btn-txt {overflow:hidden; display:inline-block; position:relative; max-width:100%; padding:0 1.8rem 0 0; color:var(--iw-primary); white-space:nowrap; text-overflow:ellipsis; vertical-align:middle; background-image:none;}
+.list-card .card-wrap .cont-area .link-area .link a.btn-txt::after {display:block; position:absolute; right:0; top:0.4rem; width:1.6rem; height:1.6rem; background-image:url('https://static.gov.kr/content/images/common/ico/ico-new-window-blue.svg');}
+
+
+.list-card .card-wrap .cont-area .link-area .platform {display:flex; gap:0.8rem; flex-wrap:wrap;}
+.list-card .card-wrap .cont-area .link-area .platform .div {display:inline-flex; align-items:flex-start;}
+.list-card .card-wrap .cont-area .link-area .platform .btn-txt {align-items:flex-start; gap:0 0.5rem; padding:0 0.2rem 0 0.1rem; color:var(--iw-gray-90); font-size:var(--iw-fz-b-sm); text-decoration:underline; text-underline-offset:0.4rem;}
+.list-card .card-wrap .cont-area .link-area .platform .btn-txt.on {background-color:var(--iw-secondary-5);}
+.list-card .card-wrap .cont-area .link-area .platform .btn-txt::before {flex-shrink:0; margin-bottom:0; margin-top:0.1rem;}
+
+/* .list-card .card-wrap .cont-area .btn-wrap {gap:0.8rem;} */
+
+/* 목록형 */
+.list-card.row .list {gap:0; border-top:0.1rem solid var(--iw-gray-20);}
+.list-card.row .list > li {width:100%;}
+.list-card.row .card-wrap {height:auto; padding:2.4rem 0; border-radius:0; border:0; border-bottom:0.1rem solid var(--iw-gray-20);}
+.list-card.row .card-wrap .cont-area .card-body {margin:0; padding-right:13.8rem;}
+.list-card.row .card-wrap .cont-area .util-area .btn-txt {padding:0.2rem 0;}
+.list-card.row .card-wrap .cont-area .util-area .ico-like .txt,
+.list-card.row .card-wrap .cont-area .util-area .ico-with .txt {overflow:visible; position:static; width:auto; height:auto; margin:0; clip:auto; white-space:unset; border:inherit;}/* 카드형만 숨김처리 */
+.list-card.row .card-wrap .cont-area .link-area .platform {gap:1.2rem;}
+.list-card.row .card-wrap .cont-area .card-footer {position:absolute; right:0; top:4rem; z-index:1; margin-top:0; padding-top:0;}
+.list-card.row .card-wrap .cont-area .card-footer .btn-wrap {flex-direction:column;}
+
+
+
+/* 사이트메뉴명, 추천사이트 일때만 */
+.list-card .card-wrap.menu .cont-area .badge-wrap {flex-shrink:0;}
+.list-card .card-wrap.menu .cont-area .link-wrap {display:flex; flex-wrap:wrap; gap:0.8rem;}
+.list-card .card-wrap.menu .cont-area .link-wrap a {color:var(--iw-gray-90); font-size:1.9rem; font-weight:700; padding-right:3.2rem; background-image:url('https://static.gov.kr/content/images/common/ico/ico-arr-right.svg'); background-repeat:no-repeat; background-position:right center; background-size:2.4rem;}
+.list-card .card-wrap.menu .cont-area .link-wrap a:last-child {padding-right:0; background-image:none;}
+.list-card .card-wrap.menu .cont-area .link-wrap a.btn-txt {display:inline; padding:0 3.2rem 0 0; background-color:transparent;}
+.list-card .card-wrap.menu .cont-area .link-wrap a.btn-txt::after {margin-left:0.4rem;}
+
+.list-card.row .card-wrap.menu {padding:4rem 0;}
+
+@media only screen and (max-width:1248px) {
+	.list-card .list > li {width:calc((100% - 2.4rem) / 2);}
+}
+
+@media only screen and (max-width:1024px) {
+	.list-card .list > li {width:100%;}
+	.list-card .card-wrap {height:auto;}
+	.list-card .card-wrap .cont-area .card-body {margin:0;}
+	.list-card .card-wrap .cont-area .util-area .btn-txt {padding:0.2rem 0; width:2.4rem;}
+	.list-card .card-wrap .cont-area .util-area .ico-like .txt,
+	.list-card .card-wrap .cont-area .util-area .ico-with .txt {overflow:hidden; position:absolute; width:0.1rem; height:0.1rem; margin:-0.1rem; padding:0; clip:rect(0 0 0 0); white-space:nowrap; border:0;}/* 카드형만 숨김처리 */
+	.list-card .card-wrap .cont-area .info-area .txt {-webkit-line-clamp:2;}
+	.list-card .card-wrap .cont-area .sub-area {flex-direction:column; align-items:flex-start;}
+	.list-card .card-wrap .cont-area .card-footer {padding-top:2rem;}
+	.list-card .card-wrap .cont-area .btn-wrap {flex-direction:row;}
+	.list-card .card-wrap .cont-area .btn-wrap .btn {flex-shrink:1; width:100%;}
+
+	.list-card.row .card-wrap .cont-area .card-body {margin:0 0 2.4rem 0; padding-right:0;}
+	.list-card.row .card-wrap .cont-area .util-area .ico-like .txt,
+	.list-card.row .card-wrap .cont-area .util-area .ico-with .txt {overflow:hidden; position:absolute; width:0.1rem; height:0.1rem; margin:-0.1rem; padding:0; clip:rect(0 0 0 0); white-space:nowrap; border:0;}/* 카드형만 숨김처리 */
+	.list-card.row .card-wrap .cont-area .info-area .tit {font-size:1.9rem;}
+	.list-card.row .card-wrap .cont-area .info-area .tit .iconset {margin-bottom:0;}
+	.list-card.row .card-wrap .cont-area .info-area .txt {margin-top:1.2rem;}
+	.list-card.row .card-wrap .cont-area .sub-area {gap:1.6rem; margin-top:1.6rem;}
+	.list-card.row .card-wrap .cont-area .card-footer {position:static; padding-top:0;}
+	.list-card.row .card-wrap .cont-area .btn-wrap {gap:0.8rem;}
+	.list-card.row .card-wrap .cont-area .btn-wrap .btn {height:4.8rem; padding:1.6rem; border-radius:0.6rem; font-size:1.7rem;}
+	
+	.list-card.row .card-wrap.menu {padding:3.2rem 0 4rem;}
+	.list-card.row .card-wrap.menu .cont-area .link-wrap a {font-size:1.9rem;}
+}
+
+@media only screen and (max-width:767px) {
+	.list-card .card-wrap .cont-area .link-area .platform {gap:1.2rem;}
+	.list-card .card-wrap .cont-area .link-area .platform .div {width:calc(50% - 0.6rem);}
+	.with .layer-with {right:0; border-radius:1.2rem .6rem 1.2rem 1.2rem;}
+	.with .layer-with::before {right:-0.1rem; }
+	.with .layer-with .with-wrap {width:calc(100vw - 3.6rem);}
+	.with .layer-with .with-wrap .list-bull {gap:1.2rem;}
+	.with .layer-with .with-wrap .list-bull li {flex-wrap:wrap; }
+	.with .layer-with .with-wrap .list-bull li .btn {width:calc(100% + 1.2rem); margin-left:-1.2rem;}
+}
+
+@media only screen and (max-width:359px) {
+	.list-card .card-wrap .cont-area .link-area .platform .div {width:100%;}
+	.list-card .card-wrap .cont-area .btn-wrap {flex-direction:column;}
+}
+
+/* 통합검색 페이지
+========================================================================== */
+body.filter-overflow {overflow:visible;}
+@media only screen and (max-width:1248px) {
+	body.filter-overflow {overflow:hidden;}
+}
+
+.total-search-page .keyword {background-color:var(--iw-primary-5);}
+
+/* 통합검색 - 상단 검색어 입력 영역 */
+.total-search-page .top-search {width:100%; min-width:124.8rem; padding:3.2rem 0; background-color:var(--iw-secondary-5);}
+.total-search-page .top-search .input-area {position:relative; width:82.4rem; margin:0 auto; padding:0 1.6rem;}
+.total-search-page .top-search .input-area .input-fn {height:5.6rem; padding:0 1.6rem; gap:1.2rem; background-color:#fff; border-radius:1rem;}
+.total-search-page .top-search .input-area .input-fn .input {padding:0; font-weight:700; font-size:1.9rem;}
+.total-search-page .top-search .input-area .input-fn .input::placeholder {font-weight:400;}
+.total-search-page .top-search .input-area .input-fn .btn-clear.lg {width:2.4rem; height:2.4rem;}
+.total-search-page .top-search .input-area .input-fn .btn-total-search {width:3.2rem; height:3.2rem;}
+.total-search-page .top-search .input-area .input-fn .btn-total-search::after {width:3.2rem; height:3.2rem;}
+.total-search-page .top-search .input-area .auto-complete-area {display:none; position:absolute; left:1.6rem; right:1.6rem; top:5.6rem; z-index:3; padding:0 0 5.6rem; border-radius:0 0 1rem 1rem; border:0.2rem solid var(--iw-primary); border-top:0; background-color:#fff; filter:drop-shadow(0 .8rem 1.6rem rgba(0,0,0,0.12)); }
+.total-search-page .top-search .input-area.on .auto-complete-area {display:block; }
+.total-search-page .top-search .input-area .auto-complete-area .auto-complete-inner {display:grid; grid-template-columns:1fr 1fr; max-height:40rem; overflow-y:auto; overscroll-behavior:contain;}
+.total-search-page .top-search .input-area .auto-complete-area .auto-complete-inner::-webkit-scrollbar {width:5px;}
+.total-search-page .top-search .input-area .auto-complete-area .auto-complete-inner::-webkit-scrollbar-track {background-color:#f4f5f6;}
+.total-search-page .top-search .input-area .auto-complete-area .auto-complete-inner::-webkit-scrollbar-thumb {background-color:#58616a;}
+.total-search-page .top-search .input-area.on .input-fn { border-color:var(--iw-primary); border-width:.2rem .2rem 0 .2rem; border-radius:1rem 1rem 0 0;  z-index:4;}
+.total-search-page .top-search .input-area.on .input-fn::before { position:absolute; bottom:0; left:0; height:.1rem; width:100%; background-color:var(--iw-secondary-10); content:" "; }
+.total-search-page .top-search .input-area .auto-complete-area ul {list-style-type:none; margin:0; padding:0;}
+.total-search-page .top-search .input-area .auto-complete-area ul li {margin:0; padding:0;}
+.total-search-page .top-search .input-area .auto-complete-area ul li a {text-decoration:none; color:var(--iw-gray-90);}
+.total-search-page .top-search .input-area .auto-complete-area ul li a:hover {text-decoration:underline;}
+.total-search-page .top-search .input-area .auto-complete-area .col {flex-shrink:0; padding:2.4rem; border-left:0.1rem solid var(--iw-secondary-10);}
+.total-search-page .top-search .input-area .auto-complete-area .col:first-child {border-left:0;}
+.total-search-page .top-search .input-area .auto-complete-area .col .tit {margin:0 0 2.4rem 0; color:var(--iw-gray-90); font-weight:700; font-size:var(--iw-fz-b-md);}
+.total-search-page .top-search .input-area .auto-complete-area .auto-off {display:flex; align-items:center; height:16rem; color:var(--iw-gray-40); color:var(--iw-gray-90)}
+.total-search-page .top-search .input-area .auto-complete-area .list-auto {display:flex; flex-direction:column; gap:1.6rem 0;}
+.total-search-page .top-search .input-area .auto-complete-area .list-auto .btn-auto {display:inline-block; position:relative; padding-left:4rem;}
+.total-search-page .top-search .input-area .auto-complete-area .list-auto .btn-auto::before {content:''; display:block; position:absolute; left:0; top:0.2rem; width:2.4rem; height:2.4rem; border-radius:100rem; background:var(--iw-color-border-gray-light) url('https://static.gov.kr/content/images/common/ico/ico-search.svg') no-repeat center; background-size:1.6rem;}
+.total-search-page .top-search .input-area .auto-complete-area .list-auto .btn-auto em {font-weight:700;}
+.total-search-page .top-search .input-area .auto-complete-area .list-auto .btn-auto .keyword {background-color:transparent; color:var(--iw-gray-90);}
+.total-search-page .top-search .input-area .auto-complete-area .auto-control { position:absolute; bottom:1.6rem; left:2.4rem; }
+.total-search-page .top-search .input-area .auto-complete-area .list-service {display:flex; flex-direction:column; gap:1.6rem 0;}
+.total-search-page .top-search .input-area .auto-complete-area .list-service .btn-txt {padding:0; background-color:transparent;}
+.total-search-page .top-search .related-word {display:flex; position:relative; width:82.4rem; margin:2.4rem auto 0; padding:0 1.6rem;}
+.total-search-page .top-search .related-word .tit {flex-shrink:0; margin:0; padding:1.2rem 1.2rem 0 0; font-weight:700;}
+.total-search-page .top-search .related-word .no-data {display:block; padding:1.2rem 0 0; font-size:var(--iw-fz-b-md); font-weight:400; text-align:left;}
+.total-search-page .top-search .related-word .no-data::before {display:none;}
+.total-search-page .top-search .related-word .view-more {display:none;}
+
+@media only screen and (max-width:1248px) {
+	.total-search-page .top-search {width:100%; min-width:100%; padding:2.4rem 0; }
+	.total-search-page .top-search .input-area {width:100%;}
+	.total-search-page .top-search .input-area .input-fn {height:6.4rem; padding:0 1.6rem; gap:.8rem; border-radius:.8rem;}
+	.total-search-page .top-search .input-area .input-fn .input {font-size:2.1rem;}
+	.total-search-page .btn-total-search,
+	.total-search-page .btn-total-search::after {width:3.2rem; height:3.2rem; }
+	.total-search-page .btn-clear.lg,
+	.total-search-page .btn-clear.lg::after {width:2.4rem; height:2.4rem; }
+	.total-search-page .top-search .input-area .auto-complete-area { top:6.4rem;}
+
+	.total-search-page .top-search .related-word {display:block; width:100%;}
+	.total-search-page .top-search .related-word .tit {padding:0 0 0.8rem 0;}
+	.total-search-page .top-search .related-word .no-data {padding:0;}
+	.total-search-page .top-search .related-word .list {display:flex; width:100%; align-items:flex-start;}
+	.total-search-page .top-search .related-word .list .tag-chip-area {overflow:hidden; flex-wrap:nowrap; width:100%; margin:0; padding:0; white-space:nowrap;}
+	.total-search-page .top-search .related-word .list .tag-chip {min-height:3.2rem; font-size:1.5rem; padding:.4rem 1.2rem; line-height:2.2rem;}
+	.total-search-page .top-search .related-word .list .view-more {flex-shrink:0; display:block; position:relative; height:100%;; margin:0 0 0 0.4rem;}
+	.total-search-page .top-search .related-word .list .view-more::before {content:''; display:block; position:absolute; right:0; top:0; z-index:2; width:6.4rem; height:3.2rem; background:linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--iw-secondary-5) 40%);}
+	.total-search-page .top-search .related-word .list .view-more .btn-arr-toggle {position:relative; z-index:2;}
+	.total-search-page .top-search .related-word .list.on .tag-chip-area {overflow:visible; flex-wrap:wrap; white-space:unset;}
+	.total-search-page .top-search .related-word .list.on .view-more::before {display:none;}
+	.total-search-page .top-search .related-word .list.on .view-more .btn-arr-toggle::after {transform:rotate(180deg);}
+}
+@media only screen and (max-width:767px) {
+	.total-search-page .top-search .input-area .auto-complete-area {overflow-y:visible; max-height:none; padding-top:0; padding-bottom:5.6rem;}
+	.total-search-page .top-search .input-area .auto-complete-area .auto-complete-inner { padding:0 1.6rem; overflow-y:auto; overscroll-behavior:contain; max-height:50vh; grid-template-columns:none; }
+	.total-search-page .top-search .input-area .auto-complete-area .col { border-left:0; width:100%; padding:2.4rem 0;}
+	.total-search-page .top-search .input-area .auto-complete-area .col.service-area {border-top:0.1rem solid var(--iw-secondary-10);}
+	.total-search-page .top-search .input-area .auto-complete-area .auto-control { left:1.6rem; }
+}
+/* 통합검색 - 검색 결과 wrap */
+.total-search-wrap {display:flex; align-items:flex-start; width:124.8rem; margin:0 auto; padding:3.2rem 2.4rem 0 2.4rem; gap:0 6.4rem;}
+
+/* 통합검색 - 검색 filter 영역 */
+.total-search-wrap .filter-area {flex-shrink:0; width:24.2rem;}
+.total-search-wrap .filter-area p {margin:0; padding:0;}
+.total-search-wrap .filter-area .filter-tit-wrap {display:flex; justify-content:space-between; align-items:center; padding:1.6rem 0;}
+.total-search-wrap .filter-area .filter-tit-wrap .tit {font-size:var(--iw-fz-md); font-weight:700; color:var(--iw-gray-90);}
+.total-search-wrap .filter-area .filter-tit-wrap + .filter-block {border-top:0.2rem solid var(--iw-gray-50);}
+.total-search-wrap .filter-area .filter-block {padding:0.4rem 0; border-top:0.1rem solid #6f757b;}
+.total-search-wrap .filter-area .filter-block .btn-toggle {display:flex; align-items:center; gap:0 0.4rem; position:relative; width:100%; margin:0; padding:1.2rem 0.8rem; border:0; color:var(--iw-secondary-80); font-weight:700; background-color:#fff;}
+.total-search-wrap .filter-area .filter-block .btn-toggle::after {content:''; display:block; position:absolute; right:1rem; top:50%; width:2.4rem; height:2.4rem; margin:-1.2rem 0 0 0; padding:0; background:url('https://static.gov.kr/content/images/common/ico/ico-arr-toggle.svg') no-repeat center; background-size:100% auto; transition:0.25s ease-in-out;}
+.total-search-wrap .filter-area .filter-block .btn-toggle .count {display:inline-flex; justify-content:center; align-items:center; height:2rem; padding:0 0.8rem; color:#fff; font-weight:400; font-size:1.5rem; border-radius:100rem; background-color:var(--iw-primary);}
+.total-search-wrap .filter-area .filter-block .filter-cont {padding:1.6rem 0.8rem 3.2rem; transition:0.4s ease-in-out;}
+.total-search-wrap .filter-area .filter-block .filter-cont .form-wrap .row .form-area {gap:0 .4rem;}
+.total-search-wrap .filter-area .filter-block .filter-cont .form-wrap .row .form-area .input-fn.select-date {width:auto;}
+.total-search-wrap .filter-area .filter-block .filter-cont .form-wrap .row .form-area .input-fn.sm {padding:0 0.4rem;}
+.total-search-wrap .filter-area .filter-block .filter-cont .form-wrap .row .form-area .input-fn.sm .input {padding:0 0 0 0.4rem;}
+.total-search-wrap .filter-area .filter-block .filter-cont .form-wrap .row .form-area .input-fn.sm .input::placeholder {font-size:1.3rem;}
+.total-search-wrap .filter-area .filter-block .filter-cont .form-wrap .row .form-area .input-fn.sm .input:-ms-input-placeholder {font-size:1.3rem;}
+.total-search-wrap .filter-area .filter-block .filter-cont .form-wrap .row .form-area .input-fn.sm .input::-ms-input-placeholder {font-size:1.3rem;}
+.total-search-wrap .filter-area .filter-block .filter-cont .form-group + .form-group {margin-top:1.6rem;}
+.total-search-wrap .filter-area .filter-block .filter-cont .form-group .form-conts.col {flex-direction:column; gap:0.8rem 0;}
+.total-search-wrap .filter-area .filter-block .filter-cont .form-group .form-conts.col .btn {width:100%;}
+.total-search-wrap .filter-area .filter-block .filter-cont .chk-area + .form-group {margin-top:2rem;}
+.total-search-wrap .filter-area .filter-block.off .filter-cont {display:none;}
+.total-search-wrap .filter-area .filter-block.off .btn-toggle::after {transform:rotate(180deg);}
+.total-search-wrap .filter-area .filter-block .filter-cont .choice-period {display:flex; flex-wrap:wrap; gap:0.8rem; margin-bottom:2.4rem;}
+.total-search-wrap .filter-area .filter-block .filter-cont .choice-period .btn-chip {width:calc((100% - 0.8rem) / 2); flex-shrink:1;}
+.total-search-wrap .filter-area .filter-block .filter-cont .symbol-divide {display:flex; flex-direction:column; gap:1.6rem 0; width:100%;}
+.total-search-wrap .filter-area .filter-block .filter-cont .symbol-divide .form-group {width:100%;}
+.total-search-wrap .filter-area .filter-block .filter-cont .symbol-divide .symbol {display:none;}
+.total-search-wrap .filter-area .filter-close {display:none;}
+.total-search-wrap .list-top-util {border-bottom:0.1rem solid var(--iw-gray-90);}
+.total-search-wrap .list-top-util .info .keyword {background-color:transparent;}
+
+@media only screen and (max-width:1248px) {
+	.total-search-wrap {display:block; width:100%; padding:2.4rem 1.6rem ;}
+	.total-search-wrap .filter-area {display:none;}
+	.total-search-wrap .filter-area::after {content:''; display:block; display:none; position:fixed; left:0; top:0; z-index:1; width:100%; height:10rem; background-color:rgba(0,0,0,0.75);}
+	.total-search-wrap .filter-area.on {overflow-y:auto; overscroll-behavior:contain; display:block; position:fixed; left:0; right:0; top:0; bottom:0; z-index:100; width:100%; margin:0; padding:0; border-radius:0; border-bottom:0; background-color:#fff;}
+	.total-search-wrap .filter-area .filter-tit-wrap {position:sticky; left:0; top:0; right:0; z-index:102; padding:2.4rem 4.4rem 1.6rem 1.6rem; border-radius:0; background-color:#fff;}
+	.total-search-wrap .filter-area .filter-tit-wrap + .filter-block {border-top:0.1rem solid #6f757b;}
+	.total-search-wrap .filter-area .filter-tit-wrap .tit {font-size:1.9rem;}
+
+	.total-search-wrap .filter-area .filter-block {margin:0 1.6rem; padding:0; background-color:#fff;}
+	.total-search-wrap .filter-area .filter-block .form-wrap {max-width:100%;}
+	.total-search-wrap .filter-area .filter-block .form-wrap .row .form-area {align-items:flex-start;}
+	.total-search-wrap .filter-area .filter-block .form-wrap .row .form-area .symbol-divide {max-width:100%;}
+	.total-search-wrap .filter-area .filter-block .form-group {max-width:100%;}
+	.total-search-wrap .filter-area .filter-block .btn-toggle {padding:1.2rem 0.8rem;}
+	.total-search-wrap .filter-area .filter-block .filter-cont {padding:1.2rem 0.8rem;}
+
+	.total-search-wrap .filter-area .filter-block .filter-cont .form-wrap .row .form-area .input-fn.select-date {width:100%;}
+	
+	.total-search-wrap .filter-area .filter-close {display:block; position:fixed; right:2.4rem; top:2.4rem; z-index:102;}
+	.total-search-wrap .filter-area .filter-close .btn-close-common {width:2.4rem; height:2.4rem;}
+	.total-search-wrap .filter-area .filter-close .btn-close-common::after {width:2.4rem; height:2.4rem;}
+	.total-search-wrap .list-top-util .info {margin:0 0 1.6rem 0; padding:0 0 2.4rem 0; border-bottom:0.1rem solid var(--iw-color-border-gray-light);}
+	.total-search-wrap .list-top-util .list-sort {flex-direction:row;}
+}
+
+
+/* 통합검색 - 검색 결과 영역 */
+.total-search-wrap .result-area {width:calc(100% - 30.6rem);}
+
+@media only screen and (max-width:1248px) {
+	.total-search-wrap .result-area {width:100%;}
+}
+
+/* 통합검색 - 적용된 필터 영역 */
+.apply-filter {display:flex; padding:2rem 2.4rem; border-radius:1.2rem; background-color:var(--iw-secondary-5);}
+.apply-filter .tit-area {display:flex; flex-shrink:0; align-items:center; gap:0 1.6rem;}
+.apply-filter .tit-area .tit {flex-shrink:0; display:inline-flex; gap:0 0.4rem; margin:0; padding:0; vertical-align:middle; color:var(--iw-gray-90); font-weight:700;}
+.apply-filter .tit-area .tit .count {color:var(--iw-primary-60);}
+.apply-filter .tit-area .btn-reset {width:4rem; height:4rem; border-radius:100rem; border:0.1rem solid var(--iw-color-border-gray-light); vertical-align:middle; background-color:#fff;}
+.apply-filter .tit-area .btn-reset::after {background-size:1.6rem;}
+.apply-filter .tag-chip:hover {background-color:var(--iw-secondary-5);}
+.apply-filter .tag-chip:active {background-color:var(--iw-secondary-10);}
+
+
+@media only screen and (max-width:1248px) {
+	.apply-filter {display:none;}
+}
+
+
+.search-filter-swiper {width:100%; margin:0 0 0 1.6rem; padding:0;}
+.search-filter-swiper .swiper-slide {width:auto;}
+.search-filter-swiper .swiper-button-prev,
+.search-filter-swiper .swiper-button-next {flex-shrink:0; position:absolute; top:50%; width:3.2rem; height:4rem; margin-top:-2rem; background:var(--iw-secondary-5) url('https://static.gov.kr/content/images/common/ico/ico-swiper-arr.svg') no-repeat center;}
+.search-filter-swiper .swiper-button-prev {left:0;}
+.search-filter-swiper .swiper-button-next {right:0; transform:rotate(180deg);}
+.search-filter-swiper .swiper-button-prev::after {content:'이전'; overflow:hidden; position:absolute; left:3.2rem; width:2.2rem; height:100%; text-indent:-9999rem; background:linear-gradient(90deg, rgba(238, 242, 247, 1) 20%, rgba(238, 242, 247, 0.2) 60%, rgba(238, 242, 247, 0) 100%);}
+.search-filter-swiper .swiper-button-next::after {content:'다음'; overflow:hidden; position:absolute; left:3.2rem; width:2.2rem; height:100%; text-indent:-9999rem; background:linear-gradient(90deg, rgba(238, 242, 247, 1) 20%, rgba(238, 242, 247, 0.2) 60%, rgba(238, 242, 247, 0) 100%);}
+.search-filter-swiper .swiper-button-lock {display:none;}
+.search-filter-swiper .swiper-button-prev.swiper-button-disabled,
+.search-filter-swiper .swiper-button-next.swiper-button-disabled {opacity:1; display:none;}
+
+.search-result .list-top-viewer {padding-top:4rem; border-top:0.1rem solid var(--iw-gray-40);}
+.search-result .keyword {background-color:var(--iw-primary-5);}
+.search-result .category {color:#b82a14;}
+.search-result .no-data {padding:6.4rem 0;}
+.search-result .no-data .keyword {background-color:transparent;}
+.search-result .no-data.part {flex-direction:row; flex-wrap:nowrap; gap:.8rem; margin-top:2.4rem; margin-bottom:2.4rem; padding:2rem 2.4rem; border-radius:1.2rem; background-color:var(--iw-gray-5); border:.1rem solid var(--iw-color-border-gray-light); text-align:left;}
+.search-result .no-data.part::before {flex-shrink:0; width:2.4rem; height:2.4rem; margin:0; background-image:url('https://static.gov.kr/content/images/common/ico/ico-tooltip.svg');}
+.search-result .no-data.part .info { font-size:1.7rem; font-weight:400; color:var(--iw-gray-70);}
+.search-result .no-data.part .category {color:#1E2124; font-weight:700;}
+.search-result .help-info-link.line .block {align-items:flex-start;}
+
+.total-search-wrap .result-area .list-top-util {margin-top:4rem; padding-bottom:2rem;}
+
+@media only screen and (max-width:1248px) {
+	.total-search-wrap .result-area .list-top-util {margin-top:0; padding-bottom:1.6rem;}
+	.total-search-wrap .result-area .list-top-util .info .col { font-size:var(--iw-fz-sm);}
+
+	.search-result .no-data {padding:4rem 0;}
+	.search-result .no-data.part { padding:1.6rem; }
+	.search-result .no-data.part .info {font-size:1.7rem;}
+	.search-result .help-info-link.line {padding-top:2.4rem; border-top:0.1rem solid var(--iw-gray-40);}
+}
+
+@media only screen and (max-width:767px) {
+	.search-result .help-info-link.line .block {flex-direction:column;}
+}
+
+/* 통합검색안 list-card 커스텀 */
+.search-result .list-card .list > li {width:calc((100% - 2.4rem) / 2);}
+.search-result .list-card.row .list > li {width:100%;}
+/* .search-result .list-card.row .list {border-color:var(--iw-gray-40);} */
+
+
+@media only screen and (max-width:1248px) {
+	.search-result .list-card .list > li {width:100%;}
+
+	/* 모바일에서 리스트형태만 존재 */
+	.search-result .list-card .card-wrap .cont-area .util-area .btn-txt {justify-content:center;}
+	.search-result .list-card .list {gap:0; border-top:0.1rem solid var(--iw-gray-40);}
+	.search-result .list-card .card-wrap {padding-left:0; padding-right:0; border-width:0 0 0.1rem 0; border-radius:0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 마이페이지
+========================================================================== */
+.mygov .tit-page-wrap {margin-bottom:.8rem;}
+.mygov .user-info {margin:0; color:var(--iw-gray-90); font-size:var(--iw-fz-xsm);}
+
+.mygov .my-round-box {display:flex; flex-direction:column; height:100%; padding:2.3rem; border-radius:1.2rem; border-style:solid; border-width:0.1rem;}
+.mygov hr {display:block; margin:0; padding:0; border-color:transparent;}
+.mygov hr.gray-border {border-top:0.1rem solid var(--iw-color-border-gray-light);}
+.mygov .txt-box {display:flex; flex-direction:column;}
+.mygov .my-tit {display:inline-flex; align-items:center; text-decoration:none; font-size:var(--iw-fz-sm); color:var(--iw-gray-90); font-weight:700;}
+.mygov .my-tit .iconset {margin-bottom:0.2rem;}
+.mygov .my-desc {font-size:var(--iw-fz-b-md); color:var(--iw-gray-70);}
+
+.mygov .info-bar {display:flex; align-items:center; justify-content:space-between; gap:.8rem; padding:1.6rem 2.4rem; background-color:var(--iw-primary); border-radius:.8rem; text-decoration:none;}
+.mygov .info-bar .txt {width:100%; color:#fff; font-size:var(--iw-fz-sm);}
+.mygov .info-bar .iconset  {flex-shrink:0;}
+
+.mygov-top-wrap {display:flex; gap:var(--iw-gap-6);}
+.my-contents-list {width:100%;}
+.my-contents-list .list {flex-wrap:wrap; height:100%; display:flex; gap:var(--iw-gap-6); list-style:none; margin:0; padding:0;}
+.my-contents-list ul li {display:flex; gap:var(--iw-gap-4); width:calc(50% - 1.2rem);}
+.my-contents-list .my-round-box {justify-content:center; width:100%; gap:var(--iw-gap-3); min-height:16.8rem; padding:1.6rem 2.3rem; border-color:var(--iw-primary); box-shadow:0 .8rem 1.6rem rgba(0,0,0,0.1);}
+.my-contents-list .my-round-box .btn-my {display:flex; gap:1.2rem; align-items:center; text-decoration:none;}
+.my-contents-list .my-round-box .btn-my .txt-box {width:100%; gap:var(--iw-gap-1);}
+.my-contents-list .my-round-box .btn-my .txt-box .my-desc {font-size:var(--iw-fz-b-sm);}
+.my-contents-list .my-round-box .btn-my:hover .my-tit {text-decoration:underline;} 
+.my-contents-list .my-round-box .btn-my .count {flex-shrink:0; font-size:var(--iw-fz-xlg); font-weight:700; color:var(--iw-secondary-80);}
+
+.my-contents-list .my-round-box .ico-my-status {border-radius:100%; background-color:var(--iw-secondary-5);}
+.my-contents-list .my-round-box .ico-my-status::after {background-image:url('https://static.gov.kr/content/images/contents/ico-my-status.svg'); background-size:2.8rem auto;}
+.my-contents-list .my-round-box .ico-my-certificate {border-radius:100%; background-color:var(--iw-secondary-5);}
+.my-contents-list .my-round-box .ico-my-certificate::after {background-image:url('https://static.gov.kr/content/images/contents/ico-my-certificate.svg'); background-size:2.8rem auto;}
+.my-contents-list .my-round-box .ico-my-benefit {border-radius:100%; background-color:var(--iw-secondary-5);}
+.my-contents-list .my-round-box .ico-my-benefit::after {background-image:url('https://static.gov.kr/content/images/contents/ico-my-benefit.svg'); background-size:2.8rem auto;}
+.my-contents-list .my-round-box .ico-my-family {border-radius:100%; background-color:var(--iw-secondary-5);}
+.my-contents-list .my-round-box .ico-my-family::after {background-image:url('https://static.gov.kr/content/images/contents/ico-my-family.svg'); background-size:2.8rem auto;}
+.my-contents-list .my-round-box .ico-my-lifeinfo {border-radius:100%; background-color:var(--iw-secondary-5);}
+.my-contents-list .my-round-box .ico-my-lifeinfo::after {background-image:url('https://static.gov.kr/content/images/contents/ico-my-lifeinfo.svg'); background-size:2.8rem auto;}
+
+.my-contents-list .family-add .my-round-box {gap:var(--iw-gap-1);}
+.my-contents-list .family-add .btn-my {flex-direction:column; gap:var(--iw-gap-1); align-items:flex-start;}
+.my-contents-list .family-add .btn-my .my-desc {display:none;}
+.my-contents-list .family-add .btn-my .count {line-height:4.8rem; font-size:var(--iw-fz-lg);}
+.my-contents-list li:not(.family-add) .benefit-family {display:none;}
+
+.my-favorite-service {flex-shrink:0; width:24rem;}
+.my-favorite-service .my-round-box {padding:2.4rem; border-color:var(--iw-color-border-gray); gap:var(--iw-gap-8);}
+.my-favorite-service .list {display:flex; flex-wrap:wrap; gap:var(--iw-gap-3) var(--iw-gap-2); list-style:none; margin:0; padding:0;}
+.my-favorite-service .list li {width:100%;}
+.my-favorite-service .tag-chip {max-width:100%; text-decoration:none;}
+.my-favorite-service .tag-chip:hover {text-decoration:underline;}
+.my-favorite-service .txt-box {gap:var(--iw-gap-4);}
+.my-favorite-service .txt-box .btn-txt {color:var(--iw-primary); text-decoration:underline;}
+.my-favorite-service .txt-box .btn-txt::after {margin-bottom:0;}
+
+.user-manager {width:12rem;flex-shrink:0;}
+.user-manager .list {display:flex; list-style:none; margin:0; padding:0; flex-direction:column; gap:var(--iw-gap-4); flex:1; height:100%;}
+.user-manager .list li {flex:1;}
+.user-manager .btn-user-manager {display:flex; align-items:center; justify-content:center; gap:var(--iw-gap-1);  padding:1.6rem .8rem; border-color:var(--iw-color-border-gray); text-align:center; font-size:var(--iw-fz-xxsm); text-decoration:none; color:var(--iw-gray-90);}
+.user-manager .btn-user-manager:hover .txt {text-decoration:underline;}
+.user-manager .ico-my-user::after {background-image:url('https://static.gov.kr/content/images/contents/ico-my-user.svg');}
+.user-manager .ico-my-check::after {background-image:url('https://static.gov.kr/content/images/contents/ico-my-check.svg');}
+.user-manager .ico-my-alarm::after {background-image:url('https://static.gov.kr/content/images/contents/ico-my-alarm.svg');}
+
+.my-sub-contents {display:flex; gap:var(--iw-gap-6); list-style:none; margin:0; padding:0;}
+.my-sub-contents li {flex:1;}
+.my-sub-contents .my-round-box {padding:3.2rem; text-decoration:none;}
+.my-sub-contents .my-round-box .txt-box {gap:var(--iw-gap-2);}
+.my-sub-contents .my-round-box:hover .my-tit {text-decoration:underline;}
+.my-sub-contents .my-round-box.box01,
+.my-sub-contents .my-round-box.box03 {background-color:#E7F4FE; border-color:#D3EBFD;}
+.my-sub-contents .my-round-box.box02 {background-color:#EDF6F8; border-color:#D5EBF1;}
+
+.my-service-list {display:flex; flex-wrap:wrap; gap:var(--iw-gap-6); list-style:none; margin:0; padding:0;}
+.my-service-list li {width:calc(25% - 1.8rem);}
+.my-service-list .my-round-box {flex-direction:row; align-items:center; gap:var(--iw-gap-4); padding:1.5rem 2.3rem; border-color:var(--iw-color-border-gray); border-radius:.6rem;}
+.my-service-list .my-round-box a {display:inline-block; width:100%; min-width:0; font-size:var(--iw-fz-sm); font-weight:700; line-height:2.9rem; text-decoration:none; color:var(--iw-gray-90);}
+.my-service-list .my-round-box a:hover span {text-decoration:underline;}
+.my-service-list .my-round-box .btn-clear {flex-shrink:0;}
+
+@media only screen and (max-width:1248px) {
+	.mygov-top-wrap {flex-wrap:wrap;}
+	.my-favorite-service {width:60%;}
+	.user-manager {width:calc(40% - 2.4rem);}
+}
+@media only screen and (max-width:1024px) {
+	.mygov .tit-page-wrap {margin-bottom:0;}
+
+	.mygov .info-bar {padding:1.6rem; gap:1.2rem; display:none;}
+	.mygov .info-bar .txt {font-size:var(--iw-fz-xsm);}
+
+	.mygov .user-info {display:flex;flex-direction:column; gap:var(--iw-gap-1); margin-bottom:0.8rem;}
+	.mygov .user-info .name {font-size:var(--iw-fz-md); font-weight:700;}
+
+	
+	.mygov-top-wrap {flex-direction:column;}
+	.mygov .my-favorite-service,
+	.mygov .user-manager {width:100%;}
+	
+	.my-contents-list .list {flex-direction:column; gap:var(--iw-gap-4);}
+	.my-contents-list .list li {width:100%;}
+	.my-contents-list .my-round-box {flex-direction:row; padding:1.6rem 2.4rem 1.6rem 2rem; gap:var(--iw-gap-2); justify-content:flex-start; align-items:center; min-height:7.6rem;}
+	.my-contents-list .my-round-box .my-desc {display:none;}
+	.my-contents-list .my-round-box .iconset.xlg {width:3.2rem; height:3.2rem;}
+	.my-contents-list .my-round-box .btn-my {gap:0.8rem; width:100%;}
+	.my-contents-list .my-round-box .btn-my .count {font-size:2.4rem;}
+	.my-contents-list .family-add {flex-direction:column;}
+	.my-contents-list .family-add .btn-my {flex-direction:row; align-items:center;}
+	.my-contents-list .family-add .btn-my .count {line-height:inherit;}
+	/* .my-contents-list .family-add .btn-my .my-desc {display:block;} */
+	
+	.mygov .user-manager ul {flex-direction:row;gap:var(--iw-gap-2);}
+	
+	.my-favorite-service .my-round-box {gap:var(--iw-gap-6);}
+	.my-favorite-service .list li {max-width:100%; width:auto; }
+
+	.my-sub-contents {flex-direction:column; gap:var(--iw-gap-4);}
+	.my-sub-contents .my-round-box {padding:2.4rem;}
+	.my-sub-contents .my-round-box .txt-box {gap:var(--iw-gap-1);}
+
+	.my-service-list {flex-direction:column; gap:var(--iw-gap-4); margin-top:0.8rem;}
+	.my-service-list li {width:100%;}
+}
+
+@media only screen and (max-width:320px) {
+	.mygov .user-manager ul {flex-direction:column;}
+	.user-manager .btn-user-manager br {display:none;}
+}
+
+
+/*accordion*/
+.accordion a {color:var(--iw-gray-90);}
+.accordion a:hover {color:var(--iw-primary-60);}
+.accordion .accordion-item.off .accordion-collapse {display:none;}
+.accordion .accordion-item .accordion-collapse {display:block;}
+
+/*자주하는 질문*/
+.tab-list.full ul li .btn-tab {white-space:nowrap;}
+.faq-list .list-top-util {padding-bottom:2.4rem;}
+.accordion.faq-wrap {list-style:none; padding:0; margin:0; border-top:0.1rem solid var(--iw-gray-90);}
+.accordion.faq-wrap .accordion-header .btn-accordion {display:flex; align-items:center; gap:var(--iw-gap-4); width:100%; padding:2rem 1.6rem; border:0; background-color:transparent;  border-bottom:0.1rem solid var(--iw-color-border-gray-light);}
+.accordion.faq-wrap .accordion-header .accordion-title {display:flex; align-items:center; gap:1.6rem; width:100%; font-size:var(--iw-fz-xsm); color:var(--iw-gray-90); text-align:left;}
+.accordion.faq-wrap .accordion-header .accordion-title:after {flex-shrink:0; display:inline-block; width:2.4rem; height:2.4rem; margin-left:auto; background:url('https://static.gov.kr/content/images/common/ico/ico-arr-bottom.svg') no-repeat 50% 50% / contain;transform:rotate(-180deg);  content:"";}
+.accordion.faq-wrap .off .accordion-header .accordion-title:after {transform:rotate(0);}
+.accordion.faq-wrap .ico-acco {flex-shrink:0; display:inline-block; width:3.2rem; height:3.2rem; margin-bottom:auto; border-radius:1.2rem; font-size:var(--iw-fz-xsm); font-weight:700; text-align:center; line-height:3.2rem;}
+.accordion.faq-wrap .ico-acco.question {background-color:var(--iw-primary-5); color:var(--iw-primary);}
+.accordion.faq-wrap .ico-acco.answer {background-color:var(--iw-primary); color:#fff;}
+.accordion.faq-wrap .accordion-body {display:flex; align-items:center; gap:var(--iw-gap-4); padding:2.4rem 1.6rem; background-color:var(--iw-secondary-5);font-size:var(--iw-fz-xsm);}
+.accordion.faq-wrap .accordion-body .accordion-contetns {white-space:pre-wrap;}
+
+
+@media only screen and (max-width:767px) {
+	.faq-list .list-top-util {padding-bottom:1.6rem;}
+	.accordion.faq-wrap .accordion-header .btn-accordion {position:relative; padding:2rem 5.2rem 2rem 1.6rem;}
+	.accordion.faq-wrap .accordion-header .btn-accordion,
+	.accordion.faq-wrap .accordion-body {flex-direction:column;align-items:flex-start; gap:var(--iw-gap-2)}
+	.accordion.faq-wrap .accordion-header .accordion-title:after {position:absolute; right:1.6rem; top:calc(50% - 1rem); width:2rem; height:2rem;}
+	.accordion.faq-wrap .ico-acco {width:2.4rem; height:2.4rem; line-height:2.4rem; font-size:var(--iw-fz-xxsm); border-radius:.8rem;}
+}
+
+
+
+
+
+/*민원신청 확인증*/
+.confirmation-text {display:flex; flex-direction:column; gap:var(--iw-gap-1);}
+.confirmation-text .name {font-size:2.4rem;}
+
+@media only screen and (max-width:767px) {
+	.confirmation-text .name {font-size:2.2rem;}
+}
+
+/*회원정보 관리*/
+.member-manager .list-number {display:flex; flex-direction:column; gap:var(--iw-gap-6); list-style:none; margin:0; padding:0;}
+.member-manager .sub {margin:.8rem 0 0;}
+
+/*회원정보 수정*/
+.form-item-wrap {display:flex; flex-direction:column; gap:var(--iw-gap-6); }
+.form-item-group {display:flex; flex-direction:column; gap:var(--iw-gap-4);}
+.form-item-group > .form-conts {margin-top:0.8rem;}
+.form-item-group .form-item {margin:0; font-size:var(--iw-fz-sm); color:var(--iw-gray-90);}
+.form-item-group p {margin:0;}
+.form-item-wrap .form-wrap {max-width:75.2rem;}
+@media only screen and (max-width:1024px) {
+	.form-item-wrap {gap:1.6rem;}
+	.form-item-group {gap:var(--iw-gap-3);}
+	.form-item-group > .form-conts {margin-top:0;}
+	.form-item-group .btn {width:100%;}
+	.form-item-wrap .btn {width:100%;}
+}
+
+/* 주소검색영역 */
+.box-tip-address {display:flex; flex-direction:column; gap:1.6rem 0; padding:2.4rem 3.2rem; border-radius:1.2rem; border:0.1rem solid var(--iw-secondary-10); background-color:var(--iw-primary-5);}
+.box-tip-address .title {color:var(--iw-gray-95);}
+.box-tip-address .list-bull li {padding-left:1.2rem; margin-top:0.8rem}
+.box-tip-address .list-bull li:first-child {margin-top:0;}
+.box-tip-address .list-bull li .text-primary {color:var(--iw-info);}
+.box-tip-address .list-bull li::before {left:0; top:1rem; width:0.4rem; height:0.4rem; border-radius:0.4rem;}
+
+.add-list-wrap .list-top-util {padding-bottom:1.6rem; border-bottom:0.1rem solid var(--iw-color-border-gray-light);}
+.address-search-list {margin:0; padding:0; list-style:none;}
+.address-search-list li {padding:1.2rem 0; border-bottom:0.1rem solid var(--iw-color-border-gray-light);}
+.btn-address-item {display:flex; align-items:center; gap:var(--iw-gap-2) var(--iw-gap-4); text-decoration:none; /* color:var(--iw-color-text-basi); */}
+.btn-address-item .post-txt {width:6rem; flex-shrink:0; text-align:center; gap:var(--iw-gap-4); color:var(--iw-gray-70);}
+.btn-address-item .add-txt-box .row { display:flex; gap:1rem; padding:.5rem 0; }
+.btn-address-item .add-txt-box .badge {width:5.5rem; flex-shrink:0; }
+.btn-address-item:hover .add-detail-txt { text-decoration:underline; }
+@media only screen and (max-width:767px) {
+	.box-tip-address {padding:1.6rem 2rem;}
+	.btn-address-item {flex-direction:column; align-items:flex-start; padding:0 .8rem;}
+}
+
+/* 관심서비스 설정 */
+.favorite-service-list {display:flex; flex-wrap:wrap; gap:var(--iw-gap-6); margin:0; padding:0; list-style:none;} 
+.favorite-service-list li {width:calc(33.333% - 1.6rem);}
+.favorite-service-list .favorite-service-item {position:relative; display:flex; flex-direction:column; gap:2.4rem; height:100%; padding:2.4rem 2.4rem 2rem; border:0.1rem solid var(--iw-color-border-gray); border-radius:1.2rem;}
+.favorite-service-list .favorite-service-item .txt-box {display:flex; flex-direction:column; gap:1.2rem; }
+.favorite-service-list .favorite-service-item .txt-box .tit {margin:0;font-size:var(--iw-fz-b-lg); font-weight:700; }
+.favorite-service-list .favorite-service-item .txt-box p {margin:0;overflow:hidden; width:100%; white-space:nowrap; text-overflow:ellipsis; vertical-align:middle;display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; white-space:normal;}
+.favorite-service-list .favorite-service-item .btn-close-related {position:absolute; top:2rem; right:2.4rem;}
+.favorite-service-list .favorite-service-item .btn-wrap {margin-top:auto; white-space:nowrap; gap:.4rem;}
+.favorite-service-list .favorite-service-item .btn-txt {text-decoration:none; color:var(--iw-gray-90);}
+
+@media only screen and (max-width:1024px) {
+	.favorite-service-list {gap:var(--iw-gap-4);} 
+	.favorite-service-list li {width:100%; gap:var(--iw-gap-4);}
+	.favorite-service-list .favorite-service-item .txt-box {gap:.8rem;}
+	.favorite-service-list .favorite-service-item .btn-wrap {flex-direction:row; flex-wrap:wrap;}
+}
+
+/* 알림수신동의 */
+.form-item-wrap .title-wrap {display:flex; gap:.4rem; align-items:center;}
+.form-item-wrap .title-wrap .btn-tooltip-open {width:2.4rem; height:2.4rem;}
+
+/*주제별서비스*/
+.category-1depth-wrap {display:flex; gap:1.5rem; position:relative; align-items:flex-start; padding:2rem 3.2rem; border:0.1rem solid var(--iw-color-border-gray-light); border-radius:1.2rem;}
+.category-1depth-wrap .btn-category-select {display:none; align-items:center; gap:1.6rem; width:100%; min-height:5.6rem; padding:.8rem 1.6rem; border:0.1rem solid #61666b; border-radius:.8rem; text-align:left; font-size:1.9rem; background-color:#fff; }
+.category-1depth-wrap .btn-category-select:after {display:inline-block; width:2.4rem; height:2.4rem; margin-left:auto; flex-shrink:0; background:url('https://static.gov.kr/content/images/common/bg/bg-select-arr.svg') no-repeat 50% 50% / contain; content:"";}
+.category-1depth-wrap .category-swiper-wrap { padding:0; position:relative;}
+.category-1depth-wrap .category-swiper {overflow:visible; width:100%;}
+.category-1depth-wrap .category-1depth-list {display:flex; flex-wrap:wrap; gap:0.8rem; margin:0; padding:0; list-style:none; white-space:nowrap;}
+.category-1depth-wrap .category-1depth-list .swiper-slide {width:auto;}
+.category-1depth-wrap .category-1depth-list .btn-tab-1depth {display:flex; align-items:center; height:4.8rem; padding:0 1.2rem; border-radius:2.4rem; font-size:var(--iw-fz-b-md); color:var(--iw-gray-70); font-weight:700; border:0; text-decoration:none; white-space:normal; background-color:transparent;}
+.category-1depth-wrap .category-1depth-list .btn-tab-1depth:hover {text-decoration:underline;}
+.category-1depth-wrap .category-1depth-list .btn-tab-1depth.on {color:#fff; border-color:var(--iw-secondary-70); background-color:var(--iw-secondary-70); }
+.category-1depth-wrap .btn-category-more {line-height:2rem; flex-shrink:0; transition:none;}
+.category-1depth-wrap .control-btns .btn-control {top:1.2rem; margin:0;}
+.category-1depth-wrap .control-btns .swiper-button-prev {left:0;}
+.category-1depth-wrap .control-btns .swiper-button-next {right:0;}
+
+/* open 삭제
+.category-1depth-wrap.open {align-items:flex-start; padding:2rem 3.2rem; border:0.1rem solid var(--iw-color-border-gray-light); border-radius:1.2rem;}
+.category-1depth-wrap.open .category-swiper-wrap {padding:0;}
+.category-1depth-wrap.open .category-1depth-list { flex-wrap:wrap; gap:0 1.2rem;}
+.category-1depth-wrap.open .control-btns .btn-control {display:none;} 
+.category-1depth-wrap.open .btn-category-more {display:flex; align-items:center; justify-content:center; width:3.2rem; height:3.2rem; padding:0; margin-top:1.2rem; border:0.1rem solid var(--iw-gray-20); border-radius:50%; }
+.category-1depth-wrap.open .btn-category-more span {overflow:hidden; position:absolute; width:0.1rem; height:0.1rem; margin:-0.1rem; padding:0; clip:rect(0 0 0 0); white-space:nowrap; border:0;}
+.category-1depth-wrap.open .btn-category-more .iconset {transform:scaleY(-1);}
+.category-1depth-wrap.open .category-swiper {padding:0;}
+.category-1depth-wrap.open .category-1depth-list .btn-tab-1depth.on {border-radius:2.8rem; background-color:var(--iw-secondary-70); color:#fff;}
+ */
+
+.control-btns {display:block;}
+.control-btns .btn-control {display:inline-block; width:3.2rem; height:3.2rem; background:#fff url('https://static.gov.kr/content/images/common/ico/ico-swiper-arr.svg') no-repeat 50% 50% / 2rem 2rem;border-radius:50%; border:0.1rem solid var(--iw-gray-20);}
+.control-btns .btn-control.lg {width:4rem; height:4rem; background-size:2.4rem 2.4rem;}
+.control-btns .btn-control:hover,
+.control-btns .btn-control:focus {background-color:var(--iw-secondary-5);}
+.control-btns .btn-control:active {background-color:var(--iw-secondary-10);}
+.control-btns .btn-control:disabled {background-color:var(--iw-gray-20); opacity:1;}
+.control-btns .btn-control.swiper-button-prev {}
+.control-btns .btn-control.swiper-button-next {transform:scaleX(-1);}
+.control-btns .swiper-button-next:after, 
+.control-btns .swiper-button-prev:after { display:none;}
+
+.category-service-wrap {display:flex; gap:2.4rem 6.4rem;}
+.category-service-wrap .category-2depth-wrap {max-width:24.2rem; width:20%; flex-shrink:0;}
+.category-service-wrap .category-2depth {padding:.8rem 0; border:0.1rem solid var(--iw-gray-20); border-width:0.1rem 0; position:sticky; top:2.4rem;}
+.category-service-wrap .category-2depth-list {display:flex; flex-direction:column; gap:.1rem; margin:0; padding:0; list-style:none;}
+.category-service-wrap .category-2depth-list .btn-tab-2depth {display:flex; gap:.8rem; padding:.8rem 1.6rem; width:100%; border-radius:.6rem; text-decoration:none; text-align:left; color:var(--iw-gray-90); background-color:transparent; border:0; background-color:#fff;}
+.category-service-wrap .category-2depth-list .btn-tab-2depth::before { flex-shrink:0; display:inline-block; width:.4rem; height:.4rem; margin-top:1rem; background-color:var(--iw-gray-90); border-radius:50%; content:"";}
+.category-service-wrap .category-2depth-list .btn-tab-2depth.on {background-color:var(--iw-secondary-5); color:var(--iw-secondary-80); font-weight:700; transition:background-color 0.4s;}
+.category-service-wrap .category-2depth-list .btn-tab-2depth.on::before {background-color:var(--iw-secondary-80);}
+.category-service-wrap .category-2depth-list .btn-tab-2depth:hover {text-decoration:underline;}
+
+.category-service-wrap .category-contents {width:100%;}
+
+.category-best-wrap {padding:2.4rem; border-radius:1.2rem; background-color:var(--iw-secondary-5);}
+.category-best-wrap .title {margin-bottom:1.6rem;}
+.best-swiper .control-btns {display:none;}
+.best-swiper-list {gap:2.4rem; margin:0; padding:0; list-style:none;} 
+.best-swiper-list li {flex:1; height:auto;}
+.best-swiper-list.list-card .card-wrap {background-color:#fff;}
+/* .best-swiper-list.list-card .card-wrap .cont-area .info-area .tit {display:flex; align-items:center; flex-shrink:0;} */
+.best-swiper-list.list-card .card-wrap .cont-area .info-area .txt {-webkit-line-clamp:2;}
+.category-best-wrap .list-card .card-wrap {padding:2.4rem;}
+.category-best-wrap .list-card .card-wrap .cont-area .card-body { flex-direction:row; gap:1.6rem; margin-bottom:0;}
+.category-best-wrap .list-card .card-wrap .cont-area .card-body .tit {display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; white-space:normal; overflow:hidden;}
+
+.category-list-wrap .list-top-util {padding-bottom:2.4rem;}
+.category-list-wrap .list-sort {align-items:center;}
+.category-list-wrap .list-sort .tit {font-weight:700;}
+.category-service-list {display:flex; flex-wrap:wrap; gap:var(--iw-gap-6); margin:0; padding:0; list-style:none;}
+.category-service-wrap .category-service-list li {width:calc(50% - 1.2rem);}
+.category-service-wrap .category-service-list.list-card.col-3 li {width:calc((100% - 4.8rem) / 3);}
+
+.category-service-wrap.total .category-2depth-wrap {display:none;}
+.category-service-wrap.total .category-service-list li {width:calc(33.333% - 1.6rem);}
+
+@media only screen and (max-width:1248px) {
+	.category-list-wrap .list-sort {flex-direction:row; justify-content:flex-end;}
+	.category-list-wrap .list-card .card-wrap {padding:2.4rem; border-radius:1.2rem; border:0.1rem solid var(--iw-color-border-gray);}
+	.category-service-wrap .category-service-list.list-card.col-3 {gap:var(--iw-gap-6);}
+	.category-service-wrap .category-service-list.list-card.col-3 li {width:calc(50% - 1.2rem);}
+}
+@media only screen and (max-width:1024px) {
+	.category-1depth-wrap {padding:0; border:0;}
+	.category-1depth-wrap .btn-category-more,
+	.category-1depth-wrap .control-btns,
+	.category-1depth-wrap.open .btn-category-more {display:none;}
+	.category-1depth-wrap .btn-category-select {display:flex; position:relative; z-index:4; color:var(--iw-gray-90);}
+	.category-1depth-wrap .category-1depth-list {flex-direction:column;}
+	.category-1depth-wrap .category-1depth-list .btn-tab-1depth {padding:.8rem; min-height:4.9rem; font-weight:400; color:var(--iw-gray-90);}
+	.category-1depth-wrap .category-swiper-wrap {display:none; position:absolute; left:0; top:calc(100% - .1rem); background-color:#fff; border:0.1rem solid var(--iw-gray-20); border-radius:.8rem; z-index:3;}
+	.category-1depth-wrap .btn-category-select:focus {padding:.7rem 1.5rem; border:.2rem solid var(--iw-primary); outline:0; }
+	.category-1depth-wrap.open .btn-category-select:after {transform:scaleY(-1);}
+	.category-1depth-wrap.open {padding:0; border:0;}
+	.category-1depth-wrap.open .category-swiper-wrap {display:block; width:100%; padding:.8rem; max-height:43.1rem; overflow-y:auto; overscroll-behavior:contain;}
+	.category-1depth-wrap.open .category-1depth-list .btn-tab-1depth.on {color:var(--iw-gray-90); background-color:var(--iw-secondary-10); border-radius:.6rem; border:0;}
+	.category-service-wrap.total .category-service-list li {width:calc(50% - 1.2rem);}
+	
+	.category-service-wrap {flex-direction:column;}
+	.category-service-wrap .category-service-list li .card-wrap {height:100%;}
+	.category-service-wrap .category-2depth-wrap {width:100%; max-width:none;}
+	.category-service-wrap .category-2depth {padding-top:0; border:0;}
+	.category-service-wrap .category-2depth-list {flex-wrap:wrap; flex-direction:row; gap:1.2rem .8rem;}
+	.category-service-wrap .category-2depth-list .btn-tab-2depth {align-items:center; gap:.4rem; padding:.8rem 1rem; border-radius:.6rem; border:0.1rem solid var(--iw-color-border-gray); background:#fff; font-size:var(--iw-fz-b-sm); line-height:2.2rem; }
+	.category-service-wrap .category-2depth-list .btn-tab-2depth::before {display:none;}
+	.category-service-wrap .category-2depth-list .btn-tab-2depth.on {font-weight:400; border-color:var(--iw-primary); background-color:#F0F5FE; color:var(--iw-primary);}
+	.category-service-wrap .category-2depth-list .btn-tab-2depth.on::before {display:inline-block; width:1.2rem; height:1.2rem; margin:0; background:url('https://static.gov.kr/content/images/common/bg/bg-chk-chip-on.svg') no-repeat 50% 50% / contain; border-radius:0;}
+	
+	.category-best-wrap {padding:2.4rem;}
+	.best-swiper-list.list-card .card-wrap {height:100%; padding:2.4rem; border:0.1rem solid var(--iw-color-border-gray); border-radius:1.2rem;}
+	.best-swiper-list {gap:0;}
+	.best-swiper-list li {flex:none;}
+	.best-swiper-list.list-card .card-wrap .cont-area .btn-wrap {margin-top:0;}
+
+	.best-swiper .control-btns {display:flex; justify-content:flex-end; align-items:center; margin-top:2rem; gap:.8rem;}
+	.best-swiper .control-btns .swiper-pagination {position:unset; display:inline-flex; align-items:center; justify-content:center; gap:.4rem; width:auto; height:4rem; min-height:4rem; padding:0 1.6rem; border-radius:2rem; text-align:center; font-weight:700; background-color:#fff; color:var(--iw-gray-90); border:0.1rem solid var(--iw-color-border-gray-light);}
+	.best-swiper .control-btns .swiper-pagination .swiper-pagination-current {color:var(--iw-secondary-80);}
+	.best-swiper .control-btns .btn-control {position:unset; margin-top:0; width:4rem; height:4rem;}
+
+
+	.category-list-wrap .list-top-util {padding-bottom:1.6rem;}
+
+	.category-service-wrap .category-service-list.list-card.col-3 li {width:100%;}
+}
+
+@media only screen and (max-width:767px) {
+	.category-service-wrap .category-service-list {flex-direction:column; }
+	.category-service-wrap .category-service-list li,
+	.category-service-wrap.total .category-service-list li {width:100%;}
+}
+
+/*누리집 안내지도*/
+.nurizip-tab.tab-area {margin:0;}
+.nurizip-tab > .tab-list {padding:2.4rem 2.4rem 1.2rem; background-color:var(--iw-secondary-5); border-radius:1.2rem 1.2rem 0 0;}
+.nurizip-tab > .tab-list ul {display:flex; gap:2.4rem; overflow:visible;}
+.nurizip-tab > .tab-list li {width:calc((100% - 4.8rem) / 3); height:auto;}
+.nurizip-tab > .tab-list .btn-tab {display:flex; justify-content:space-between; width:100%; height:12rem; padding:2rem 2.4rem; border:2px solid transparent; background-color:#fff; border-radius:1.2rem; text-align:left; font-size:var(--iw-fz-sm); color:var(--iw-gray-90); }
+.nurizip-tab > .tab-list .btn-tab:hover {background-color:#fff;}
+.nurizip-tab > .tab-list .active .btn-tab {color:var(--iw-primary-60); border-color:var(--iw-primary);}
+.nurizip-tab > .tab-list .active .btn-tab:hover {background-color:#fff;}
+.nurizip-tab > .tab-list .btn-tab strong:after {visibility:hidden; display:inline-block; width:2.4rem; height:2.4rem; background:url('https://static.gov.kr/content/images/contents/ico-nurizip-check.svg'); margin-left:.4rem; vertical-align:text-bottom; content:"";}
+.nurizip-tab > .tab-list .active .btn-tab strong:after {visibility:visible;}
+.nurizip-tab > .tab-list .btn-tab::after {display:block; width:8rem; min-width:6rem; height:8rem; background-position:50% 50%; background-repeat:no-repeat; background-size:contain; content:"";}
+.nurizip-tab > .tab-list .btn-tab.service-guide::after {background-image:url('https://static.gov.kr/content/images/contents/ico-service-guide.svg');}
+.nurizip-tab > .tab-list .btn-tab.service-join::after {background-image:url('https://static.gov.kr/content/images/contents/ico-service-join.svg');}
+.nurizip-tab > .tab-list .btn-tab.service-info::after {background-image:url('https://static.gov.kr/content/images/contents/ico-service-info.svg');}
+.nurizip-tab .sub-tab-wrap {padding:1.2rem 2.4rem 2.4rem; background-color:var(--iw-secondary-5); border-radius:0 0 1.2rem 1.2rem;}
+.nurizip-tab .sub-tab-wrap .tab-list {position:relative; overflow:hidden;}
+.nurizip-tab .nurizip-sub-tab {margin:0; padding:0; list-style:none; display:flex; gap:1.2rem; white-space:nowrap;}
+.nurizip-tab .nurizip-sub-tab li {flex:1;}
+.nurizip-tab .nurizip-sub-tab .btn-tab {width:100%; height:5.6rem; padding:1rem; text-align:center; font-weight:700; color:var(--iw-gray-70); border-radius:2.8rem; border:0; background-color:#fff;} 
+.nurizip-tab .nurizip-sub-tab .btn-tab:hover {background-color:#fff;}
+.nurizip-tab .nurizip-sub-tab .active .btn-tab {background-color:var(--iw-primary); color:#fff;}
+
+@media only screen and (max-width:1149px) {
+	.nurizip-tab > .tab-list .btn-tab {justify-content:space-evenly; gap:1rem; padding:2rem 0.1rem;}
+	.nurizip-tab > .tab-list .btn-tab::after {width:6rem;}
+	.nurizip-tab > .tab-list .btn-tab strong:after {visibility:visible; display:none;}
+	.nurizip-tab > .tab-list .active .btn-tab strong:after {display:inline-block;}
+}
+
+@media only screen and (max-width:1024px) {
+	.nurizip-tab > .tab-list {padding:2.4rem 2.4rem 0.8rem;}
+	.nurizip-tab > .tab-list ul {flex-direction:column; gap:1.2rem;}
+	.nurizip-tab > .tab-list ul li {width:100%; white-space:normal}
+	.nurizip-tab > .tab-list .btn-tab {justify-content:space-between; min-height:64px; height:auto; padding:1.6rem 1.6rem 1.4rem; border-radius:.8rem; }
+	.nurizip-tab > .tab-list .btn-tab br {display:none;}
+	.nurizip-tab > .tab-list .btn-tab.service-guide::after,
+	.nurizip-tab > .tab-list .btn-tab.service-join::after,
+	.nurizip-tab > .tab-list .btn-tab.service-info::after {display:none;}
+	.nurizip-tab > .tab-list .active .btn-tab strong {display:flex; align-items:center; justify-content:space-between; width:100%;}
+	.nurizip-tab > .tab-list .active .btn-tab strong:after {flex-shrink:0;}
+	.nurizip-tab .scroll-tab-wrap > .tab-list {position:relative}
+	
+	.nurizip-tab .nurizip-sub-tab {gap:.8rem;}
+	.nurizip-tab .nurizip-sub-tab li {flex:none; height:4.8rem;}
+	.nurizip-tab .nurizip-sub-tab .btn-tab {height:4.8rem; min-width:auto; padding:1rem 1.6rem; font-size:1.5rem;}
+}
+
+.nurizip-tab .tab-conts-wrap .tab-conts {position:relative;}
+.nurizip-tab .tab-conts-wrap .tab-conts-wrap .tab-conts {margin-top:4rem;}
+.nurizip-tab .tab-conts-wrap .cont-mo {display:none;}
+.nurizip-guide-wrap {display:flex; flex-direction:column;}
+.nurizip-guide-wrap.section-2 {gap:8rem 0;}
+.box-nurizip-guide {padding:4rem; border:0.1rem solid var(--iw-color-border-gray-light); background-color:var(--iw-gray-5); border-radius:12px;}
+.box-nurizip-guide p {margin:0; padding:0;}
+
+@media only screen and (max-width:1024px) {
+	.nurizip-tab .tab-conts-wrap .tab-conts-wrap .tab-conts {margin-top:3.2rem;}
+	.nurizip-tab .tab-conts-wrap .cont-pc {display:none;}
+	.nurizip-tab .tab-conts-wrap .cont-mo {display:block;}
+
+	.box-nurizip-guide {padding:2.4rem;}
+	.nurizip-guide-wrap.section-2 {gap:4rem 0;}
+	.nurizip-guide-wrap .section-5 {gap:0.8rem 0;}
+}
+
+
+.nurizip-guide-wrap .title.xxlg {color:var(--iw-gray-95);}
+.nurizip-guide-wrap .title-row-wrap {display:flex; justify-content:space-between; align-items:baseline; gap:1.6rem;}
+.nurizip-guide-list .title.xlg {display:flex; gap:1.2rem;}
+
+.box-nurizip-guide .info-txt {display:flex; justify-content:flex-end; margin-bottom:1.6rem; color:var(--iw-gray-70);}
+.box-nurizip-guide .nurizip-guide-list {display:flex; flex-direction:column; margin:0; padding:0; list-style:none;}
+.box-nurizip-guide .nurizip-guide-list > li {display:flex; flex-direction:column; gap:1.6rem 0;}
+.box-nurizip-guide .nurizip-guide-cont {display:flex; flex-direction:column; gap:2.4rem 0;}
+.box-nurizip-guide .nurizip-guide-cont .btn-wrap {margin-top:1.6rem;}
+.box-nurizip-guide .guide-sub-text {color:var(--iw-gray-70);}
+.box-nurizip-guide .nurizip-guide-cont .guide-text .list-bull {margin-top:1.2rem;}
+.box-nurizip-guide .list-number {display:flex; flex-direction:column; gap:2.4rem 0;}
+.box-nurizip-guide .list-number li .title {margin-bottom:0.8rem;}
+.box-nurizip-guide .list-number li .title:only-child {margin-bottom:0;}
+.box-nurizip-guide .list-number li .img-box {margin-top:1.6rem;}
+.box-nurizip-guide .list-bull li .list-dash {margin-bottom:0.4rem;}
+.box-nurizip-guide .list-bull li:last-child .list-dash {margin-bottom:0;}
+.box-nurizip-guide .list-number-sm {display:flex; flex-direction:column; gap:1.2rem 0; list-style:none; margin:0; padding:0;}
+.box-nurizip-guide .list-number-sm > li {position:relative; padding-left:3.2rem;}
+.box-nurizip-guide .list-number-sm > li .number {position:absolute; left:0; top:0;}
+.box-nurizip-guide .list-number-sm li .list-dash {margin:1.6rem 0 0.4rem;}
+.box-nurizip-guide .list-number-sm li:last-child .list-dash {margin-bottom:0;}
+
+
+@media only screen and (max-width:767px) {
+	.nurizip-guide-wrap .title-row-wrap {flex-direction:column;}
+	.nurizip-guide-wrap .title-row-wrap .btn {width:100%;}
+}
+
+
+@media only screen and (max-width:1024px) {
+	.box-nurizip-guide .info-txt {justify-content:flex-start;}
+	.box-nurizip-guide ol.nurizip-guide-list > li {gap:0.8rem 0;}
+	.box-nurizip-guide ol.nurizip-guide-list .nurizip-guide-cont {gap:1.6rem 0;}
+	.box-nurizip-guide .list-number {gap:1.6rem 0;}
+}
+
+/* 이미지박스 */
+.box-nurizip-guide .img-box-wrap {display:flex; flex-direction:column; gap:0.8rem 0;}
+.box-nurizip-guide .img-box-wrap.flex {flex-direction:row; justify-content:space-between; column-gap:2.4rem;;}
+.box-nurizip-guide .img-box-wrap .sub {display:flex; justify-content:flex-end; text-align:left; font-size:var(--iw-fz-b-sm);}
+.box-nurizip-guide .img-box {display:flex; align-items:center; justify-content:center; padding:0; border-radius:1.2rem; text-align:center; font-size:2.4rem; color:var(--iw-gray-40); font-weight:700;}
+.box-nurizip-guide .img-box img {width:100%; height:100%; object-fit:contain;}
+
+@media only screen and (max-width:1024px) {
+	.box-nurizip-guide .img-box img {max-width:36rem;}
+}
+
+
+/* 하단 링크 영역 */
+.nurizip-link-list ul {display:flex; flex-wrap:wrap; gap:var(--iw-gap-6); margin:0; padding:0; list-style:none;}
+.nurizip-link-list li {width:calc(33.333% - 1.6rem);}
+.nurizip-link-list .btn-nurizip-link {display:flex; justify-content:space-between; align-items:center; height:6rem; padding:1.5rem 2.4rem; border:0.1rem solid var(--iw-gray-30); border-radius:.6rem; font-size:var(--iw-fz-b-lg); font-weight:700; text-decoration:none; color:var(--iw-gray-90); }
+.nurizip-link-list .btn-nurizip-link::after { display:block; width:2.4rem; height:2.4rem; background:url('https://static.gov.kr/content/images/common/ico/ico-more-right.svg') no-repeat 50% 50%; content:'';}
+.nurizip-tab .scroll-tab-wrap .scroll-btn-box.prev {background:linear-gradient(to left, transparent, var(--iw-secondary-5) 2.6rem);}
+.nurizip-tab .scroll-tab-wrap .scroll-btn-box.next {background:linear-gradient(to left, var(--iw-secondary-5) 2.4rem, transparent);}
+@media only screen and (max-width:767px) {
+	.nurizip-link-list ul {gap:var(--iw-gap-4);}
+	.nurizip-link-list ul li {width:100%;}
+}
+
+
+
+
+/*회원정보 수정*/
+.cert-wrap hr { border:0; border-bottom:0.1rem solid var(--iw-color-border-gray-light); margin:0;}
+.cert-section {display:flex; align-items:center; gap:1.6rem; }
+.cert-section .cert-group {display:flex; flex-direction:column; gap:2.4rem;}
+.cert-section .cert-item {display:flex; align-items:center; gap:1.6rem;}
+.cert-section .cert-item .iconset {width:4rem; height:4rem;}
+.cert-section .cert-item .text-box {display:flex; flex-direction:column; gap:.4rem;}
+.cert-section .cert-item .text-box p {margin:0;}
+.cert-section .btn {width:12.8rem; flex-shrink:0; margin-left:auto;}
+.cert-wrap .box-help {margin-top:0;}
+
+@media only screen and (max-width:767px) {
+	.cert-wrap hr {margin:0.8rem;}
+	
+	.cert-section {flex-direction:column; align-items:flex-start; gap:2.4rem;}
+	.cert-section .btn {width:100%;}
+	.cert-section .cert-group {gap:1.6rem;}
+	.cert-section .cert-item {gap:.8rem; align-items:flex-start;}
+	.cert-section .cert-item .iconset {width:2.4rem; height:2.4rem; margin-top:2px;}
+
+	.cert-section + .box-help {margin-top:0.8rem;}
+}
+
+/* 인증서 등록/관리 */
+.crtf-wrap .box-alert.mb-lg {margin-top:0; margin-bottom:4rem;}
+.tab-cont {padding-top:4rem;}
+@media only screen and (max-width:1024px) {
+	.crtf-wrap .box-alert.mb-lg {margin-top:0; margin-bottom:3.2rem;}
+	.tab-cont {padding-top:2.4rem;}
+}
+
+.list-column {padding:0; margin:0; list-style:none; display:flex; flex-wrap:wrap;}
+.list-column li {width:100%;}
+.crt-step-box {padding:2.4rem; background-color:var(--iw-gray-5); border-radius:.8rem;}
+.crt-step-box .list-column {gap:1.6rem;}
+.crt-step-box .list-crt-step {gap:1.6rem 2.4rem;}
+.crt-step-box .list-crt-step li {display:flex; gap:1.6rem; align-items:center; }
+.crt-step-box .list-crt-step li p {margin:0;}
+.crt-step-box .list-crt-step.col2 {flex-wrap:wrap;}
+.crt-step-box .list-crt-step.col2 li {width:calc(50% - 1.2rem);}
+.crt-step-box .list-crt-step .circle-box {display:inline-block; flex-shrink:0; width:6.4rem; height:6.4rem; padding:1.6rem; border-radius:50%; background-color:#fff; background-repeat:no-repeat; background-position:50% 50%;}
+.crt-step-box .list-crt-step .circle-box:after {display:block;}
+.pop-title-wrap .sub {padding-top:.8rem;}
+.iw-popup .list-data .btn-txt {text-decoration:none; color:var(--iw-gray-90);}
+
+@media only screen and (max-width:767px) {
+	.crt-step-box .list-crt-step li {flex-direction:column; align-items:flex-start;}
+	.crt-step-box .list-crt-step.col2 li {width:100%;}
+}
+
+
+/* 인증서 내보내기 */
+.export-certificate {display:flex; flex-direction:row; justify-content:center; align-items:center; gap:2.4rem;}
+.export-certificate .ex-export {display:flex; position:relative; margin-right:4.8rem; padding:2.4rem; border-radius:3.6rem; background-color:var(--iw-primary-5);}
+.export-certificate .ex-export::after {display:block; position:absolute; right:-4.8rem; top:calc(50% - 0.8rem); content:''; width:2.4rem; height:1.6rem; background:url('https://static.gov.kr/content/images/contents/ico-export-arr.svg') no-repeat center; background-size:contain;}
+.export-certificate .ex-export:last-child {margin-right:0;}
+.export-certificate .ex-export:last-child::after {display:none;}
+.export-certificate .ex-export.mo {background-color:var(--iw-warning-5);}
+@media only screen and (max-width:767px) {
+	.export-certificate {gap:1.6rem;}
+	.export-certificate .ex-export {margin-right:4rem;}
+	.export-certificate .ex-export::after {right:-4rem;}
+}
+
+
+@media only screen and (max-width:359px) {
+	.export-certificate .ex-export {padding:2rem; border-radius:3.2rem;}
+}
+
+/* 빠른인증관리 */
+.quick-auth-settings .setting-conts {display:none;}
+.quick-auth-settings .setting-conts.on {display:block;}
+.quick-auth-settings .setting-conts .box-bio-icons {margin:2.4rem 0;}
+.quick-auth-settings .setting-conts .link-section {display:flex; justify-content:center; margin:0 0 2.4rem 0; padding:0 0 2.4rem 0; border-bottom:1px solid var(--iw-gray-20);}
+.quick-auth-settings .setting-conts .link-section p {position:relative; margin:0; padding:0 0.8rem;}
+.quick-auth-settings .setting-conts .link-section p::before {content:''; display:block; position:absolute; left:0; top:50%; transform:translateY(-50%); width:0.1rem; height:1.6rem; background-color:var(--iw-gray-20);}
+.quick-auth-settings .setting-conts .link-section p:first-child::before {display:none;}
+.quick-auth-settings .setting-conts .iw-disclosure-cont p {margin:1.2rem 0 0 0; padding:0;}
+.quick-auth-settings .setting-conts .iw-disclosure-cont p:first-child {margin-top:0;}
+.quick-auth-settings .setting-conts .iw-disclosure-cont p + .list-number {margin-top:2.4rem;}
+.quick-auth-settings .setting-conts .iw-disclosure-cont .list-number li {margin:0.8rem 0 0 0;}
+.quick-auth-settings .setting-conts .iw-disclosure-cont .list-number li:first-child {margin-top:0;}
+.quick-auth-settings .setting-conts .iw-disclosure-cont .btn-wrap {margin-top:2.4rem;}
+
+/* 보안프로그램 */
+.box-help-info.security {gap:2.4rem 0; padding:4rem;}
+.security .title.icon {display:flex; align-items:center; gap:.4rem; color:var(--iw-gray-95);}
+.security .txt {font-size:var(--iw-fz-b-lg); color:var(--iw-gray-90);}
+.security-list {display:flex; flex-wrap:wrap; gap:2.4rem; margin:0; padding:0; list-style:none;}
+.security-list li {width:calc(50% - 1.2rem);}
+.security-list .security-box {display:flex; flex-direction:column; gap:1.6rem; height:100%; padding:3.2rem 3.2rem 2.8rem; border:0.1rem solid var(--iw-color-border-gray); border-radius:1.2rem;}
+.security-list .security-box .txt-wrap {display:flex; gap:1.6rem; }
+.security-list .security-box .iconset {width:4rem; height:4rem; flex-shrink:0;}
+.security-list .security-box .tit {margin:0; font-weight:700; font-size:var(--iw-fz-b-lg);}
+.security-list .security-box .sub {margin:.8rem 0 0;}
+.security-list .security-box .text-primary-check {display:inline-block; padding-left:2.6rem; line-height:4.8rem; color:var(--iw-primary-60); background:url('https://static.gov.kr/content/images/common/ico/ico-check-primary.svg') no-repeat 0 50%; background-size:2.4rem;}
+.security-list .security-box .btn-wrap {margin-top:auto;}
+@media only screen and (max-width:767px) {
+	.box-help-info.security {padding:2.4rem;}
+	.security .title.icon {align-items:flex-start;}
+	.security .txt {display:inline;}
+	.security-list li {width:100%;}
+	.security-list .security-box {padding:3.2rem;}
+	.security-list .security-box .txt-wrap {flex-direction:column;}
+	.security-list .security-box .iconset {width:3.2rem; height:3.2rem;}
+}
+
+/*개인정보처리방침, 약관동의*/
+.term-txt-lg {color:var(--iw-gray-90); font-size:var(--iw-fz-b-lg);}
+.term-txt-lg .list-refer li {padding:0; color:var(--iw-gray-90);}
+.term-txt-lg .list-refer li::before {display:inline; position:static; margin-right:0.4rem;}
+
+.term-anchor-list {display:flex; flex-wrap:wrap; gap:1.2rem 4rem; margin-top:2.4rem; }
+.term-anchor-list li {display:flex; width:calc(50% - 2.1rem); margin-top:0;}
+.term-anchor-list .btn-anchor {background-color:transparent; border:0; color:var(--iw-primary); text-decoration:underline; text-align:left;}
+.term-anchor-list .btn-anchor:hover {color:var(--iw-primary-60);}
+.term-anchor-list.row {max-height:62rem; gap:1.6rem 4rem;}
+.term-anchor-list.row .list-dash {display:flex; flex-direction:column; gap:.8rem; margin-top:1.6rem;}
+.term-anchor-list.row .list-dash li {width:100%;}
+
+
+
+.term-cont-list {display:flex; flex-direction:column; gap:4rem; margin:4rem 0 0; padding:0; list-style:none;}
+.term-cont-list p {margin:0;}
+.term-cont-list.condition {gap:3.2rem;}
+.term-cont-list .trem-cont {display:flex; flex-direction:column; gap:1.6rem;}
+
+.term-cont-list .trem-cont .box-terms .list-terms {display:flex; flex-direction:column; row-gap:1.6rem; list-style-type:none; margin:0; padding:0;}
+.term-cont-list .trem-cont .box-terms .list-terms > li {margin:0; padding:0;}
+.term-cont-list .trem-cont .box-terms .list-terms > li .txt {margin-top:0.8rem; color:var(--iw-gray-70);}
+.term-cont-list .trem-cont .box-terms .list-terms .list-number {row-gap:0.8rem; margin:0.8rem 0 0 0.8rem;}
+.term-cont-list .trem-cont .box-terms .list-terms .list-number .list-bull li > .txt {margin-left:1.2rem; margin-bottom:1.2rem;}
+
+.term-cont-list .trem-cont .box-terms .list-terms .list-bull {margin-top:0.8rem;}
+.term-cont-list .trem-cont .box-terms .section-5 > .list-bull {margin-left:0;}
+
+.term-cont-list .trem-cont .box-terms .list-number {display:flex; flex-direction:column; row-gap:1.6rem;}
+.term-cont-list .trem-cont .box-terms .list-number > li > .refer {margin:0.8rem 0 0 0.8rem;}
+.term-cont-list .trem-cont .box-terms .list-number > li > .list-refer {margin:0.8rem 0 0 0.8rem;}
+.term-cont-list .trem-cont .box-terms .list-number .list-number {row-gap:0.8rem; margin:0.8rem 0 0 0.8rem;}
+.term-cont-list .trem-cont .box-terms .list-number .tbl-wrap {margin-top:0.8rem;}
+
+.term-cont-list .trem-cont .box-terms .list-number .list-bull {margin-left:1.2rem; margin-top:1.2rem;}
+.term-cont-list .trem-cont .box-terms .list-number .list-bull .list-circle {margin-top:1.2rem;}
+.term-cont-list .trem-cont .box-terms .list-number .list-bull .list-dash {margin-left:1.2rem; margin-top:1.2rem;}
+
+.term-cont-list .trem-cont .box-terms .list-text {display:flex; flex-direction:column; row-gap:1.6rem; list-style-type:none; margin:0; padding:0;}
+.term-cont-list .trem-cont .box-terms .list-number .list-text {row-gap:0.8rem; margin:0.8rem 0 0 0.8rem;}
+
+@media only screen and (max-width:1024px) {
+	.term-wrap {margin-top:0.8rem;}
+	.term-wrap .section-5 {gap:0.8rem;}
+	.term-anchor-list {gap:1.2rem; margin-top:1.6rem;}
+	.term-anchor-list li {display:flex; width:100%;}
+	.term-cont-list {gap:3.2rem; margin-top:3.2rem;}
+	.term-cont-list.condition {gap:2.4rem;}
+	.term-cont-list .trem-cont {gap:1.2rem; }
+	.term-cont-list li {gap:1.2rem}
+	.term-anchor-list.row {max-height:none;}
+}
+
+/*혜택알리미*/
+.benefit-top-wrap {display:flex; gap:1.6rem 2.4rem;}
+.benefit-top-wrap .benefit-visual {overflow:hidden; display:flex; flex-direction:column; gap:2.4rem; position:relative; padding:3.2rem 4rem; width:100%; border-radius:1.2rem; background:linear-gradient(93deg, #d8e7fd 31.03%, #bccfff 112.59%);}
+.benefit-top-wrap.alram-non .benefit-visual {background:linear-gradient(93deg, #d8effd 31.03%, #b2e3fc 112.59%);}
+.benefit-top-wrap .benefit-visual::after {display:block; position:absolute; right:0; top:0; content:''; width:36rem; height:100%; background-repeat:no-repeat; background-position:top center; background-size:100% 100%; transition:.3s;}
+.benefit-top-wrap.alram-non .benefit-visual::after {background-image:url('https://static.gov.kr/content/images/contents/img-benefit-visual-alram-non.svg');}
+.benefit-top-wrap.alram-agree .benefit-visual::after {background-image:url('https://static.gov.kr/content/images/contents/img-benefit-visual-alram-agree.svg');}
+.benefit-top-wrap.benefit-join .benefit-visual::after {background-image:url('https://static.gov.kr/content/images/contents/img-benefit-visual-join.svg');}
+.benefit-top-wrap.benefit-alram-off .benefit-visual::after {background-image:url('https://static.gov.kr/content/images/contents/img-benefit-visual-alram-off.svg');}
+
+
+
+.benefit-top-wrap .benefit-visual .visual-txtbox {display:flex; flex-direction:column; gap:0.8rem; position:relative; z-index:1;}
+.benefit-top-wrap .benefit-visual .visual-txtbox p {margin:0;}
+.benefit-top-wrap .benefit-visual .visual-txtbox .sub span {display:block;}
+.benefit-top-wrap .benefit-visual .visual-txtbox .tit {color:var(--iw-gray-90); font-size:3.2rem; font-weight:700;}
+.benefit-top-wrap .benefit-visual .visual-txtbox .tit span {display:block;}
+.benefit-top-wrap .benefit-visual .visual-txtbox .tit .mo-br {display:none;}
+.benefit-top-wrap .benefit-visual .visual-txtbox .tit .md {font-size:2.4rem;}
+.benefit-top-wrap .benefit-visual .visual-txtbox .txt {color:var(--iw-gray-90);}
+.benefit-top-wrap .benefit-visual .btn-wrap {flex-direction:row !important;}
+.benefit-top-wrap .benefit-visual .btn-wrap .btn {gap:0.4rem;}
+.benefit-top-wrap .benefit-visual .btn-wrap .btn-txt {text-decoration:underline; text-underline-offset:0.4rem;}
+.benefit-top-wrap .benefit-manager ul {display:flex; flex-direction:column; justify-content:center; list-style-type:none; max-width:12rem; height:100%; margin:0; padding:0; border:0.1rem solid #d5ebf1; border-radius:1.2rem; background-color:#edf6f8;}
+.benefit-top-wrap .benefit-manager li {position:relative; width:7.2rem; height:100%; margin:0 2.4rem; padding:1rem 0;}
+.benefit-top-wrap .benefit-manager li:only-child {width:3rem;}
+.benefit-top-wrap .benefit-manager li::before {position:absolute; left:0; top:0; content:''; width:100%; height:0.1rem; background-color:var(--iw-secondary-10);}
+.benefit-top-wrap .benefit-manager li:first-child::before {display:none;}
+.benefit-top-wrap .benefit-manager li .btn-user-manager {display:flex; flex-direction:column; justify-content:center; align-items:center; gap:0.4rem; width:100%; height:100%; padding:0 .4rem; color:var(--iw-gray-90); text-decoration:none; text-align:center; word-break:keep-all; border:none; background-color:transparent;}
+.benefit-top-wrap .benefit-manager li .btn-user-manager .txt span {display:block;}
+.benefit-top-wrap .benefit-manager li .btn-user-manager:hover {text-decoration:underline; text-underline-offset:0.4rem;;}
+.benefit-top-wrap .benefit-manager li a.btn-user-manager:hover {color:var(--iw-primary-60);}
+@media only screen and (max-width:893px) {
+	.benefit-top-wrap .benefit-visual .visual-txtbox .sub {text-align:center;}
+}
+
+
+
+.benefit-main-cont-type01 {margin-top:4rem;}
+.iw-benefit-main .benefit-swiper {width:100%;}
+.iw-benefit-main .benefit-swiper .control-btns {display:none;}
+.iw-benefit-main .benefit-swiper-list {display:flex; gap:2.4rem; padding:0; margin:0;}
+.iw-benefit-main .benefit-swiper-list li {flex:1; height:auto;}
+.iw-benefit-main .benefit-info-card {display:flex; flex-direction:column; gap:2.4rem; padding:3.2rem; height:100%; border-radius:1.2rem;}
+.iw-benefit-main .benefit-info-card .img-box {width:100%;}
+.iw-benefit-main .benefit-info-card img {width:100%; height:100%; object-fit:contain; }
+.iw-benefit-main .benefit-info-card .txt-box .tit { margin-bottom:.8rem; font-weight:700; font-size:var(--iw-fz-b-lg);}
+.iw-benefit-main .benefit-info-card.list01 {background-color:var(--iw-secondary-5);}
+.iw-benefit-main .benefit-info-card.list02 {background-color:#FFF3DB;}
+.iw-benefit-main .benefit-info-card.list03 {background-color:var(--iw-secondary-5);}
+
+.iw-benefit-main .gray-btn-wrap { display:flex; align-items:center; justify-content:space-around; padding:1.5rem 2.4rem; border:0.1rem solid var(--iw-color-border-gray); border-radius:1.2rem;}
+.iw-benefit-main .gray-btn-wrap hr {display:inline-block; width:0.1rem; height:1.6rem; margin:0; border:0; background-color:var(--iw-color-border-gray-light);}
+.iw-benefit-main .gray-btn-wrap .btn-txt {text-decoration:none;}
+.iw-benefit-main .gray-btn-wrap .btn-txt:hover {text-decoration:underline; background-color:transparent;}
+.iw-benefit-main .gray-btn-wrap .btn-txt .iconset {margin-right:.4rem;}
+.iw-benefit-main .gray-btn-wrap .btn-txt::after {margin-left:auto;}
+
+
+.iw-benefit-main .benefit-main-cont-type02 {margin-top:4rem;}
+.iw-benefit-main .benefit-main-help { display:flex; flex-direction:column; gap:1.6rem; padding:2.4rem; text-align:center; border:0.1rem solid var(--iw-color-border-gray); border-radius:1.2rem;}
+.iw-benefit-main .benefit-main-help .btn {height:auto; padding:1rem 1.6rem;}
+.iw-benefit-main .more-arrow-btn {display:flex; align-items:center; gap:.8rem; height:5.6rem; padding:0 1.6rem 0 2.4rem; border-radius:.8rem;text-decoration:none; color:#1E2124; background-color:#fff; border:0.1rem solid transparent; }
+.iw-benefit-main .more-arrow-btn:after {flex-shrink:0; display:inline-block; width:2rem; height:2rem; background:url('https://static.gov.kr/content/images/common/ico/ico-more-right.svg'); margin-left:auto; content:"";}
+.iw-benefit-main .more-arrow-btn:hover {text-decoration:underline;}
+.iw-benefit-main .more-arrow-btn .iconset {flex-shrink:0;}
+
+
+.iw-benefit-main .white-circle {width:4.8rem; height:4.8rem; padding:1.2rem; border-radius:2rem; background-color:#fff;}
+.iw-benefit-main .benefit-cont-list {display:grid; grid-template-columns:repeat(2, 1fr); gap:2.4rem; }
+.iw-benefit-main .benefit-cont-box {padding:3.2rem 2.4rem; background-color:#FFF3DB; border-radius:1.2rem;}
+.iw-benefit-main .benefit-cont-box .tit {display:flex; align-items:center; gap:.8rem; margin-bottom:1.6rem; font-size:var(--iw-fz-b-lg);}
+.iw-benefit-main .benefit-cont-box .btn-txt-lg { display:inline-flex; align-items:center; margin-bottom:.8rem; color:#1e2124; font-size:var(--iw-fz-b-lg); font-weight:700; text-decoration:none;} 
+.iw-benefit-main .benefit-cont-box .btn-txt-lg:hover {text-decoration:underline;}
+.iw-benefit-main .benefit-cont-box .btn-box {display:flex; flex-direction:column; gap:.8rem; margin-top:2.4rem;}
+.iw-benefit-main .benefit-cont-list .benefit-cont-inner {display:flex; flex-direction:column; gap:1.6rem;}
+.iw-benefit-main .benefit-cont-list .benefit-cont-inner .benefit-cont-box {display:flex; flex:1; align-items:center; gap:1.6rem; padding:2.4rem;background-color:var(--iw-secondary-5);}
+
+.iw-benefit-main .benefit-info-btns {display:grid; grid-template-columns:repeat(2, 1fr); flex-wrap:wrap; margin:0; padding:0; gap:1.6rem 2.4rem; list-style:none;}
+.iw-benefit-main .benefit-info-btns li {min-width:0;}
+.iw-benefit-main .benefit-info-btns .more-arrow-btn {gap:0 .4rem; height:6.4rem; padding:1.6rem 2.4rem; border-color:var(--iw-color-border-gray); border-radius:1.2rem;}
+.iw-benefit-main .benefit-info-btns .more-arrow-btn .iconset {margin-right:.4rem;}
+
+.iw-benefit-main .benefit-other-btns {display:flex; justify-content:center; align-items:center; flex-wrap:wrap;  gap:.8rem;padding:2.4rem 0 0; border-top:0.1rem solid var(--iw-gray-20);}
+.iw-benefit-main .benefit-other-btns a { display:inline-block; padding:.3rem .2rem; text-decoration:none; color:#1E2124; }
+.iw-benefit-main .benefit-other-btns a:hover {text-decoration:underline;}
+.iw-benefit-main .benefit-other-btns hr { display:inline-block; width:0.1rem; height:1.6rem; background-color:var(--iw-color-border-gray-light); margin:0; border:0; }
+
+.iw-benefit-main .benefit-notice-list {display:flex; flex-direction:column; gap:1.6rem; margin:0; padding:0; list-style:none; }
+.iw-benefit-main .benefit-notice-box {display:flex; flex-direction:column; gap:.8rem; padding:2.4rem; border-radius:1.2rem; border:0.1rem solid var(--iw-color-border-gray);}
+.iw-benefit-main .benefit-notice-box .benefit-notice-date {display:flex; align-items:center; font-size:1.5rem; color:var(--iw-gray-70);}
+.iw-benefit-main .benefit-notice-box .benefit-notice-date .time:before {content:""; display:inline-block; width:0.1rem; height:1rem; background-color:#6D7882; margin:0 .8rem; }
+.iw-benefit-main .benefit-notice-box .tit {font-weight:700;}
+
+@media only screen and (max-width:893px) {
+	.iw-benefit-main .benefit-info-card .txt-box .tit br {display:none;}
+}
+
+
+/* 혜택알리미 메인 - 모바일 */
+.iw-benefit-main.mo-benefit .benefit-top-wrap {flex-direction:column;}
+.iw-benefit-main.mo-benefit .benefit-top-wrap .benefit-visual {align-items:center; gap:1.6rem; padding:17.6rem 2.4rem 3.2rem 2.4rem;}
+.iw-benefit-main.mo-benefit .benefit-top-wrap .benefit-visual::after {right:calc(50% - 14rem); width:28rem; height:20rem;}
+.iw-benefit-main.mo-benefit .benefit-top-wrap.alram-non .benefit-visual::after {right:calc(50% - 14rem); background-image:url('https://static.gov.kr/content/images/contents/img-benefit-visual-alram-non-mo.svg');}
+.iw-benefit-main.mo-benefit .benefit-top-wrap.alram-agree .benefit-visual::after {background-image:url('https://static.gov.kr/content/images/contents/img-benefit-visual-alram-agree-mo.svg');}
+.iw-benefit-main.mo-benefit .benefit-top-wrap.benefit-join .benefit-visual::after {background-image:url('https://static.gov.kr/content/images/contents/img-benefit-visual-join-mo.svg');}
+.iw-benefit-main.mo-benefit .benefit-top-wrap.benefit-alram-off .benefit-visual::after {background-image:url('https://static.gov.kr/content/images/contents/img-benefit-visual-alram-off-mo.svg');}
+
+.iw-benefit-main.mo-benefit .benefit-top-wrap .benefit-visual .visual-txtbox {align-items:center;}
+.iw-benefit-main.mo-benefit .benefit-top-wrap .benefit-visual .visual-txtbox .tit {font-size:2.4rem; text-align:center; word-break:keep-all;}
+.iw-benefit-main.mo-benefit .benefit-top-wrap .benefit-visual .visual-txtbox .tit span {display:inline;}
+.iw-benefit-main.mo-benefit .benefit-top-wrap .benefit-visual .visual-txtbox .tit .mo-br {display:block;}
+.iw-benefit-main.mo-benefit .benefit-top-wrap .benefit-visual .visual-txtbox .txt {display:none;}
+.iw-benefit-main.mo-benefit .benefit-top-wrap .benefit-visual .btn-wrap {width:100%; align-items:center; flex-direction:column !important;}
+.iw-benefit-main.mo-benefit .benefit-top-wrap .benefit-visual .btn-wrap .btn {width:100%;}
+
+.iw-benefit-main.mo-benefit .benefit-top-wrap .benefit-manager ul {max-width:none; width:100%; padding:2rem 2.4rem;}
+.iw-benefit-main.mo-benefit .benefit-top-wrap .benefit-manager li {width:100%; margin:1.6rem 0 0 0; padding:1.6rem 0 0 0;}
+.iw-benefit-main.mo-benefit .benefit-top-wrap .benefit-manager li:only-child {width:100%;}
+.iw-benefit-main.mo-benefit .benefit-top-wrap .benefit-manager li:first-child {margin:0; padding:0;}
+.iw-benefit-main.mo-benefit .benefit-top-wrap .benefit-manager li .btn-user-manager {flex-direction:row; justify-content:flex-start;}
+.iw-benefit-main.mo-benefit .benefit-top-wrap .benefit-manager li .btn-user-manager .txt {text-align:left;}
+.iw-benefit-main.mo-benefit .benefit-top-wrap .benefit-manager li .btn-user-manager .txt span {display:inline;}
+
+.iw-benefit-main.mo-benefit .benefit-info-card .txt-box .tit br {display:block;}
+.iw-benefit-main.mo-benefit .benefit-main-cont-type01 {margin-top:2.4rem;}
+.iw-benefit-main.mo-benefit .benefit-main-cont-type02 {margin-top:2.4rem;}
+
+.iw-benefit-main.mo-benefit .benefit-swiper .control-btns {display:flex; justify-content:flex-end; align-items:center; gap:.8rem; margin-top:1.6rem;} 
+.iw-benefit-main.mo-benefit .benefit-swiper .swiper-pagination {position:unset; width:auto; height:4rem; line-height:3.8rem; padding:0 1.6rem; border-radius:2.5rem; border:0.1rem solid var(--iw-color-border-gray); font-weight:700; } 
+.iw-benefit-main.mo-benefit .benefit-swiper .swiper-button-prev, 
+.iw-benefit-main.mo-benefit .benefit-swiper .swiper-button-next {position:unset; flex-shrink:0; margin-top:0; }
+.iw-benefit-main.mo-benefit .benefit-swiper-list {gap:0;}
+.iw-benefit-main.mo-benefit .benefit-swiper-list li {flex:none;}
+.iw-benefit-main.mo-benefit .benefit-info-card .img-box {height:12rem;}
+
+.iw-benefit-main.mo-benefit .gray-btn-wrap {flex-direction:column; gap:1.6rem; padding:2rem 2.4rem;}
+.iw-benefit-main.mo-benefit .gray-btn-wrap hr {width:100%; height:0.1rem; }
+.iw-benefit-main.mo-benefit .gray-btn-wrap .btn-txt {width:100%;}
+
+.iw-benefit-main.mo-benefit .benefit-main-help {text-align:left;}
+.iw-benefit-main.mo-benefit .benefit-cont-list ,
+.iw-benefit-main.mo-benefit .benefit-info-btns {grid-template-columns:none; gap:1.6rem; }
+.iw-benefit-main.mo-benefit .benefit-cont-box.fammily {overflow:hidden; width:100%; padding-top:2.4rem;}
+.iw-benefit-main.mo-benefit .benefit-cont-list .benefit-cont-inner .benefit-cont-box {flex-direction:column; align-items:flex-start;}
+
+.iw-benefit-main.mo-benefit .benefit-other-btns {flex-direction:column; align-items:flex-start;}
+.iw-benefit-main.mo-benefit .benefit-other-btns hr {display:none;}
+
+
+/* 혜택알리미 혜택목록 */
+.iw-benefit-wrap {background-color:#fff; max-width:108rem; margin:0 auto;}
+.iw-benefit-wrap .iw-benefit-header {position:sticky; top:0; height:6.4rem; padding:1.6rem; border-bottom:0.1rem solid var(--iw-color-border-gray-light); background-color:#fff;}
+.iw-benefit-wrap .iw-benefit-header .logo-benefit { display:inline-block; width:12.2rem; height:3.2rem; background:url('https://static.gov.kr/content/images/layout/logo-header.svg') no-repeat 0 50% / contain;}
+.iw-benefit-wrap .iw-benefit-container {padding:3.2rem 1.6rem 4rem;}
+.iw-benefit-container .benefit-name {display:flex; flex-direction:column; gap:.8rem; margin-bottom:2.4rem;}
+.iw-benefit-container .benefit-name .txt {font-size:var(--iw-fz-b-lg);}
+.iw-benefit-container .benefit-btn-wrap {display:flex; flex-direction:column; gap:.8rem; }
+.iw-benefit-container .btn-benefit-info { display:flex; align-items:center; gap:1.2rem; padding:1.6rem; border-radius:1.2rem; border:0; background-color:var(--iw-info-5); }
+.iw-benefit-container .btn-benefit-info .info-badge {display:inline-block; flex-shrink:0; padding:0 1.2rem; line-height:3.2rem; border-radius:1.6rem; background-color:var(--iw-primary-60); color:#fff; font-size:var(--iw-fz-b-sm); }
+.iw-benefit-container .btn-benefit-info .ellipsis {color:var(--iw-gray-90);}
+.iw-benefit-container .btn-benefit-info .iconset {margin-left:auto;}
+.iw-benefit-container .benefit-result-wrap {margin-top:3.2rem;}
+.iw-benefit-container .benefit-result-wrap .result-total-box {margin-bottom:1.6rem; font-size:var(--iw-fz-b-lg); font-weight:700;}
+.iw-benefit-container .benefit-result-wrap .btn-benefit-tooltip {width:2rem; height:2rem; margin:0 0 .2rem 0; border:0; background:url('https://static.gov.kr/content/images/contents/ico-benefit-tooltip.svg') no-repeat 50% 50%;}
+.iw-benefit-container .benefit-result-wrap .benefit-item-list {display:flex; flex-direction:column; gap:2.4rem; list-style:none; padding:0; margin:0;} 
+.iw-benefit-container .benefit-item-box {display:flex; flex-direction:column; gap:1.2rem; padding:2.4rem; align-items:flex-start; border-radius:1.2rem; background-color:var(--iw-secondary-5);}
+.iw-benefit-container .benefit-item-box .btn-tit {display:inline-flex; align-items:center; gap:.8rem; font-size:var(--iw-fz-b-lg); color:var(--iw-gray-90); font-weight:700; text-decoration:none;}
+.iw-benefit-container .benefit-item-box .badge.info,
+.iw-benefit-container .benefit-item-box .badge.success {background-color:transparent;}
+.iw-benefit-container .benefit-item-box .benefit-item-detail {display:flex; gap:.4rem; flex-direction:column; width:100%; }
+.iw-benefit-container .benefit-item-box .benefit-item {display:flex; gap:.8rem; }
+.iw-benefit-container .benefit-item-box .iconset.circle {width:3.2rem; height:3.2rem; padding:.8rem; flex-shrink:0; background-color:#fff; border-radius:50%;}
+.iw-benefit-container .benefit-item-box .benefit-item-txt {display:flex; gap:.8rem; padding-top:.4rem; min-width:0; font-size:var(--iw-fz-xxsm);}
+.iw-benefit-container .benefit-item-box .benefit-item-txt .tit {white-space:nowrap;}
+.iw-benefit-container .benefit-item-box .benefit-item-txt .tit:after {display:inline-block; width:.1rem; height:1.2rem; margin-left:.8rem; background-color:var(--iw-color-border-gray-light); content:"";}
+.iw-benefit-container .benefit-item-box .benefit-item-txt .txt {color:var(--iw-gray-70);}
+
+/* 혜택알리미 오류 안내 */
+.benefit-error-box {display:flex; flex-direction:column; align-items:center; text-align:center; gap:0; padding-top:4.8rem;}
+.benefit-error-box p {margin:0; padding:0;}
+.benefit-error-box .txt-01 {margin-top:3.2rem; font-size:2.2rem; font-weight:700;}
+.benefit-error-box .txt-02 {margin-top:0.8rem;}
+.benefit-error-box .btn-wrap {width:100%; margin-top:2.4rem; align-items:center;}
+.benefit-error-box .btn-wrap .btn {flex-shrink:0; width:100%; max-width:28rem;}
+
+
+.benefit-contents .tit-page-wrap {margin-bottom:4.8rem;}
+@media only screen and (max-width:1024px) {
+	.benefit-contents .tit-page-wrap {margin-bottom:0;}
+
+}
+.benefit-iframe-wrap + .btn-wrap {margin-top:4rem;}
+.benefit-iframe-wrap .benefit-iframe {width:100%; }
+@media only screen and (max-width:1024px) {
+	.benefit-iframe-wrap + .btn-wrap {display:none;}
+}
+
+/* OTT 검증 요청 */
+.benefit-loading-box {display:flex; flex-direction:column; align-items:center; text-align:center; gap:3.2rem; padding-top:4.8rem;}
+.benefit-loading-box .txt {font-size:2.2rem; font-weight:700;}
+
+/* 이용동의 완료 안내  */
+.benefit-agree-fin-box {display:flex; flex-direction:column; align-items:center; text-align:center; gap:3.2rem; padding-top:4.8rem;}
+.benefit-agree-fin-box .txt {font-size:2.2rem; font-weight:700;}
+
+.lnb-wrap .benefit-agree-fin-box {padding:8rem 4rem; border-radius:1.2rem; border:1px solid var(--iw-gray-30);}
+.lnb-wrap .benefit-agree-fin-box .txt {word-break:keep-all;}
+@media only screen and (max-width:1024px) {
+	.lnb-wrap .benefit-agree-fin-box {gap:2.4rem; padding:4rem 0 0 0; border:0;}
+}
+
+/* 이용동의 완료 안내  */
+.benefit-agree-cancel {display:flex; flex-direction:column; align-items:center; text-align:center; padding-top:4.8rem;}
+.benefit-agree-cancel .txt {margin:3.2rem 0 0 0; font-size:2.2rem; font-weight:700;}
+.benefit-agree-cancel .btn-wrap {width:100%; align-items:center; margin:2.4rem 0 0 0;}
+.benefit-agree-cancel .btn-wrap .btn {flex-shrink:0; width:100%; max-width:28rem;}
+
+/* 혜택알리미 - 가족 등록 및 관리 */
+.household-data-reception {padding:4rem 0 0 0;}
+.household-data-reception .household-list {display:flex; flex-direction:column; gap:2.4rem 0; list-style-type:none; margin:4rem 0 0 0; padding:0;}
+.household-data-reception .household-list li {padding:3.2rem; border-radius:1.2rem; border:1px solid var(--iw-gray-30);}
+.household-data-reception .household-list li p {margin:0; padding:0;}
+.household-data-reception .household-list li .align-wrap {display:flex; align-items:center; gap:0 1.6rem; margin:1.6rem 0 0 0;}
+.household-data-reception .household-list li .align-wrap .info-area {display:flex; flex-direction:column; gap:1.2rem 0; color:var(--iw-gray-70);}
+.household-data-reception .household-list li .align-wrap .info-area .date {font-size:var(--iw-fz-b-lg); color:var(--iw-gray-90); font-weight:700;}
+.household-data-reception .household-list li .align-wrap .info-area .txt {font-size:var(--iw-fz-b-sm);}
+.household-data-reception .household-list li .align-wrap .btn-area {flex-shrink:0; display:flex; flex-direction:column; gap:0.8rem 0; margin-left:auto;}
+.household-data-reception .household-list li .align-wrap .btn-area .btn {flex-shrink:0; width:14rem;}
+.household-data-reception .iw-disclosure-list {margin-top:2.4rem;}
+.household-data-reception .iw-disclosure-list .iw-disclosure .iw-disclosure-cont .tit-sub {margin:1.6rem 0 0.8rem 0; padding:0; font-weight:700;}
+.household-data-reception .iw-disclosure-list .iw-disclosure .iw-disclosure-cont .tit-sub:first-child {margin-top:0;}
+.household-data-reception .iw-disclosure-list .iw-disclosure .iw-disclosure-cont .txt {margin:0; padding:0;}
+.household-data-reception .btn-wrap {margin-top:4rem;}
+@media only screen and (max-width:1024px) {
+	.household-data-reception {padding:2.4rem 0 0 0;}
+	.household-data-reception .household-list {margin:2.4rem 0 0 0;}
+	.household-data-reception .household-list li {padding:2.4rem;}
+	.household-data-reception .household-list li .align-wrap {flex-direction:column; align-items:flex-start; gap:1.6rem 0;}
+	.household-data-reception .household-list li .align-wrap .btn-area {flex-shrink:0; flex-direction:row; gap:0 0.8rem; width:100%; margin:0;}
+	.household-data-reception .household-list li .align-wrap .btn-area .btn {flex-shrink:1; width:100%; padding:0;}
+}
+
+@media only screen and (max-width:359px) {
+	.household-data-reception .household-list li .align-wrap .btn-area {flex-direction:column; gap:0.8rem 0;}
+}
+
+/* 혜택알리미 - 가족 추가하기 */
+.household-add-text {padding:3.2rem; border-radius:1.2rem; background-color:var(--iw-gray-5);}
+.household-add-text .list-number > li {margin-top:1.6rem;}
+.household-add-text .list-number > li:first-child {margin-top:0;}
+.household-add-text .list-bull {margin-top:0.8rem;}
+
+/* 혜택알리미 - 14세미안 자녀등록 완료 */
+.benefit-child-regi {padding:8rem 4rem; text-align:center; border-radius:1.2rem; border:1px solid var(--iw-gray-30);}
+.benefit-child-regi .txt {margin:0; padding:0;}
+.benefit-child-regi .txt strong {display:block; margin:4rem 0 0.8rem 0; color:var(--iw-gray-90); font-size:var(--iw-fz-md);}
+
+
+/*약관동의*/
+.title-wrap.column {display:flex; flex-direction:column; gap:.8rem;}
+.all-agree-chk {padding-bottom:2rem; border-bottom:0.1rem solid var(--iw-gray-20); margin-bottom:2.4rem;}
+.agree-chk-list {display:flex; flex-direction:column; row-gap:2.4rem; list-style:none; margin:0; padding:0; }
+.agree-chk-list.depth02 {gap:2rem; margin-top:1.6rem; padding:2.4rem 3.2rem; background-color:var(--iw-gray-5); border-radius:1rem;}
+.agree-chk-item {display:flex; gap:2.4rem; }
+.agree-chk-item .btn-agree { margin-left:auto; flex-shrink:0; padding:.1rem .4rem;; border:0; background-color:transparent; font-size:var(--iw-fz-b-sm); }
+.agree-chk-item .btn-agree .text {color:var(--iw-gray-90); text-decoration:underline; text-underline-offset:0.4rem;; display:inline-block; white-space:nowrap;} 
+.agree-chk-item .btn-agree .iconset {display:none;}
+@media only screen and (max-width:767px) {
+	.all-agree-chk {padding-top:0.8rem; padding-bottom:1.6rem; margin-bottom:1.6rem;}
+	.all-agree-chk .form-check input[type='checkbox'] + label {min-height:2rem; padding-left:2.8rem;}
+	.all-agree-chk .form-check input[type='checkbox'] + label::before {top:0.4rem; width:2rem; height:2rem;}
+	.all-agree-chk .form-check input[type='checkbox'] + label::after {top:0.8rem; width:1.2rem; height:1.2rem;}
+	.agree-chk-list {row-gap:1.6rem;}
+	.agree-chk-list.depth02 {padding:2rem; gap:1.6rem; margin-top:1.2rem;}
+	.agree-chk-item {gap:0;}
+	.agree-chk-item .form-check.lg input[type='checkbox'] + label {min-height:2rem; padding-left:2.8rem;}
+	.agree-chk-item .form-check.lg input[type='checkbox'] + label::before {top:0.4rem; width:2rem; height:2rem;}
+	.agree-chk-item .form-check.lg input[type='checkbox'] + label::after {top:0.8rem; width:1.2rem; height:1.2rem;}
+	.agree-chk-item .btn-agree {display:inline-flex; align-items:flex-start; padding:.2rem;}
+	.agree-chk-item .btn-agree .text {display:none;}
+	.agree-chk-item .btn-agree .iconset {display:inline-flex;}
+	.agree-chk-item label {flex-wrap:wrap;}
+	.agree-chk-item label .req {width:100%;}
+}
+
+
+/*약관동의 - 모바일*/
+.agree-chk-list-ad {display:flex; flex-direction:column; gap:1.6rem; padding:0; margin:0; list-style:none;}
+.agree-chk-item-ad {display:flex; gap:2.4rem;}
+.agree-chk-item-ad .btn-agree {display:inline-flex; align-items:flex-start; margin-left:auto; flex-shrink:0; padding:.2rem .4rem; border:0; background-color:transparent;}
+@media only screen and (max-width:767px) {
+	.agree-chk-item-ad .form-check.lg input[type='checkbox'] + label {min-height:2rem; padding-left:2.8rem;}
+	.agree-chk-item-ad .form-check.lg input[type='checkbox'] + label::before {top:0.4rem; width:2rem; height:2rem;}
+	.agree-chk-item-ad .form-check.lg input[type='checkbox'] + label::after {top:0.8rem; width:1.2rem; height:1.2rem;}
+}
+
+
+/*회원가입*/
+.tel-complete {display:flex; flex-wrap:wrap; gap:0.8rem 1.2rem; align-items:center;}
+.iw-login-member .form-rrn-wrap {width:auto;}
+.iw-login-member .form-rrn-wrap .form-group {width:auto;}
+.iw-login-member .form-rrn-wrap .input {width:14.8rem;}
+
+@media only screen and (max-width:1024px) {
+	.iw-login-member .form-rrn-wrap {width:100%;}
+	.iw-login-member .form-rrn-wrap .input {width:100%;}	
+}
+
+
+
+/*모바일*/
+.tel-complete-ad {display:flex; flex-direction:column; gap:.8rem;}
+.form-group-ad.captcha {gap:0;}
+.form-group-ad.captcha .form-tit.lg {margin-bottom:0.4rem}
+.captcha-wrap {display:flex; gap:.8rem; margin:1.6rem 0;}
+.captcha-wrap .img-captcha {width:100%; max-width:20rem;}
+.captcha-wrap .img-captcha img {vertical-align:top; width:100%;}
+.captcha-wrap .btn-wrap {flex-direction:column; flex-shrink:0; gap:.8rem; justify-content:center;}
+
+
+.iw-login-member .form-wrap-ad .form-rrn-wrap {width:100%;}
+.iw-login-member .form-wrap-ad .form-rrn-wrap .input {width:100%;}	
+
+@media only screen and (max-width:359px) {
+	.captcha-wrap {flex-direction:column;}
+	.captcha-wrap .btn-wrap {flex-direction:row;}
+	.captcha-wrap .btn-wrap .btn {flex:1;}
+}
+
+
+
+/* 자녀확인 */
+.form-group .captcha-wrap { margin:0 0 1.6rem ;}
+
+.iw-conts-sm .tit-page-wrap {margin-bottom:.8rem;}
+.iw-conts-sm .conts-wrap {margin-top:0;}
+.iw-conts-sm .tit-conts-area .tit-sub {font-weight:400; font-size:var(--iw-fz-b-md);}
+.iw-conts-sm .symbol-divide {width:100%;}
+.iw-conts-sm .symbol-divide .form-group {width:100%;}
+
+.cont-border.child-box {display:flex; justify-content:space-between; align-items:center; gap:2rem 2.4rem; }
+@media only screen and (max-width:1024px) { 
+	.iw-conts-sm .tit-conts-area .tit-sub {font-weight:700; font-size:2.4rem;}
+}
+@media only screen and (max-width:767px) { 
+	.cont-border.child-box {flex-direction:column; align-items:flex-start; }
+	.cont-border.child-box .btn {width:100%;}
+}
+
+/*약관*/
+.tab-terms .tab-conts {padding-top:2.4rem;}
+.terms-cont-list {list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:2.4rem;}
+.terms-cont-list .title.lg {margin-bottom:1.6rem;}
+.agree-cont {font-size:var(--iw-gray-70);}
+@media only screen and (max-width:1024px) {
+	.terms-cont-list {gap:2rem;}
+	.terms-cont-list .title.lg {margin-bottom:0.8rem;}
+}
+
+/* 서비스 신청내역 */
+.tbl-wrap.tbl-block tbody td .d-flex {gap:.4rem .8rem; justify-content:center;}
+.btn-more-area.multi .a-r {position:absolute; right:0; top:.4rem;}
+.btn-more-area.multi .btn-more {width:40rem; margin:0 auto;}
+.btn.sm .iconset.xsm {margin-right:.4rem;}
+
+@media only screen and (max-width:1024px) { 
+	.tbl-wrap.tbl-block tbody td .d-flex {justify-content:flex-start;}
+	.btn-more-area.multi .a-r {position:unset; margin-top:1.2rem;}
+	.btn-more-area.multi .btn-more {width:100%;}
+}
+
+
+/* 범정부통합포털 소개 */
+.iw-intro-wrap {display:flex; flex-direction:column; row-gap:4rem;}
+.iw-intro-wrap p {margin:0;}
+.iw-intro-wrap .box-intro {display:flex; gap:0 1.1rem; position:relative; padding:4rem; border-radius:1.2rem; background-color:var(--iw-info-5);}
+.iw-intro-wrap .box-intro::after {content:''; display:block; position:absolute; right:0; top:0; z-index:1; width:36.4rem; height:21.5rem; background:url('https://static.gov.kr/content/images/contents/bg-iw-intro.svg');}
+.iw-intro-wrap .box-intro .txt-area .title-wrap {margin-bottom:1.6rem; color:var(--iw-gray-90);}
+.iw-intro-wrap .box-intro .txt-area .title-wrap .txt {font-size:var(--iw-fz-b-lg);}
+.iw-intro-wrap .box-intro .img-area {flex-shrink:0; width:100%; max-width:28rem; margin:2rem -4rem 0 0;}
+.iw-intro-wrap .box-intro .img-area img {display:block; position:relative; z-index:2; width:100%;}
+
+@media only screen and (max-width:1024px) {
+	.iw-intro-wrap {row-gap:3.2rem;}
+	.iw-intro-wrap .box-intro {flex-direction:column; gap:0; padding:3.2rem 2.4rem 1.5rem 2.4rem;}
+	.iw-intro-wrap .box-intro::after {display:none;}
+	.iw-intro-wrap .box-intro .txt-area .sub br {display:none;}
+	.iw-intro-wrap .box-intro .img-area {margin:0 -2.4rem 0 auto;}
+}
+
+
+.iw-intro-item .item-area .list-item {display:flex; flex-wrap:wrap; gap:2.4rem; margin:0; padding:0; list-style-type:none;}
+.iw-intro-item .item-area .list-item li {display:flex; flex-direction:column; row-gap:1.6rem; width:calc((100% - 2.4rem) / 2);}
+.iw-intro-item .item-area .list-item li .title-wrap {display:flex; align-items:center; column-gap:1.2rem; padding:1.6rem 2.4rem; border-radius:1.2rem; border:0.1rem solid var(--iw-primary-10); background-color:var(--iw-primary-5);}
+.iw-intro-item .item-area .list-item li .title-wrap .number {display:flex; justify-content:center; align-items:center; min-width:2.4rem; height:2.4rem; padding:0 0.4rem; line-height:1.6; border-radius:2.4rem; color:#fff; font-size:var(--iw-fz-b-sm); font-weight:700; background-color:var(--iw-primary);}
+.iw-intro-item .item-area .list-item li .title-wrap .tit {color:var(--iw-primary-60);}
+.iw-intro-item .item-area .list-item li .txt-area {height:100%; padding:2rem 2.4rem; border-radius:1.2rem; border:0.1rem solid var(--iw-gray-20);}
+.iw-intro-item .item-area .list-item li .txt-area .sub {word-break:break-all;}
+
+@media only screen and (max-width:1024px) {
+	.iw-intro-item .item-area .list-item {gap:1.6rem;}
+	.iw-intro-item .item-area .list-item li {row-gap:1.2rem; width:100%;}
+	.iw-intro-item .item-area .list-item li .title-wrap {align-items:flex-start;}
+	.iw-intro-item .item-area .list-item li .txt-area {height:auto;}
+}
+
+
+/* 서비스 로딩 화면 */
+.iw-service-loading {display:none; justify-content:center; align-items:center; position:fixed; left:0; top:0; width:100%; height:100%; background-color:rgba(0, 0, 0, 0.50);}
+.iw-service-loading .wrap {flex-shrink:0; width:78rem; margin:0; padding:6rem 0; border-radius:1.6rem; background-color:#fff;}
+.iw-service-loading .wrap p {margin:0; padding:0;}
+.iw-service-loading .wrap h1.logo {width:16.5rem; height:5.6rem; margin:0 auto; padding:0; background:url('https://static.gov.kr/content/images/layout/logo-header.svg') no-repeat 0 0;}
+.iw-service-loading .wrap .loading-icon-area {padding:1.6rem 0;}
+.iw-service-loading .wrap .txt-area {text-align:center;}
+.iw-service-loading .wrap .txt-area .txt-01 {color:var(--iw-gray-90); font-size:var(--iw-fz-md); font-weight:700;}
+.iw-service-loading .wrap .txt-area .txt-01 span {display:block;}
+.iw-service-loading .wrap .txt-area .txt-01 span:first-child {display:block; font-size:var(--iw-fz-b-lg); color:var(--iw-gray-70);}
+.iw-service-loading.on {display:flex;}
+@media only screen and (max-width: 767px) {
+	.iw-service-loading {padding:0 2rem;}
+	.iw-service-loading .wrap {width:100%; padding:2rem;}
+	.iw-service-loading .wrap .txt-area {word-break:keep-all;}
+	.iw-service-loading .wrap .txt-area p span {display:block;}
+}
+
+
+/* 정부 통합인증(Any-ID) 사업장 사용자 등록 안내사항 - 레이어 */
+.anyid-info-layer {padding:4.8rem 2.4rem; background-color:#e7f4fe;}
+.anyid-info-layer p {margin:0; padding:0;}
+.anyid-info-layer .tit {display:flex; flex-direction:column; align-items:center; color:var(--iw-secondary-80); font-size:var(--iw-fz-lg); font-weight:700;}
+.anyid-info-layer .txt {margin:2rem 0 2.4rem 0; text-align:center; color:var(--iw-gray-70); font-size:var(--iw-fz-b-lg);}
+.anyid-info-layer .cont {display:flex; justify-content:center; gap:0 1.2rem;}
+.anyid-info-layer .cont .p {padding:1.2rem 2rem; color:#fff; border-radius:8px;}
+.anyid-info-layer .cont .p.corp {background-color:#2666c5;}
+.anyid-info-layer .cont .p.indi {background-color:#5f58e3;}
+.anyid-info-layer .img-area {position:relative; margin-top:48px;}
+.anyid-info-layer .img-area .bg-bundle {position:relative; display:flex; flex-direction:row-reverse; justify-content:space-between; gap:0;}
+.anyid-info-layer .img-area .bg-bundle .bg-01 {flex-shrink:0; position:relative; width:414px; height:232px; border-radius: 16px; background:url('https://static.gov.kr/content/images/contents/img-anyid-info-layer-01.svg') no-repeat 0 0; background-size:contain; box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);}
+.anyid-info-layer .img-area .bg-bundle .bg-01::before {content:''; position:absolute; left:-100px; bottom:-30px; z-index:100; width:144px; height:157px; background:url('https://static.gov.kr/content/images/contents/img-anyid-info-layer-arr.svg') no-repeat 0 0; background-size:contain;}
+.anyid-info-layer .img-area .bg-bundle .bg-02 {flex-shrink:0; position:relative; width:262px; height:391px; border-radius: 16px; background:url('https://static.gov.kr/content/images/contents/img-anyid-info-layer-02.svg') no-repeat 0 0; background-size:contain; box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);}
+.anyid-info-layer .img-area .txt-01 {position:absolute; right:0; bottom:72px; width:414px; font-size:20px; color:var(--iw-gray-70); font-weight:700;}
+.anyid-info-layer .img-area .txt-01 span {display:block; text-align:center;}
+@media only screen and (max-width: 1024px) {
+	.anyid-info-layer {padding:2.4rem;}
+	.anyid-info-layer .tit {display:block; text-align:center;}
+}
+
+@media only screen and (max-width: 1024px) {
+	.anyid-info-layer .tit {text-align:left;}
+	.anyid-info-layer .txt {text-align:left;}
+	.anyid-info-layer .cont {flex-direction:column; justify-content:flex-start; gap:0.8rem 0;}
+	.anyid-info-layer .img-area .bg-bundle {flex-direction:column; gap:2.4rem 0;}
+	.anyid-info-layer .img-area .bg-bundle .bg-01 {width:100%; height:auto; aspect-ratio: 414 / 232; background-size:100% auto;}
+	.anyid-info-layer .img-area .bg-bundle .bg-01::before {left:3%; bottom:-12%; width:10%; height:auto; aspect-ratio: 144 / 157; transform:rotate(-50deg);}
+	.anyid-info-layer .img-area .bg-bundle .bg-02 {width:100%; height:auto; aspect-ratio: 262 / 391; background-size:100% auto;}
+	.anyid-info-layer .img-area .txt-01 {position:static; width:100%; margin-top:2.4rem;}
+	.anyid-info-layer .img-area .txt-01 span {display:inline;}
+}
+@media only screen and (max-width: 375px) {
+	.anyid-info-layer .img-area .bg-bundle .bg-01::before {width:15%; left:-2%; bottom:-25%;}
+}
+
+
+/* 설문조사 : 수급자 재취업지원 설문지 */
+.survey-list {list-style-type:none; margin:3.2rem 0 0 0; padding:0;}
+.survey-list > li {margin:3.2rem 0 0 0;}
+.survey-list > li:first-child {margin:0;}
+.survey-list .tit {margin:0 0 2.4rem 0; padding:0; font-size:var(--iw-fz-sm); font-weight:700;}
+.survey-list p.refer {margin-top:1.6rem;}
+.survey-list p.reset {margin-top:2.4rem;}
+.survey-list .v3dp__datepicker {width:100%;}
+
+.box-chk-all {margin:4rem 0 0 0; padding:2.4rem; text-align:center; background-color:var(--iw-secondary-5);}
+@media only screen and (max-width: 767px) {
+	.box-chk-all {margin:2.4rem 0 0 0; text-align:left;}
+}
+
+
+
